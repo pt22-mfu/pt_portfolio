@@ -315,41 +315,53 @@ export default function Home() {
                 title: "Google Cloud Fundamentals: Core Infrastructure",
                 issuer: "Google Cloud",
                 date: "Mar 2026",
+                link: "",
               },
               {
                 title: "Build Data Lakes and Data Warehouses",
                 issuer: "Google Cloud",
                 date: "Mar 2026",
+                link: "",
               },
               {
                 title: "Google Data Analytics Professional",
                 issuer: "Google",
                 date: "Mar 2026",
+                link: "",
               },
               {
                 title: "SQL for Data Science",
                 issuer: "UC Davis",
                 date: "Jul 2025",
+                link: "",
               },
               {
                 title: "Google Prompting Essentials",
                 issuer: "Google",
                 date: "Sep 2025",
+                link: "",
               },
               {
                 title: "Google AI Essentials",
                 issuer: "Google",
                 date: "Feb 2025",
+                link: "",
               },
             ].map((cert, index) => (
-              <div
+              <a
                 key={index}
-                className="bg-card rounded-lg p-6 border border-border-subtle hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/20"
+                href={cert.link || "#"}
+                target={cert.link ? "_blank" : undefined}
+                rel={cert.link ? "noopener noreferrer" : undefined}
+                className="block bg-card rounded-lg p-6 border border-border-subtle hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 cursor-pointer group"
               >
-                <p className="text-primary text-xs font-mono mb-2">{cert.issuer}</p>
+                <div className="flex items-start justify-between mb-2">
+                  <p className="text-primary text-xs font-mono">{cert.issuer}</p>
+                  {cert.link && <ExternalLink size={16} className="text-primary opacity-0 group-hover:opacity-100 transition-opacity" />}
+                </div>
                 <h4 className="text-text-white font-bold mb-3">{cert.title}</h4>
                 <p className="text-text-muted text-sm">{cert.date}</p>
-              </div>
+              </a>
             ))}
           </div>
         </div>
