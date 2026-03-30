@@ -331,8 +331,8 @@ export default function Home() {
               },
               {
                 title: "SQL for Data Science",
-                issuer: "UC Davis",
-                date: "Jul 2025",
+                issuer: "University of California",
+                date: "Nov 2025",
                 link: "https://www.coursera.org/account/accomplishments/verify/KSRTIHE6BHO8",
               },
               {
