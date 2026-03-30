@@ -81,7 +81,7 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/50 to-background" />
 
-        <div className="container relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center px-4 lg:px-8">
+        <div className="container relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-4 items-center px-4 lg:px-8">
           {/* Left: Text Content */}
           <div className="space-y-8 animate-in" style={{ animationDelay: "0.1s" }}>
             <div className="space-y-4">
