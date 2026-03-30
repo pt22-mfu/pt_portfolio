@@ -3,6 +3,10 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* PT Portfolio Design System */
+/* Cyberpunk Minimalism with Cyan Glow Accents */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap');
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -43,74 +47,86 @@
 }
 
 :root {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-600);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
+  /* Cyberpunk Minimalism Color Palette */
+  --primary: #00d4ff; /* Cyan Glow */
+  --primary-foreground: #0f1419; /* Deep Charcoal */
+  --sidebar-primary: #00a8cc; /* Teal Accent */
+  --sidebar-primary-foreground: #e8e8e8; /* Off-white */
+  --chart-1: #00d4ff;
+  --chart-2: #00a8cc;
+  --chart-3: #0088aa;
+  --chart-4: #006688;
+  --chart-5: #004466;
   --radius: 0.65rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.235 0.015 65);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.235 0.015 65);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.98 0.001 286.375);
-  --secondary-foreground: oklch(0.4 0.015 65);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.141 0.005 285.823);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.623 0.214 259.815);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.235 0.015 65);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.623 0.214 259.815);
+  --background: #0f1419; /* Deep Charcoal */
+  --foreground: #e8e8e8; /* Off-white */
+  --card: #1a2332; /* Slightly lighter charcoal */
+  --card-foreground: #e8e8e8;
+  --popover: #1a2332;
+  --popover-foreground: #e8e8e8;
+  --secondary: #00a8cc; /* Teal */
+  --secondary-foreground: #0f1419;
+  --muted: #3a4a5a; /* Muted gray */
+  --muted-foreground: #a0b0c0; /* Light gray */
+  --accent: #00d4ff; /* Cyan Glow */
+  --accent-foreground: #0f1419;
+  --destructive: #ff4444;
+  --destructive-foreground: #ffffff;
+  --border: #2a3a4a; /* Subtle border */
+  --input: #1a2332;
+  --ring: #00d4ff;
+  --sidebar: #1a2332;
+  --sidebar-foreground: #e8e8e8;
+  --sidebar-accent: #00d4ff;
+  --sidebar-accent-foreground: #0f1419;
+  --sidebar-border: #2a3a4a;
+  --sidebar-ring: #00d4ff;
+  
+  /* Custom PT Portfolio Tokens */
+  --glow-cyan: #00d4ff;
+  --glow-teal: #00a8cc;
+  --dark-bg: #0f1419;
+  --card-bg: #1a2332;
+  --text-light: #e8e8e8;
+  --text-white: #ffffff;
+  --text-muted: #a0b0c0;
+  --border-subtle: #2a3a4a;
 }
 
 .dark {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-500);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --background: oklch(0.141 0.005 285.823);
-  --foreground: oklch(0.85 0.005 65);
-  --card: oklch(0.21 0.006 285.885);
-  --card-foreground: oklch(0.85 0.005 65);
-  --popover: oklch(0.21 0.006 285.885);
-  --popover-foreground: oklch(0.85 0.005 65);
-  --secondary: oklch(0.24 0.006 286.033);
-  --secondary-foreground: oklch(0.7 0.005 65);
-  --muted: oklch(0.274 0.006 286.033);
-  --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
-  --accent-foreground:  oklch(0.92 0.005 65);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.488 0.243 264.376);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --sidebar: oklch(0.21 0.006 285.885);
-  --sidebar-foreground: oklch(0.85 0.005 65);
-  --sidebar-accent: oklch(0.274 0.006 286.033);
-  --sidebar-accent-foreground:  oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.488 0.243 264.376);
+  /* Dark theme is default for PT Portfolio */
+  --primary: #00d4ff;
+  --primary-foreground: #0f1419;
+  --sidebar-primary: #00a8cc;
+  --sidebar-primary-foreground: #e8e8e8;
+  --background: #0f1419;
+  --foreground: #e8e8e8;
+  --card: #1a2332;
+  --card-foreground: #e8e8e8;
+  --popover: #1a2332;
+  --popover-foreground: #e8e8e8;
+  --secondary: #00a8cc;
+  --secondary-foreground: #0f1419;
+  --muted: #3a4a5a;
+  --muted-foreground: #a0b0c0;
+  --accent: #00d4ff;
+  --accent-foreground: #0f1419;
+  --destructive: #ff4444;
+  --destructive-foreground: #ffffff;
+  --border: #2a3a4a;
+  --input: #1a2332;
+  --ring: #00d4ff;
+  --chart-1: #00d4ff;
+  --chart-2: #00a8cc;
+  --chart-3: #0088aa;
+  --chart-4: #006688;
+  --chart-5: #004466;
+  --sidebar: #1a2332;
+  --sidebar-foreground: #e8e8e8;
+  --sidebar-accent: #00d4ff;
+  --sidebar-accent-foreground: #0f1419;
+  --sidebar-border: #2a3a4a;
+  --sidebar-ring: #00d4ff;
 }
 
 @layer base {
@@ -118,7 +134,31 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+  
+  /* Typography System */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+  
+  h1 {
+    @apply text-5xl tracking-tight;
+    font-family: 'Space Mono', monospace;
+  }
+  
+  h2 {
+    @apply text-4xl;
+    font-family: 'Space Mono', monospace;
+  }
+  
+  h3 {
+    @apply text-2xl;
+    font-family: 'Space Mono', monospace;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -136,22 +176,12 @@
 @layer components {
   /**
    * Custom container utility that centers content and adds responsive padding.
-   *
-   * This overrides Tailwind's default container behavior to:
-   * - Auto-center content (mx-auto)
-   * - Add responsive horizontal padding
-   * - Set max-width for large screens
-   *
-   * Usage: <div className="container">...</div>
-   *
-   * For custom widths, use max-w-* utilities directly:
-   * <div className="max-w-6xl mx-auto px-4">...</div>
    */
   .container {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem; /* 16px - mobile padding */
+    padding-left: 1rem;
     padding-right: 1rem;
   }
 
@@ -162,16 +192,72 @@
 
   @media (min-width: 640px) {
     .container {
-      padding-left: 1.5rem; /* 24px - tablet padding */
+      padding-left: 1.5rem;
       padding-right: 1.5rem;
     }
   }
 
   @media (min-width: 1024px) {
     .container {
-      padding-left: 2rem; /* 32px - desktop padding */
+      padding-left: 2rem;
       padding-right: 2rem;
-      max-width: 1280px; /* Standard content width */
+      max-width: 1280px;
     }
+  }
+  
+  /* PT Portfolio Custom Components */
+  
+  /* Cyan Glow Effect */
+  .glow-cyan {
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.5), inset 0 0 20px rgba(0, 212, 255, 0.1);
+  }
+  
+  .glow-cyan-border {
+    border: 2px solid #00d4ff;
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.4), inset 0 0 15px rgba(0, 212, 255, 0.05);
+  }
+  
+  /* Accent Bar */
+  .accent-bar {
+    background: linear-gradient(135deg, #00d4ff, #00a8cc);
+    height: 4px;
+  }
+  
+  /* Hover Glow Animation */
+  @keyframes glow-pulse {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 30px rgba(0, 212, 255, 0.8);
+    }
+  }
+  
+  .hover-glow:hover {
+    animation: glow-pulse 2s ease-in-out infinite;
+  }
+  
+  /* Entrance Animation */
+  @keyframes fadeInScale {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .animate-in {
+    animation: fadeInScale 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+  
+  /* Data Grid Background */
+  .data-grid-bg {
+    background-image: 
+      linear-gradient(0deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
   }
 }
