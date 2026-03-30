@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Mail, Github, ExternalLink, ChevronDown, Moon, Sun } from "lucide-react";
+import { Mail, Github, ExternalLink, ChevronDown } from "lucide-react";
 import { useEffect, useState } from "react";
-import { useTheme } from "@/contexts/ThemeContext";
 
 /**
  * PT Portfolio - Cyberpunk Minimalism Design
@@ -11,7 +10,6 @@ import { useTheme } from "@/contexts/ThemeContext";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const { theme, toggleTheme } = useTheme();
   const [visibleSections, setVisibleSections] = useState<Record<string, boolean>>({});
 
   useEffect(() => {
@@ -64,13 +62,7 @@ export default function Home() {
             <a href="#contact" className="text-text-muted hover:text-primary transition-colors">
               Contact
             </a>
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-lg hover:bg-card transition-colors text-text-muted hover:text-primary"
-              aria-label="Toggle theme"
-            >
-              {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
+
           </div>
         </div>
       </nav>
@@ -158,7 +150,7 @@ export default function Home() {
               }}
             >
               <img
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663493646000/aW35T6wqwCw6MNGKZMLhKb/PtCV-buFoMFUDwY8UzpxRWTJzGb.png"
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663493646000/aW35T6wqwCw6MNGKZMLhKb/PtCV_ff732073.png"
                 alt="Phyo Thant Kyaw"
                 className="w-full h-full object-cover"
               />
