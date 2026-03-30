@@ -332,7 +332,7 @@ export default function Home() {
               {
                 title: "SQL for Data Science",
                 issuer: "University of California",
-                date: "Nov 2025",
+                date: "July 2025",
                 link: "https://www.coursera.org/account/accomplishments/verify/KSRTIHE6BHO8",
               },
               {
