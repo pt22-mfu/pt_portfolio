@@ -73,17 +73,17 @@ export default function Home() {
               <p className="text-primary text-sm font-mono tracking-wider uppercase">
                 Portfolio / 2025
               </p>
-              <h1 className="text-5xl lg:text-6xl font-bold text-text-white leading-tight">
+              <h1 className="text-4xl lg:text-5xl font-bold text-text-white leading-tight">
                 Phyo Thant
                 <br />
                 <span className="text-primary">Kyaw</span>
               </h1>
-              <p className="text-xl text-text-light">
+              <p className="text-lg text-text-light font-medium">
                 Computer Engineering Student & Aspiring Data Engineer
               </p>
             </div>
 
-            <p className="text-text-muted text-lg leading-relaxed max-w-md">
+            <p className="text-text-muted text-base leading-relaxed max-w-md">
               Building robust data pipelines, uncovering insights, and engineering predictive models. Capable across Data Engineering, Data Science, and Data Analytics.
             </p>
 
@@ -161,16 +161,16 @@ export default function Home() {
         <div className="container">
           <div className="mb-16">
             <div className="accent-bar w-16 mb-4" />
-            <h2 className="text-4xl font-bold text-text-white">About Me</h2>
+            <h2 className="text-3xl font-bold text-text-white">About Me</h2>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Main Bio */}
             <div className="lg:col-span-2 space-y-6">
-              <p className="text-text-light text-lg leading-relaxed">
+              <p className="text-text-light text-base leading-relaxed">
                 I am a 3rd-year Computer Engineering student at Mae Fah Luang University (MFU), expected to graduate in 2027. While my primary focus and passion lie in Data Engineering and cloud infrastructure, I maintain a strong 'T-shaped' skill set with proven capabilities in Data Analytics and Data Science.
               </p>
-              <p className="text-text-light text-lg leading-relaxed">
+              <p className="text-text-light text-base leading-relaxed">
                 I am actively seeking roles where I can architect end-to-end data solutions. My experience spans from designing ETL pipelines to building predictive models and creating actionable insights through data visualization.
               </p>
             </div>
@@ -202,13 +202,13 @@ export default function Home() {
         <div className="container">
           <div className="mb-16">
             <div className="accent-bar w-16 mb-4" />
-            <h2 className="text-4xl font-bold text-text-white">Tech Stack</h2>
+            <h2 className="text-3xl font-bold text-text-white">Tech Stack</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Data Engineering */}
             <div className="bg-card rounded-lg p-6 border border-border-subtle hover:border-primary transition-all duration-300">
-              <h3 className="text-primary font-bold mb-4 text-lg">Data Engineering</h3>
+              <h3 className="text-primary font-bold mb-4 text-base">Data Engineering</h3>
               <div className="space-y-2">
                 {["Apache Spark", "Airflow", "ETL Pipelines", "Cloud Infrastructure"].map((skill) => (
                   <p key={skill} className="text-text-muted text-sm">
@@ -262,7 +262,7 @@ export default function Home() {
         <div className="container">
           <div className="mb-16">
             <div className="accent-bar w-16 mb-4" />
-            <h2 className="text-4xl font-bold text-text-white">Featured Project</h2>
+            <h2 className="text-3xl font-bold text-text-white">Featured Project</h2>
           </div>
 
           <div className="bg-card rounded-lg border border-border-subtle overflow-hidden hover:border-primary transition-all duration-300">
@@ -270,7 +270,7 @@ export default function Home() {
               <div className="flex items-start justify-between mb-6">
                 <div>
                   <p className="text-primary text-sm font-mono mb-2">HIGHLIGHT</p>
-                  <h3 className="text-3xl font-bold text-text-white">
+                  <h3 className="text-2xl font-bold text-text-white">
                     PM2.5 Air Quality Prediction for the MFU Valley
                   </h3>
                 </div>
@@ -303,7 +303,7 @@ export default function Home() {
         <div className="container">
           <div className="mb-16">
             <div className="accent-bar w-16 mb-4" />
-            <h2 className="text-4xl font-bold text-text-white">Certifications</h2>
+            <h2 className="text-3xl font-bold text-text-white">Certifications</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -360,14 +360,14 @@ export default function Home() {
               <p className="text-primary text-sm font-mono tracking-wider uppercase mb-4">
                 Get In Touch
               </p>
-              <h2 className="text-5xl font-bold text-text-white mb-6">
+              <h2 className="text-4xl font-bold text-text-white mb-6">
                 Let's build something
                 <br />
                 <span className="text-primary">data-driven</span>
               </h2>
             </div>
 
-            <p className="text-text-light text-lg mb-12">
+              <p className="text-text-light text-base mb-12">
               I'm currently open to internship and full-time opportunities in Data Engineering, Data Science, or Data Analytics. Feel free to reach out!
             </p>
 
