@@ -312,16 +312,16 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                title: "Google Cloud Fundamentals: Core Infrastructure",
-                issuer: "Google Cloud",
+                title: "Python",
+                issuer: "Google",
                 date: "Mar 2026",
-                link: "",
+                link: "https://www.coursera.org/account/accomplishments/verify/VBZJW4B7JFFQ",
               },
               {
                 title: "Build Data Lakes and Data Warehouses",
                 issuer: "Google Cloud",
                 date: "Mar 2026",
-                link: "",
+                link: "https://www.coursera.org/account/accomplishments/verify/M8M3B0Y7QGVV",
               },
               {
                 title: "Google Data Analytics Professional",
@@ -333,7 +333,7 @@ export default function Home() {
                 title: "SQL for Data Science",
                 issuer: "UC Davis",
                 date: "Jul 2025",
-                link: "",
+                link: "https://www.coursera.org/account/accomplishments/verify/KSRTIHE6BHO8",
               },
               {
                 title: "Google Prompting Essentials",
