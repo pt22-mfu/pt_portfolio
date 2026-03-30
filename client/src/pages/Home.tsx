@@ -314,7 +314,7 @@ export default function Home() {
               {
                 title: "Python",
                 issuer: "Google",
-                date: "Mar 2026",
+                date: "Nov 2025",
                 link: "https://www.coursera.org/account/accomplishments/verify/VBZJW4B7JFFQ",
               },
               {
