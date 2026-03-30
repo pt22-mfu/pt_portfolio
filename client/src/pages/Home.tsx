@@ -139,8 +139,8 @@ export default function Home() {
               {/* Profile Image Placeholder */}
               <div className="absolute inset-4 rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
                 <img
-                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663493646000/aW35T6wqwCw6MNGKZMLhKb/profile-frame-m8MpcaacAvNEQ5GV8vURqP.webp"
-                  alt="Profile"
+                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663493646000/aW35T6wqwCw6MNGKZMLhKb/PtCV_ef559052.png"
+                  alt="Phyo Thant Kyaw"
                   className="w-full h-full object-cover rounded-2xl"
                 />
               </div>
@@ -263,7 +263,12 @@ export default function Home() {
             <h2 className="text-3xl font-bold text-text-white">Featured Project</h2>
           </div>
 
-          <div className="bg-card rounded-lg border border-border-subtle overflow-hidden hover:border-primary transition-all duration-300">
+          <a
+            href="https://github.com/pt22-mfu/MFU_PM25_Prediction"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block bg-card rounded-lg border border-border-subtle overflow-hidden hover:border-primary transition-all duration-300 cursor-pointer"
+          >
             <div className="p-8 md:p-12">
               <div className="flex items-start justify-between mb-6">
                 <div>
@@ -292,7 +297,7 @@ export default function Home() {
                 ))}
               </div>
             </div>
-          </div>
+          </a>
         </div>
       </section>
 
