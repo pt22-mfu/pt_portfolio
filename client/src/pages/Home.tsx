@@ -81,7 +81,7 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/50 to-background" />
 
-        <div className="container relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="container relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center px-4 lg:px-8">
           {/* Left: Text Content */}
           <div className="space-y-8 animate-in" style={{ animationDelay: "0.1s" }}>
             <div className="space-y-4">
@@ -96,7 +96,7 @@ export default function Home() {
               </p>
             </div>
 
-            <p className="text-text-muted text-base leading-relaxed max-w-md">
+            <p className="text-text-muted text-base leading-relaxed max-w-lg">
               Building robust data pipelines, uncovering insights, and engineering predictive models. Capable across Data Engineering, Data Science, and Data Analytics.
             </p>
 
@@ -140,11 +140,11 @@ export default function Home() {
 
           {/* Right: Profile Image with Glow Frame */}
           <div
-            className="relative flex justify-center items-center animate-in"
+            className="relative flex justify-center items-center animate-in lg:justify-end"
             style={{ animationDelay: "0.3s" }}
           >
             <div
-              className="w-80 h-80 rounded-3xl border-4 border-primary glow-frame flex items-center justify-center overflow-hidden"
+              className="w-72 h-72 lg:w-80 lg:h-80 rounded-3xl border-4 border-primary glow-frame flex items-center justify-center overflow-hidden"
               style={{
                 boxShadow: "0 0 40px rgba(0, 212, 255, 0.4), inset 0 0 40px rgba(0, 212, 255, 0.1)",
               }}
