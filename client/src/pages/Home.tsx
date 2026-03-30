@@ -327,7 +327,7 @@ export default function Home() {
                 title: "Google Data Analytics Professional",
                 issuer: "Google",
                 date: "Mar 2026",
-                link: "",
+                link: "https://www.coursera.org/account/accomplishments/professional-cert/CT58UMUB0V4R",
               },
               {
                 title: "SQL for Data Science",
@@ -339,13 +339,13 @@ export default function Home() {
                 title: "Google Prompting Essentials",
                 issuer: "Google",
                 date: "Sep 2025",
-                link: "",
+                link: "https://www.coursera.org/account/accomplishments/specialization/HA7IOPDF4WUF",
               },
               {
                 title: "Google AI Essentials",
                 issuer: "Google",
                 date: "Feb 2025",
-                link: "",
+                link: "https://www.coursera.org/account/accomplishments/verify/SPPAZGDMT9EO",
               },
             ].map((cert, index) => (
               <a
