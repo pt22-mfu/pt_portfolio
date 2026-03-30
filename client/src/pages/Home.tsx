@@ -30,7 +30,7 @@ export default function Home() {
         <div className="container flex items-center justify-between py-4">
           <div className="text-2xl font-bold">
             <span className="text-primary">PT</span>
-            <span className="text-text-light">.</span>
+            <span className="text-text-light"></span>
           </div>
           <div className="hidden md:flex items-center gap-8">
             <a href="#about" className="text-text-muted hover:text-primary transition-colors">
@@ -73,8 +73,8 @@ export default function Home() {
               <p className="text-primary text-sm font-mono tracking-wider uppercase">
                 Portfolio / 2025
               </p>
-              <h1 className="text-4xl lg:text-5xl font-bold text-text-white leading-tight">
-                Phyo Thant <span className="text-primary">Kyaw</span>
+              <h1 className="text-4xl lg:text-5xl font-bold text-primary leading-tight">
+                Phyo Thant Kyaw
               </h1>
               <p className="text-lg text-text-light font-medium">
                 Computer Engineering Student & Aspiring Data Engineer
