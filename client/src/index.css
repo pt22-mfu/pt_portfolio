@@ -93,6 +93,52 @@
   --border-subtle: #2a3a4a;
 }
 
+:root.light {
+  /* Light theme for accessibility */
+  --primary: #0088aa; /* Darker teal for light bg */
+  --primary-foreground: #ffffff;
+  --sidebar-primary: #0066aa;
+  --sidebar-primary-foreground: #ffffff;
+  --background: #f5f7fa; /* Light gray-blue */
+  --foreground: #1a2332; /* Dark text */
+  --card: #ffffff; /* White cards */
+  --card-foreground: #1a2332;
+  --popover: #ffffff;
+  --popover-foreground: #1a2332;
+  --secondary: #0088aa;
+  --secondary-foreground: #ffffff;
+  --muted: #d0d8e0; /* Light gray */
+  --muted-foreground: #5a6a7a; /* Dark gray */
+  --accent: #0088aa; /* Teal accent */
+  --accent-foreground: #ffffff;
+  --destructive: #dd3333;
+  --destructive-foreground: #ffffff;
+  --border: #e0e8f0; /* Light border */
+  --input: #f0f4f8;
+  --ring: #0088aa;
+  --chart-1: #0088aa;
+  --chart-2: #00a8cc;
+  --chart-3: #00d4ff;
+  --chart-4: #66ddff;
+  --chart-5: #99eeff;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #1a2332;
+  --sidebar-accent: #0088aa;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #e0e8f0;
+  --sidebar-ring: #0088aa;
+  
+  /* Custom PT Portfolio Tokens - Light */
+  --glow-cyan: #0088aa;
+  --glow-teal: #0066aa;
+  --dark-bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text-light: #1a2332;
+  --text-white: #000000;
+  --text-muted: #5a6a7a;
+  --border-subtle: #e0e8f0;
+}
+
 .dark {
   /* Dark theme is default for PT Portfolio */
   --primary: #00d4ff;

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Mail, Github, ExternalLink, ChevronDown } from "lucide-react";
+import { Mail, Github, ExternalLink, ChevronDown, Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useTheme } from "@/contexts/ThemeContext";
 
 /**
  * PT Portfolio - Cyberpunk Minimalism Design
@@ -10,12 +11,27 @@ import { useEffect, useState } from "react";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const { theme, toggleTheme } = useTheme();
+  const [visibleSections, setVisibleSections] = useState<Record<string, boolean>>({});
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+      
+      // Detect visible sections for animations
+      const sections = document.querySelectorAll('[data-section]');
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight * 0.75;
+        const sectionId = section.id;
+        setVisibleSections(prev => ({
+          ...prev,
+          [sectionId]: isVisible
+        }));
+      });
     };
     window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Call on mount
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -48,6 +64,13 @@ export default function Home() {
             <a href="#contact" className="text-text-muted hover:text-primary transition-colors">
               Contact
             </a>
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-lg hover:bg-card transition-colors text-text-muted hover:text-primary"
+              aria-label="Toggle theme"
+            >
+              {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
           </div>
         </div>
       </nav>
@@ -128,22 +151,17 @@ export default function Home() {
             className="relative flex justify-center items-center animate-in"
             style={{ animationDelay: "0.3s" }}
           >
-            <div className="relative w-full max-w-sm aspect-square">
-              {/* Hexagonal Glow Frame */}
-              <div
-                className="absolute inset-0 rounded-3xl glow-cyan-border"
-                style={{
-                  background: "linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(0, 168, 204, 0.05))",
-                }}
+            <div
+              className="w-80 h-80 rounded-3xl border-4 border-primary glow-frame flex items-center justify-center overflow-hidden"
+              style={{
+                boxShadow: "0 0 40px rgba(0, 212, 255, 0.4), inset 0 0 40px rgba(0, 212, 255, 0.1)",
+              }}
+            >
+              <img
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663493646000/aW35T6wqwCw6MNGKZMLhKb/PtCV-buFoMFUDwY8UzpxRWTJzGb.png"
+                alt="Phyo Thant Kyaw"
+                className="w-full h-full object-cover"
               />
-              {/* Profile Image Placeholder */}
-              <div className="absolute inset-4 rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                <img
-                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663493646000/aW35T6wqwCw6MNGKZMLhKb/PtCV_ef559052.png"
-                  alt="Phyo Thant Kyaw"
-                  className="w-full h-full object-cover rounded-2xl"
-                />
-              </div>
             </div>
           </div>
         </div>
@@ -155,7 +173,13 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-24 bg-background relative">
+      <section
+        id="about"
+        data-section
+        className={`py-24 relative transition-all duration-700 ${
+          visibleSections['about'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}
+      >
         <div className="container">
           <div className="mb-16">
             <div className="accent-bar w-16 mb-4" />
@@ -196,7 +220,13 @@ export default function Home() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-24 bg-card/30 relative">
+      <section
+        id="skills"
+        data-section
+        className={`py-24 bg-card/30 relative transition-all duration-700 ${
+          visibleSections['skills'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}
+      >
         <div className="container">
           <div className="mb-16">
             <div className="accent-bar w-16 mb-4" />
@@ -230,7 +260,7 @@ export default function Home() {
 
             {/* Data Analytics */}
             <div className="bg-card rounded-lg p-6 border border-border-subtle hover:border-primary transition-all duration-300">
-              <h3 className="text-primary font-bold mb-4 text-lg">Data Analytics</h3>
+              <h3 className="text-primary font-bold mb-4 text-base">Data Analytics</h3>
               <div className="space-y-2">
                 {["SQL", "Power BI", "Tableau", "Statistical Analysis"].map((skill) => (
                   <p key={skill} className="text-text-muted text-sm">
@@ -242,7 +272,7 @@ export default function Home() {
 
             {/* Cloud & Tools */}
             <div className="bg-card rounded-lg p-6 border border-border-subtle hover:border-primary transition-all duration-300">
-              <h3 className="text-primary font-bold mb-4 text-lg">Cloud & Tools</h3>
+              <h3 className="text-primary font-bold mb-4 text-base">Cloud & Tools</h3>
               <div className="space-y-2">
                 {["Google Cloud", "BigQuery", "Docker", "Git / GitHub"].map((skill) => (
                   <p key={skill} className="text-text-muted text-sm">
@@ -256,7 +286,13 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-24 bg-background relative">
+      <section
+        id="projects"
+        data-section
+        className={`py-24 relative transition-all duration-700 ${
+          visibleSections['projects'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}
+      >
         <div className="container">
           <div className="mb-16">
             <div className="accent-bar w-16 mb-4" />
@@ -267,42 +303,35 @@ export default function Home() {
             href="https://github.com/pt22-mfu/MFU_PM25_Prediction"
             target="_blank"
             rel="noopener noreferrer"
-            className="block bg-card rounded-lg border border-border-subtle overflow-hidden hover:border-primary transition-all duration-300 cursor-pointer"
+            className="group block bg-card rounded-xl p-8 border border-border-subtle hover:border-primary transition-all duration-300 cursor-pointer hover:shadow-lg hover:shadow-primary/20"
           >
-            <div className="p-8 md:p-12">
-              <div className="flex items-start justify-between mb-6">
-                <div>
-                  <p className="text-primary text-sm font-mono mb-2">HIGHLIGHT</p>
-                  <h3 className="text-2xl font-bold text-text-white">
-                    PM2.5 Air Quality Prediction for the MFU Valley
-                  </h3>
-                </div>
-                <ExternalLink className="text-primary flex-shrink-0" size={24} />
+            <div className="flex items-start justify-between mb-6">
+              <div>
+                <p className="text-primary text-sm font-mono mb-2">HIGHLIGHT</p>
+                <h3 className="text-2xl font-bold text-text-white group-hover:text-primary transition-colors">
+                  PM2.5 Air Quality Prediction for the MFU Valley
+                </h3>
               </div>
-
-              <p className="text-text-muted mb-6">Team: The Outliers</p>
-
-              <p className="text-text-light text-lg leading-relaxed mb-8">
-                An end-to-end data solution predicting air quality levels. Demonstrates full-stack data capabilities: automating data ingestion from sensors (Data Engineering), training predictive machine learning algorithms (Data Science), and visualizing trends for stakeholders (Data Analytics).
-              </p>
-
-              <div className="flex flex-wrap gap-3">
-                {["Data Engineering", "Data Science", "Data Analytics"].map((tag) => (
-                  <span
-                    key={tag}
-                    className="px-4 py-2 bg-primary/10 border border-primary text-primary rounded-full text-sm font-medium"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
+              <ExternalLink className="text-primary opacity-0 group-hover:opacity-100 transition-opacity" size={24} />
             </div>
+            <p className="text-text-muted mb-6">
+              Team: The Outliers
+            </p>
+            <p className="text-text-light leading-relaxed">
+              An end-to-end data solution predicting air quality levels using machine learning models and real-time data pipelines.
+            </p>
           </a>
         </div>
       </section>
 
       {/* Certifications Section */}
-      <section id="certifications" className="py-24 bg-card/30 relative">
+      <section
+        id="certifications"
+        data-section
+        className={`py-24 bg-card/30 relative transition-all duration-700 ${
+          visibleSections['certifications'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}
+      >
         <div className="container">
           <div className="mb-16">
             <div className="accent-bar w-16 mb-4" />
@@ -350,16 +379,20 @@ export default function Home() {
             ].map((cert, index) => (
               <a
                 key={index}
-                href={cert.link || "#"}
-                target={cert.link ? "_blank" : undefined}
-                rel={cert.link ? "noopener noreferrer" : undefined}
-                className="block bg-card rounded-lg p-6 border border-border-subtle hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 cursor-pointer group"
+                href={cert.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group bg-card rounded-lg p-6 border border-border-subtle hover:border-primary transition-all duration-300 cursor-pointer hover:shadow-lg hover:shadow-primary/20"
               >
-                <div className="flex items-start justify-between mb-2">
-                  <p className="text-primary text-xs font-mono">{cert.issuer}</p>
-                  {cert.link && <ExternalLink size={16} className="text-primary opacity-0 group-hover:opacity-100 transition-opacity" />}
+                <div className="flex items-start justify-between mb-4">
+                  <div>
+                    <p className="text-primary text-sm font-mono mb-1">{cert.issuer}</p>
+                    <h4 className="text-lg font-bold text-text-white group-hover:text-primary transition-colors">
+                      {cert.title}
+                    </h4>
+                  </div>
+                  <ExternalLink className="text-primary opacity-0 group-hover:opacity-100 transition-opacity" size={20} />
                 </div>
-                <h4 className="text-text-white font-bold mb-3">{cert.title}</h4>
                 <p className="text-text-muted text-sm">{cert.date}</p>
               </a>
             ))}
@@ -368,7 +401,13 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 bg-background relative">
+      <section
+        id="contact"
+        data-section
+        className={`py-24 relative transition-all duration-700 ${
+          visibleSections['contact'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}
+      >
         <div className="container">
           <div className="max-w-2xl mx-auto text-center">
             <div className="mb-8">
@@ -376,20 +415,17 @@ export default function Home() {
                 Get In Touch
               </p>
               <h2 className="text-4xl font-bold text-text-white mb-6">
-                Let's build something
-                <br />
-                <span className="text-primary">data-driven</span>
+                Let's build something <span className="text-primary">data-driven</span>
               </h2>
+              <p className="text-text-light text-lg leading-relaxed">
+                I'm currently open to internship and full-time opportunities in Data Engineering, Data Science, or Data Analytics. Feel free to reach out!
+              </p>
             </div>
 
-              <p className="text-text-light text-base mb-12">
-              I'm currently open to internship and full-time opportunities in Data Engineering, Data Science, or Data Analytics. Feel free to reach out!
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
               <a
                 href="mailto:phyothantkyaw22.pku@gmail.com"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-primary/50"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg transition-all duration-300 font-semibold hover:shadow-lg hover:shadow-primary/50"
               >
                 <Mail size={20} />
                 Email Me
@@ -398,7 +434,7 @@ export default function Home() {
                 href="https://github.com/pt22-mfu"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-primary text-primary hover:bg-primary/10 rounded-lg font-semibold transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-primary text-primary hover:bg-primary/10 rounded-lg transition-all duration-300 font-semibold"
               >
                 <Github size={20} />
                 GitHub Profile
@@ -409,11 +445,10 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-card/50 border-t border-border-subtle py-8">
-        <div className="container flex flex-col md:flex-row items-center justify-between text-text-muted text-sm">
-          <p>© 2025 Phyo Thant Kyaw. All rights reserved.</p>
-          <p>Built with passion & precision</p>
-        </div>
+      <footer className="py-8 border-t border-border-subtle text-center text-text-muted">
+        <p className="text-sm">
+          © 2025 Phyo Thant Kyaw. All rights reserved.
+        </p>
       </footer>
     </div>
   );
