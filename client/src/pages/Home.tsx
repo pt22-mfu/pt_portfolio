@@ -74,9 +74,7 @@ export default function Home() {
                 Portfolio / 2025
               </p>
               <h1 className="text-4xl lg:text-5xl font-bold text-text-white leading-tight">
-                Phyo Thant
-                <br />
-                <span className="text-primary">Kyaw</span>
+                Phyo Thant <span className="text-primary">Kyaw</span>
               </h1>
               <p className="text-lg text-text-light font-medium">
                 Computer Engineering Student & Aspiring Data Engineer
