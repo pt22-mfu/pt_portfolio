@@ -277,6 +277,48 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Languages Section */}
+      <section
+        id="languages"
+        data-section
+        className={`py-24 relative transition-all duration-700 ${
+          visibleSections['languages'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}
+      >
+        <div className="container">
+          <div className="mb-16">
+            <div className="accent-bar w-16 mb-4" />
+            <h2 className="text-3xl font-bold text-text-white">Languages</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* English */}
+            <div className="bg-card rounded-lg p-6 border border-border-subtle hover:border-primary transition-all duration-300">
+              <h3 className="text-primary font-bold mb-4 text-base">English</h3>
+              <div className="space-y-2">
+                <p className="text-text-muted text-sm">• Fluent</p>
+              </div>
+            </div>
+
+            {/* Myanmar */}
+            <div className="bg-card rounded-lg p-6 border border-border-subtle hover:border-primary transition-all duration-300">
+              <h3 className="text-primary font-bold mb-4 text-base">Myanmar</h3>
+              <div className="space-y-2">
+                <p className="text-text-muted text-sm">• Native / Fluent</p>
+              </div>
+            </div>
+
+            {/* Japanese */}
+            <div className="bg-card rounded-lg p-6 border border-border-subtle hover:border-primary transition-all duration-300">
+              <h3 className="text-primary font-bold mb-4 text-base">Japanese</h3>
+              <div className="space-y-2">
+                <p className="text-text-muted text-sm">• Basic</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Projects Section */}
       <section
         id="projects"
