@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Mail, Github, ExternalLink, ChevronDown } from "lucide-react";
+import { Mail, Github, ExternalLink, ChevronDown, Download, Linkedin } from "lucide-react";
 import { useEffect, useState } from "react";
 
 /**
@@ -109,6 +109,15 @@ export default function Home() {
                 View Projects
               </Button>
               <a
+                href="https://d2xsxph8kpxj0f.cloudfront.net/310519663493646000/aW35T6wqwCw6MNGKZMLhKb/DataEngineer_PT_Resume_50c0ce36.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-8 py-6 border-2 border-primary text-primary hover:bg-primary/10 rounded-lg transition-all duration-300"
+              >
+                <Download size={20} />
+                Download CV
+              </a>
+              <a
                 href="https://github.com/pt22-mfu"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -134,6 +143,14 @@ export default function Home() {
                 className="w-12 h-12 rounded-full border-2 border-primary flex items-center justify-center hover:bg-primary/10 transition-all duration-300 hover-glow"
               >
                 <Mail size={20} className="text-primary" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/phyo-thant-kyaw-2816332a4/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full border-2 border-primary flex items-center justify-center hover:bg-primary/10 transition-all duration-300 hover-glow"
+              >
+                <Linkedin size={20} className="text-primary" />
               </a>
             </div>
           </div>
