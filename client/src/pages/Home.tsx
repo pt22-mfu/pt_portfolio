@@ -480,7 +480,7 @@ export default function Home() {
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg blur-xl" />
                   <img
-                    src="/manus-storage/photo_2026-05-06_20-53-36_f91d8daa.jpg"
+                    src="/manus-storage/photo_2026-05-06_20-53-36_a8a9e5ac.jpg"
                     alt="Volunteer Explainer: Vibe Coding & RAG"
                     className="relative rounded-lg w-full h-auto object-cover shadow-lg"
                   />
