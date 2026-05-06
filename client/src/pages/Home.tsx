@@ -59,6 +59,9 @@ export default function Home() {
             <a href="#certifications" className="text-text-muted hover:text-primary transition-colors">
               Certifications
             </a>
+            <a href="#activities" className="text-text-muted hover:text-primary transition-colors">
+              Activities
+            </a>
             <a href="#contact" className="text-text-muted hover:text-primary transition-colors">
               Contact
             </a>
@@ -447,6 +450,66 @@ export default function Home() {
                 <p className="text-text-muted text-sm">{cert.date}</p>
               </a>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Activities & Experiential Learning Section */}
+      <section
+        id="activities"
+        data-section
+        className={`py-24 relative transition-all duration-700 ${
+          visibleSections['activities'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}
+      >
+        <div className="container">
+          <div className="mb-16">
+            <p className="text-primary text-sm font-mono tracking-wider uppercase mb-4">
+              Beyond the Classroom
+            </p>
+            <h2 className="text-3xl font-bold text-text-white">
+              Activities & <span className="text-primary">Experiential Learning</span>
+            </h2>
+          </div>
+
+          {/* Volunteer Activity Card */}
+          <div className="bg-card rounded-lg border border-border-subtle overflow-hidden hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8">
+              {/* Left: Image */}
+              <div className="flex items-center justify-center">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg blur-xl" />
+                  <img
+                    src="/manus-storage/photo_2026-05-06_20-53-36_f91d8daa.jpg"
+                    alt="Volunteer Explainer: Vibe Coding & RAG"
+                    className="relative rounded-lg w-full h-auto object-cover shadow-lg"
+                  />
+                  <p className="text-text-muted text-sm mt-4 text-center italic">
+                    Receiving a souvenir for correctly solving and explaining the coding problem to the class.
+                  </p>
+                </div>
+              </div>
+
+              {/* Right: Content */}
+              <div className="flex flex-col justify-center space-y-6">
+                <div>
+                  <p className="text-primary text-sm font-mono mb-2">April 18, 2026</p>
+                  <h3 className="text-2xl font-bold text-text-white mb-4">
+                    Volunteer Explainer: Vibe Coding & RAG
+                  </h3>
+                </div>
+
+                <p className="text-text-light leading-relaxed">
+                  During our Business Data Analytics course (guided by Ajarn Khwunta Kirimasthong), we had an insightful guest lecture on Vibe Coding and RAG delivered by Asst. Prof. Nongnuch Ketui, Ph.D. During the hands-on session, I volunteered to solve a data analytics coding problem and explain the logic to the class. It was a rewarding opportunity to share my approach. I was honored to receive a special souvenir from Asst. Prof. Nongnuch in recognition of a correct solution and volunteering as an explainer.
+                </p>
+
+                <div className="pt-4 border-t border-border-subtle">
+                  <p className="text-text-muted text-sm">
+                    <span className="text-primary font-semibold">Key Takeaway:</span> Collaboration and knowledge sharing are essential in data analytics. This experience reinforced my commitment to continuous learning and helping others understand complex concepts.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
