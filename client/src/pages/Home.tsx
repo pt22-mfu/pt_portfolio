@@ -231,6 +231,133 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Education & Timeline Section */}
+      <section
+        id="education"
+        data-section
+        className={`py-24 relative transition-all duration-700 ${
+          visibleSections['education'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}
+      >
+        <div className="container">
+          <div className="mb-16">
+            <div className="accent-bar w-16 mb-4" />
+            <h2 className="text-3xl font-bold text-text-white">Academic Background</h2>
+          </div>
+
+          {/* Timeline Container */}
+          <div className="relative max-w-3xl mx-auto">
+            {/* Timeline Line */}
+            <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-primary via-primary to-primary/30" style={{
+              boxShadow: '0 0 20px rgba(0, 212, 255, 0.5)'
+            }} />
+
+            {/* Education Entries */}
+            <div className="space-y-12">
+              {/* Entry 1: MFU (Current) */}
+              <div className="relative pl-24 animate-in" style={{ animationDelay: '0.1s' }}>
+                {/* Timeline Dot */}
+                <div className="absolute left-0 top-2 w-16 h-16 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center border-4 border-background" style={{
+                    boxShadow: '0 0 30px rgba(0, 212, 255, 0.8), inset 0 0 20px rgba(0, 212, 255, 0.3)'
+                  }}>
+                    <span className="text-background font-bold text-sm">2022</span>
+                  </div>
+                </div>
+
+                {/* Card */}
+                <div className="bg-card rounded-lg p-8 border-2 border-primary/50 hover:border-primary transition-all duration-300" style={{
+                  boxShadow: '0 0 20px rgba(0, 212, 255, 0.2)'
+                }}>
+                  {/* Status Badge */}
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="inline-block px-3 py-1 bg-green-500/20 text-green-400 text-xs font-semibold rounded-full border border-green-500/50" style={{
+                      boxShadow: '0 0 10px rgba(34, 197, 94, 0.4)'
+                    }}>
+                      Currently Enrolled
+                    </span>
+                  </div>
+
+                  <h3 className="text-2xl font-bold text-text-white mb-2">
+                    Bachelor of Engineering – Computer Engineering
+                  </h3>
+                  <p className="text-primary font-semibold mb-4">Mae Fah Luang University (MFU), Chiang Rai, Thailand</p>
+
+                  <div className="space-y-3 mb-4">
+                    <p className="text-text-light text-sm">
+                      <span className="text-primary font-semibold">Status:</span> Currently 3rd Year Student
+                    </p>
+                    <p className="text-text-light text-sm">
+                      <span className="text-primary font-semibold">Focus:</span> Data Engineering, Cloud Infrastructure
+                    </p>
+                    <p className="text-text-light text-sm">
+                      <span className="text-primary font-semibold">Expected Graduation:</span> 2027
+                    </p>
+                  </div>
+
+                  <div className="border-t border-border-subtle pt-4">
+                    <p className="text-text-muted text-sm mb-3">
+                      <span className="text-primary font-semibold">Relevant Coursework:</span>
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {[
+                        'Data Structures & Algorithms',
+                        'Database Systems',
+                        'Business Data Analytics',
+                        'Cloud Computing',
+                        'Software Engineering'
+                      ].map((course) => (
+                        <span key={course} className="inline-block px-3 py-1 bg-primary/10 text-primary text-xs rounded-full border border-primary/30">
+                          {course}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Entry 2: MTU (Completed) */}
+              <div className="relative pl-24 animate-in" style={{ animationDelay: '0.2s' }}>
+                {/* Timeline Dot */}
+                <div className="absolute left-0 top-2 w-16 h-16 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-full bg-text-muted flex items-center justify-center border-4 border-background" style={{
+                    boxShadow: '0 0 20px rgba(100, 116, 139, 0.5)'
+                  }}>
+                    <span className="text-background font-bold text-sm">2019</span>
+                  </div>
+                </div>
+
+                {/* Card */}
+                <div className="bg-card rounded-lg p-8 border border-border-subtle hover:border-text-muted transition-all duration-300">
+                  <h3 className="text-2xl font-bold text-text-white mb-2">
+                    Bachelor of Engineering – Electronics Engineering
+                  </h3>
+                  <p className="text-text-muted font-semibold mb-4">Mandalay Technological University (MTU/MIT), Myanmar</p>
+
+                  <div className="space-y-3 mb-4">
+                    <p className="text-text-light text-sm">
+                      <span className="text-primary font-semibold">Period:</span> Dec 2016 – Sep 2019
+                    </p>
+                    <p className="text-text-light text-sm">
+                      <span className="text-primary font-semibold">Status:</span> Completed up to 3rd Year
+                    </p>
+                    <p className="text-text-light text-sm">
+                      <span className="text-primary font-semibold">GPA:</span> 3.04
+                    </p>
+                  </div>
+
+                  <div className="border-t border-border-subtle pt-4">
+                    <p className="text-text-muted text-sm">
+                      Strong foundation in engineering principles, circuit design, and technical problem-solving.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Skills Section */}
       <section
         id="skills"
