@@ -91,6 +91,15 @@ export default function Home() {
               <p className="text-primary text-sm font-mono tracking-wider uppercase">
                 Portfolio / 2025
               </p>
+              
+              {/* Open to Work Badge */}
+              <div className="badge-glow inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/40 border border-green-500/50 backdrop-blur-sm w-fit">
+                <div className="pulse-dot w-2.5 h-2.5 rounded-full bg-green-400" />
+                <span className="text-xs font-semibold text-green-400 tracking-wide">
+                  Available for Internship · Starting June 2026
+                </span>
+              </div>
+              
               <h1 className="text-4xl lg:text-5xl font-bold text-primary leading-tight">
                 Phyo Thant Kyaw
               </h1>
