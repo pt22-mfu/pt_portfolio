@@ -320,10 +320,10 @@ export default function Home() {
               <div className="relative pl-24 animate-in" style={{ animationDelay: '0.2s' }}>
                 {/* Timeline Dot */}
                 <div className="absolute left-0 top-2 w-16 h-16 flex items-center justify-center">
-                  <div className="w-12 h-12 rounded-full bg-text-muted flex items-center justify-center border-4 border-background" style={{
-                    boxShadow: '0 0 20px rgba(100, 116, 139, 0.5)'
+                  <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center border-4 border-background" style={{
+                    boxShadow: '0 0 30px rgba(0, 212, 255, 0.8), inset 0 0 20px rgba(0, 212, 255, 0.3)'
                   }}>
-                    <span className="text-white font-bold text-sm">2019</span>
+                    <span className="text-background font-bold text-sm">2019</span>
                   </div>
                 </div>
 
