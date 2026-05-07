@@ -214,7 +214,7 @@ export default function Home() {
               <div className="bg-card rounded-lg p-6 border border-border-subtle">
                 <p className="text-text-muted text-sm mb-2">Current Status</p>
                 <p className="text-2xl font-bold text-primary">3rd Year</p>
-                <p className="text-text-muted text-sm">CE Student</p>
+                <p className="text-text-muted text-sm">Computer Engineering Student</p>
               </div>
               <div className="bg-card rounded-lg p-6 border border-border-subtle">
                 <p className="text-text-muted text-sm mb-2">Expected Graduation</p>
