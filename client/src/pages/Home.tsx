@@ -489,28 +489,128 @@ export default function Home() {
             <h2 className="text-3xl font-bold text-text-white">Featured Project</h2>
           </div>
 
-          <a
-            href="https://github.com/pt22-mfu/MFU_PM25_Prediction"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group block bg-card rounded-xl p-8 border border-border-subtle hover:border-primary transition-all duration-300 cursor-pointer hover:shadow-lg hover:shadow-primary/20"
-          >
-            <div className="flex items-start justify-between mb-6">
+          <div className="bg-card rounded-xl p-10 border-2 border-primary/50 hover:border-primary transition-all duration-300" style={{
+            boxShadow: '0 0 30px rgba(0, 212, 255, 0.2)'
+          }}>
+            {/* Header with Title and Badge */}
+            <div className="flex items-start justify-between mb-8">
               <div>
                 <p className="text-primary text-sm font-mono mb-2">HIGHLIGHT</p>
-                <h3 className="text-2xl font-bold text-text-white group-hover:text-primary transition-colors">
-                  PM2.5 Air Quality Prediction for the MFU Valley
+                <h3 className="text-3xl font-bold text-text-white mb-2">
+                  MFU PM2.5 Air Quality Forecasting Engine
                 </h3>
+                <p className="text-text-muted text-sm">Team: <span className="text-primary font-semibold">The Outliers</span> | Advisor: Dr. Khwunta Kirimasthong</p>
               </div>
-              <ExternalLink className="text-primary opacity-0 group-hover:opacity-100 transition-opacity" size={24} />
+              <div className="inline-block px-3 py-1 bg-primary/20 border border-primary/50 rounded-full text-xs font-semibold text-primary">
+                Senior Project · MFU 2026
+              </div>
             </div>
-            <p className="text-text-muted mb-6">
-              Team: The Outliers
-            </p>
-            <p className="text-text-light leading-relaxed">
-              An end-to-end data solution predicting air quality levels using machine learning models and real-time data pipelines.
-            </p>
-          </a>
+
+            {/* Section 1: The Problem */}
+            <div className="mb-8 pb-8 border-b border-border-subtle">
+              <h4 className="text-lg font-bold text-primary mb-3 flex items-center gap-2">
+                <span>🔴</span> The Problem
+              </h4>
+              <p className="text-text-light leading-relaxed">
+                Northern Thailand suffers from a severe annual haze crisis. The MFU campus sits inside a valley basin where "Temperature Inversion" traps PM2.5 pollution near the ground like a physical lid. Existing global apps (like IQAir/AirVisual) use coarse 9km x 9km grid resolution — far too broad to capture MFU's hyper-local micro-climate. Students were only checking air quality AFTER physically smelling smoke — a reactive and dangerous approach.
+              </p>
+            </div>
+
+            {/* Section 2: The Solution */}
+            <div className="mb-8 pb-8 border-b border-border-subtle">
+              <h4 className="text-lg font-bold text-primary mb-3 flex items-center gap-2">
+                <span>💡</span> The Solution
+              </h4>
+              <p className="text-text-light leading-relaxed">
+                Built a hyper-local, proactive PM2.5 forecasting system specifically calibrated for the MFU valley topography. The system fetches live meteorological data via OpenWeatherMap API using MFU's exact GPS coordinates and runs it through a custom-trained Machine Learning engine to deliver a 5-day forecast — warning students BEFORE hazardous exposure occurs.
+              </p>
+            </div>
+
+            {/* Section 3: My Role */}
+            <div className="mb-8 pb-8 border-b border-border-subtle">
+              <h4 className="text-lg font-bold text-primary mb-3 flex items-center gap-2">
+                <span>👤</span> My Role
+              </h4>
+              <ul className="text-text-light space-y-2">
+                <li className="flex gap-3">
+                  <span className="text-primary">•</span>
+                  <span>Led the Data Engineering pipeline: sourced, cleaned and structured 7 years of historical meteorological data from Chiang Mai (Kaggle)</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-primary">•</span>
+                  <span>Designed and built the ETL pipeline (etl_pipeline.py) to process raw CSV data into ML-ready format stored in MySQL database</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-primary">•</span>
+                  <span>Integrated the OpenWeatherMap API for real-time live inference</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-primary">•</span>
+                  <span>Contributed to ML model training, evaluation and XGBoost selection</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-primary">•</span>
+                  <span>Co-developed the 3-tab Streamlit web dashboard (app_v2.py)</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Section 4: Tech Stack */}
+            <div className="mb-8 pb-8 border-b border-border-subtle">
+              <h4 className="text-lg font-bold text-primary mb-4 flex items-center gap-2">
+                <span>🛠️</span> Tech Stack
+              </h4>
+              <div className="flex flex-wrap gap-3">
+                {[
+                  'Python', 'XGBoost', 'Random Forest', 'SVR', 'Scikit-learn', 'Pandas', 'NumPy',
+                  'Streamlit', 'OpenWeatherMap API', 'MySQL', 'XAMPP', 'Git'
+                ].map((tech) => (
+                  <span key={tech} className="inline-block px-4 py-2 bg-black/40 border border-primary/50 rounded-full text-xs font-semibold text-primary hover:border-primary transition-all duration-300">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Section 5: Results & Outcomes - Stat Cards */}
+            <div className="mb-8 pb-8 border-b border-border-subtle">
+              <h4 className="text-lg font-bold text-primary mb-6 flex items-center gap-2">
+                <span>📊</span> Results & Outcomes
+              </h4>
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-6">
+                {[
+                  { value: '86.52%', label: 'XGBoost Accuracy (R²)' },
+                  { value: '5.38', label: 'MAE - Lowest Error Rate' },
+                  { value: '4', label: 'Models Compared' },
+                  { value: '7', label: 'Years Historical Data' },
+                  { value: '5-Day', label: 'Forecast Window' }
+                ].map((stat, idx) => (
+                  <div key={idx} className="bg-black/40 border border-primary/50 rounded-lg p-4 text-center hover:border-primary transition-all duration-300" style={{
+                    boxShadow: '0 0 15px rgba(0, 212, 255, 0.1)'
+                  }}>
+                    <p className="text-2xl font-bold text-primary mb-1">{stat.value}</p>
+                    <p className="text-xs text-text-muted">{stat.label}</p>
+                  </div>
+                ))}
+              </div>
+              <p className="text-text-light leading-relaxed">
+                The XGBoost engine outperformed all baselines — proving that non-linear ensemble methods are essential for chaotic valley weather modeling. The dashboard was deployed and demonstrated to the MFU academic committee, receiving approval as a complete Senior Project deliverable.
+              </p>
+            </div>
+
+            {/* GitHub Button */}
+            <div className="flex gap-4">
+              <a
+                href="https://github.com/pt22-mfu/MFU_PM25_Prediction"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-primary/50"
+              >
+                <Github size={20} />
+                View on GitHub
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
