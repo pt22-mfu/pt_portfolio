@@ -12,6 +12,7 @@ export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [visibleSections, setVisibleSections] = useState<Record<string, boolean>>({});
   const [isProjectExpanded, setIsProjectExpanded] = useState(false);
+  const [isChiangMaiExpanded, setIsChiangMaiExpanded] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -636,6 +637,117 @@ export default function Home() {
                   <p className="text-text-light leading-relaxed">
                     The XGBoost engine outperformed all baselines — proving that non-linear ensemble methods are essential for chaotic valley weather modeling. The dashboard was deployed and demonstrated to the MFU academic committee, receiving approval as a complete Senior Project deliverable.
                   </p>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Second Project: Chiang Mai Tri-Node Zone */}
+          <div className="bg-card rounded-xl border-2 border-primary/50 hover:border-primary transition-all duration-300 overflow-hidden mt-12" style={{
+            boxShadow: '0 0 30px rgba(0, 212, 255, 0.2)'
+          }}>
+            {/* Collapsed View - Always Visible */}
+            <div className="p-8">
+              {/* Dashboard Image */}
+              <div className="mb-6 rounded-lg overflow-hidden border border-primary/30" style={{
+                boxShadow: '0 0 20px rgba(0, 212, 255, 0.15)'
+              }}>
+                <img 
+                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663493646000/aW35T6wqwCw6MNGKZMLhKb/chiangmai-dashboard-placeholder-b8VdYZpdrT26FUsnccmffL.webp"
+                  alt="Chiang Mai Tri-Node Zone Dashboard"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+
+              {/* Header with Title and Badge */}
+              <div className="flex items-start justify-between mb-4">
+                <div className="flex-1">
+                  <p className="text-primary text-sm font-mono mb-2">FLAGSHIP PROJECT</p>
+                  <h3 className="text-2xl font-bold text-text-white mb-2">
+                    Chiang Mai Tri-Node Zone: Geo-Predictive PM2.5 Platform
+                  </h3>
+                  <p className="text-text-muted text-xs mb-2">Geospatial Intelligence for Resilience Hackathon 2026 • Lead Data Engineer & Developer</p>
+                  <p className="text-text-light text-sm leading-relaxed">
+                    End-to-end geospatial AI platform integrating real-time satellite data and wind vectors to forecast PM2.5 movement across three critical Chiang Mai urban zones with spatial threat scoring and LLM-powered mitigation strategies.
+                  </p>
+                </div>
+              </div>
+
+              {/* Tech Stack Badges - Compact */}
+              <div className="flex flex-wrap gap-2 mb-6">
+                {['Python', 'XGBoost', 'Streamlit', 'LangChain', 'Google Gemini', 'NASA FIRMS', 'GISTDA'].map((tech) => (
+                  <span key={tech} className="inline-block px-3 py-1 bg-black/40 border border-primary/50 rounded-full text-xs font-semibold text-primary">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              {/* Buttons */}
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a
+                  href="https://chiangmai-trinode-zone-pm25-prediction.streamlit.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg font-semibold transition-all duration-300 text-sm"
+                >
+                  🚀 Live Dashboard
+                </a>
+                <a
+                  href="https://github.com/pt22-mfu/chiangmai-trinode-pm25"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-4 py-2 border-2 border-primary text-primary hover:bg-primary/10 rounded-lg font-semibold transition-all duration-300 text-sm"
+                >
+                  💻 GitHub Repo
+                </a>
+                <button
+                  onClick={() => setIsChiangMaiExpanded(!isChiangMaiExpanded)}
+                  className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary/20 border border-primary/50 text-primary hover:bg-primary/30 rounded-lg font-semibold transition-all duration-300 text-sm"
+                >
+                  {isChiangMaiExpanded ? 'Hide Details' : 'View Details'}
+                  <span className={`transition-transform duration-300 ${isChiangMaiExpanded ? 'rotate-180' : ''}`}>
+                    ↓
+                  </span>
+                </button>
+              </div>
+            </div>
+
+            {/* Expanded View - Hidden by Default */}
+            {isChiangMaiExpanded && (
+              <div className={`expand-enter border-t border-border-subtle px-8 py-8 space-y-8`}>
+                {/* Project Overview */}
+                <div>
+                  <h4 className="text-lg font-bold text-primary mb-3">Project Overview</h4>
+                  <p className="text-text-light leading-relaxed">
+                    Designed and deployed an end-to-end geospatial AI platform aimed at resolving the limitations of traditional, static fire-monitoring dashboards. Focusing on the Chiang Mai basin, this system integrates real-time satellite hotspot data and wind vectors to accurately forecast PM2.5 movement and accumulation across three critical urban zones (Downtown, Doi Suthep, and Mae Rim).
+                  </p>
+                </div>
+
+                {/* Key Features */}
+                <div>
+                  <h4 className="text-lg font-bold text-primary mb-4">Key Features & Engineering Contributions</h4>
+                  <ul className="text-text-light space-y-3">
+                    <li className="flex gap-3">
+                      <span className="text-primary flex-shrink-0">•</span>
+                      <span><strong>Automated Data Integration Pipelines:</strong> Developed robust extraction pipelines utilizing the NASA FIRMS API for real-time Fire Radiative Power (FRP), OpenWeatherMap for dynamic wind vectors, and Air4Thai for baseline truth.</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <span className="text-primary flex-shrink-0">•</span>
+                      <span><strong>Spatial Threat Scoring Algorithm:</strong> Engineered a custom data-weighting logic that calculates a "Spatial Threat Score" by evaluating the intensity of macro-level forest fires against their physical proximity to densely populated micro-grids.</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <span className="text-primary flex-shrink-0">•</span>
+                      <span><strong>Wind-Guided Ensemble Prediction:</strong> Implemented a machine learning architecture (XGBoost) that dynamically shifts pollution risk weightings based on real-time advection (wind direction) to predict localized PM2.5 spikes.</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <span className="text-primary flex-shrink-0">•</span>
+                      <span><strong>Generative AI Mitigation Copilot:</strong> Integrated an LLM-powered "What-If" simulator that translates complex spatial datasets into immediate, actionable disaster-relief protocols and resource allocation strategies for local government authorities.</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <span className="text-primary flex-shrink-0">•</span>
+                      <span><strong>Interactive UI/UX Deployment:</strong> Built a highly responsive, presentation-ready web dashboard using Streamlit, seamlessly embedding the GISTDA Sphere Map to visualize threat zones and simulated spatial data.</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
             )}
