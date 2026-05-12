@@ -477,7 +477,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Projects Section */}
+      {/* Projects Section - Clean Hard Reset */}
       <section
         id="projects"
         data-section
@@ -486,260 +486,109 @@ export default function Home() {
         }`}
       >
         <div className="container">
+          {/* Section Header */}
           <div className="mb-16">
             <div className="accent-bar w-16 mb-4" />
-            <h2 className="text-3xl font-bold text-text-white">Featured Project</h2>
+            <h2 style={{ fontSize: '32px', fontWeight: 700 }} className="text-text-white">Featured Projects</h2>
           </div>
 
-          <div className="bg-card rounded-xl border-2 border-primary/50 hover:border-primary transition-all duration-300 overflow-hidden" style={{
-            boxShadow: '0 0 30px rgba(0, 212, 255, 0.2)'
-          }}>
-            {/* Collapsed View - Always Visible */}
-            <div className="p-8">
-              {/* Header with Title and Badge */}
-              <div className="flex items-start justify-between mb-6">
-                <div className="flex-1">
-                  <p className="text-primary text-sm font-mono mb-2">HIGHLIGHT</p>
-                  <h3 className="text-2xl font-bold text-text-white mb-3">
-                    MFU PM2.5 Prediction Engine (v2) - Champion Model
-                  </h3>
-                  <p className="text-text-light text-sm leading-relaxed">
-                    Production-ready 5-Model Showdown Architecture dynamically integrating real-time satellite fire hotspot data — 89% accuracy, 5-day forecast, deployed to production.
-                  </p>
-                </div>
-                <div className="inline-block px-3 py-1 bg-primary/20 border border-primary/50 rounded-full text-xs font-semibold text-primary flex-shrink-0 ml-4">
-                  Senior Project · MFU 2026
-                </div>
-              </div>
+          {/* Projects Grid - Two Identical Cards */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* PROJECT 1: MFU PM2.5 */}
+            <div className="bg-card rounded-xl border-2 border-primary/50 hover:border-primary transition-all duration-300 overflow-hidden" style={{
+              boxShadow: '0 0 30px rgba(0, 212, 255, 0.2)'
+            }}>
+              <div className="p-8 space-y-6">
+                {/* Title */}
+                <h3 style={{ fontSize: '24px', fontWeight: 700 }} className="text-text-white">
+                  MFU PM2.5 Prediction Engine (v2) - Champion Model
+                </h3>
 
-              {/* Tech Stack Badges - Compact */}
-              <div className="flex flex-wrap gap-2 mb-6">
-                {['Python', 'XGBoost', 'Streamlit', 'NASA FIRMS', 'OpenWeather API'].map((tech) => (
-                  <span key={tech} className="inline-block px-3 py-1 bg-black/40 border border-primary/50 rounded-full text-xs font-semibold text-primary">
-                    {tech}
-                  </span>
-                ))}
-              </div>
+                {/* Description */}
+                <p style={{ fontSize: '16px', fontWeight: 400, lineHeight: '1.6' }} className="text-text-light">
+                  Production-ready 5-Model Showdown Architecture dynamically integrating real-time satellite fire hotspot data — 89% accuracy, 5-day forecast, deployed to production.
+                </p>
 
-              {/* Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3">
-                <a
-                  href="https://mfu-pm25-prediction.streamlit.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg font-semibold transition-all duration-300 text-sm"
-                >
-                  🚀 Live Dashboard
-                </a>
-                <a
-                  href="https://github.com/pt22-mfu/MFU_PM25_Prediction"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-4 py-2 border-2 border-primary text-primary hover:bg-primary/10 rounded-lg font-semibold transition-all duration-300 text-sm"
-                >
-                  💻 GitHub Repo
-                </a>
-                <button
-                  onClick={() => setIsProjectExpanded(!isProjectExpanded)}
-                  className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary/20 border border-primary text-primary hover:bg-primary/30 rounded-lg font-semibold transition-all duration-300 text-sm"
-                >
-                  {isProjectExpanded ? 'Hide Details' : 'View Details'}
-                  <span className={`transition-transform duration-300 ${isProjectExpanded ? 'rotate-180' : ''}`}>
-                    ↓
-                  </span>
-                </button>
+                {/* Tech Stack Badges */}
+                <div className="flex flex-wrap gap-2">
+                  {['Python', 'XGBoost', 'Streamlit', 'NASA FIRMS', 'OpenWeather API'].map((tech) => (
+                    <span key={tech} style={{ fontSize: '14px', fontWeight: 600 }} className="inline-block px-3 py-1 bg-black/40 border border-primary/50 rounded-full text-primary">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Buttons */}
+                <div className="flex flex-col sm:flex-row gap-3 pt-4">
+                  <a
+                    href="https://mfu-pm25-prediction.streamlit.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ fontSize: '16px', fontWeight: 600 }}
+                    className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg transition-all duration-300"
+                  >
+                    🚀 Live Dashboard
+                  </a>
+                  <a
+                    href="https://github.com/pt22-mfu/MFU_PM25_Prediction"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ fontSize: '16px', fontWeight: 600 }}
+                    className="inline-flex items-center justify-center gap-2 px-4 py-2 border-2 border-primary text-primary hover:bg-primary/10 rounded-lg transition-all duration-300"
+                  >
+                    💻 GitHub Repo
+                  </a>
+                </div>
               </div>
             </div>
 
-            {/* Expanded View - Hidden by Default */}
-            {isProjectExpanded && (
-              <div className={`expand-enter border-t border-border-subtle px-8 py-8 space-y-8`}>
-                {/* Project Overview */}
-                <div>
-                  <h4 className="text-lg font-bold text-primary mb-3">Project Overview</h4>
-                  <p className="text-text-light leading-relaxed">
-                    Northern Thailand suffers from a severe annual haze crisis. The MFU campus sits inside a valley basin where "Temperature Inversion" traps PM2.5 pollution near the ground like a physical lid. Existing global apps (like IQAir/AirVisual) use coarse 9km x 9km grid resolution — far too broad to capture MFU's hyper-local micro-climate. This system delivers a hyper-local, proactive PM2.5 forecasting solution specifically calibrated for the MFU valley topography, integrating real-time meteorological data to warn students BEFORE hazardous exposure occurs.
-                  </p>
+            {/* PROJECT 2: CHIANG MAI - IDENTICAL STRUCTURE */}
+            <div className="bg-card rounded-xl border-2 border-primary/50 hover:border-primary transition-all duration-300 overflow-hidden" style={{
+              boxShadow: '0 0 30px rgba(0, 212, 255, 0.2)'
+            }}>
+              <div className="p-8 space-y-6">
+                {/* Title */}
+                <h3 style={{ fontSize: '24px', fontWeight: 700 }} className="text-text-white">
+                  Chiang Mai Tri-Node Zone: Geo-Predictive Platform
+                </h3>
+
+                {/* Description */}
+                <p style={{ fontSize: '16px', fontWeight: 400, lineHeight: '1.6' }} className="text-text-light">
+                  End-to-end geospatial AI platform integrating real-time satellite data and wind vectors to forecast PM2.5 movement across three critical Chiang Mai urban zones with spatial threat scoring and LLM-powered mitigation strategies.
+                </p>
+
+                {/* Tech Stack Badges */}
+                <div className="flex flex-wrap gap-2">
+                  {['Python', 'XGBoost', 'Streamlit', 'LangChain', 'Google Gemini', 'NASA FIRMS', 'GISTDA'].map((tech) => (
+                    <span key={tech} style={{ fontSize: '14px', fontWeight: 600 }} className="inline-block px-3 py-1 bg-black/40 border border-primary/50 rounded-full text-primary">
+                      {tech}
+                    </span>
+                  ))}
                 </div>
 
-                {/* Key Features & Engineering Contributions */}
-                <div>
-                  <h4 className="text-lg font-bold text-primary mb-4">Key Features & Engineering Contributions</h4>
-                  <ul className="text-text-light space-y-3">
-                    <li className="flex gap-3">
-                      <span className="text-primary flex-shrink-0">•</span>
-                      <span><strong>Data Engineering Pipeline:</strong> Sourced, cleaned and structured 7 years of historical meteorological data from Chiang Mai (Kaggle) into ML-ready format.</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <span className="text-primary flex-shrink-0">•</span>
-                      <span><strong>ETL Pipeline Development:</strong> Designed and built etl_pipeline.py to process raw CSV data into ML-ready format stored in MySQL database with automated data validation.</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <span className="text-primary flex-shrink-0">•</span>
-                      <span><strong>Real-Time API Integration:</strong> Integrated the OpenWeatherMap API for live meteorological data fetching using MFU's exact GPS coordinates for hyper-local accuracy.</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <span className="text-primary flex-shrink-0">•</span>
-                      <span><strong>Machine Learning Model Selection:</strong> Evaluated XGBoost, Random Forest, and SVR models; selected XGBoost for superior performance (86.52% R² accuracy) in chaotic valley weather modeling.</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <span className="text-primary flex-shrink-0">•</span>
-                      <span><strong>Interactive Dashboard Deployment:</strong> Co-developed a responsive 3-tab Streamlit web dashboard (app_v2.py) for real-time PM2.5 visualization and 5-day forecasting.</span>
-                    </li>
-                  </ul>
+                {/* Buttons */}
+                <div className="flex flex-col sm:flex-row gap-3 pt-4">
+                  <a
+                    href="https://chiangmai-trinode-zone-pm25-prediction.streamlit.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ fontSize: '16px', fontWeight: 600 }}
+                    className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg transition-all duration-300"
+                  >
+                    🚀 Live Dashboard
+                  </a>
+                  <a
+                    href="https://github.com/pt22-mfu/chiangmai-trinode-pm25"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ fontSize: '16px', fontWeight: 600 }}
+                    className="inline-flex items-center justify-center gap-2 px-4 py-2 border-2 border-primary text-primary hover:bg-primary/10 rounded-lg transition-all duration-300"
+                  >
+                    💻 GitHub Repo
+                  </a>
                 </div>
-
-                {/* Full Tech Stack */}
-                <div>
-                  <h4 className="text-lg font-bold text-primary mb-4">Tech Stack</h4>
-                  <div className="flex flex-wrap gap-3">
-                    {[
-                      'Python', 'XGBoost', 'Random Forest', 'SVR', 'Scikit-learn', 'Pandas', 'NumPy',
-                      'Streamlit', 'OpenWeatherMap API', 'MySQL', 'XAMPP', 'Git'
-                    ].map((tech) => (
-                      <span key={tech} className="inline-block px-4 py-2 bg-black/40 border border-primary/50 rounded-full text-xs font-semibold text-primary hover:border-primary transition-all duration-300">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Results & Outcomes - Stat Cards */}
-                <div>
-                  <h4 className="text-lg font-bold text-primary mb-6">Results & Outcomes</h4>
-                  <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-6">
-                    {[
-                      { value: '86.52%', label: 'XGBoost Accuracy (R²)' },
-                      { value: '5.38', label: 'MAE - Lowest Error Rate' },
-                      { value: '4', label: 'Models Compared' },
-                      { value: '7', label: 'Years Historical Data' },
-                      { value: '5-Day', label: 'Forecast Window' }
-                    ].map((stat, idx) => (
-                      <div key={idx} className="bg-black/40 border border-primary/50 rounded-lg p-4 text-center hover:border-primary transition-all duration-300" style={{
-                        boxShadow: '0 0 15px rgba(0, 212, 255, 0.1)'
-                      }}>
-                        <p className="text-2xl font-bold text-primary mb-1">{stat.value}</p>
-                        <p className="text-xs text-text-muted">{stat.label}</p>
-                      </div>
-                    ))}
-                  </div>
-                  <p className="text-text-light leading-relaxed">
-                    The XGBoost engine outperformed all baselines — proving that non-linear ensemble methods are essential for chaotic valley weather modeling. The dashboard was deployed and demonstrated to the MFU academic committee, receiving approval as a complete Senior Project deliverable.
-                  </p>
-                </div>
-              </div>
-            )}
-          </div>
-
-          {/* Second Project: Chiang Mai Tri-Node Zone */}
-          <div className="bg-card rounded-xl border-2 border-primary/50 hover:border-primary transition-all duration-300 overflow-hidden mt-12" style={{
-            boxShadow: '0 0 30px rgba(0, 212, 255, 0.2)'
-          }}>
-            {/* Collapsed View - Always Visible */}
-            <div className="p-8">
-              {/* Dashboard Image */}
-              <div className="mb-6 rounded-lg overflow-hidden border border-primary/30" style={{
-                boxShadow: '0 0 20px rgba(0, 212, 255, 0.15)'
-              }}>
-                <img 
-                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663493646000/aW35T6wqwCw6MNGKZMLhKb/chiangmai-dashboard-placeholder-b8VdYZpdrT26FUsnccmffL.webp"
-                  alt="Chiang Mai Tri-Node Zone Dashboard"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-
-              {/* Header with Title and Badge */}
-              <div className="flex items-start justify-between mb-4">
-                <div className="flex-1">
-                  <p className="text-primary text-sm font-mono mb-2">FLAGSHIP PROJECT</p>
-                  <h3 className="text-2xl font-bold text-text-white mb-2">
-                    Chiang Mai Tri-Node Zone: Geo-Predictive Platform
-                  </h3>
-                  <p className="text-text-muted text-xs mb-2">Geospatial Intelligence for Resilience Hackathon 2026 • Lead Data Engineer & Developer</p>
-                  <p className="text-text-light text-sm leading-relaxed">
-                    End-to-end geospatial AI platform integrating real-time satellite data and wind vectors to forecast PM2.5 movement across three critical Chiang Mai urban zones with spatial threat scoring and LLM-powered mitigation strategies.
-                  </p>
-                </div>
-              </div>
-
-              {/* Tech Stack Badges - Compact */}
-              <div className="flex flex-wrap gap-2 mb-6">
-                {['Python', 'XGBoost', 'Streamlit', 'LangChain', 'Google Gemini', 'NASA FIRMS', 'GISTDA'].map((tech) => (
-                  <span key={tech} className="inline-block px-3 py-1 bg-black/40 border border-primary/50 rounded-full text-xs font-semibold text-primary">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-
-              {/* Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3">
-                <a
-                  href="https://chiangmai-trinode-zone-pm25-prediction.streamlit.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg font-semibold transition-all duration-300 text-sm"
-                >
-                  🚀 Live Dashboard
-                </a>
-                <a
-                  href="https://github.com/pt22-mfu/chiangmai-trinode-pm25"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-4 py-2 border-2 border-primary text-primary hover:bg-primary/10 rounded-lg font-semibold transition-all duration-300 text-sm"
-                >
-                  💻 GitHub Repo
-                </a>
-                <button
-                  onClick={() => setIsChiangMaiExpanded(!isChiangMaiExpanded)}
-                  className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary/20 border border-primary/50 text-primary hover:bg-primary/30 rounded-lg font-semibold transition-all duration-300 text-sm"
-                >
-                  {isChiangMaiExpanded ? 'Hide Details' : 'View Details'}
-                  <span className={`transition-transform duration-300 ${isChiangMaiExpanded ? 'rotate-180' : ''}`}>
-                    ↓
-                  </span>
-                </button>
               </div>
             </div>
-
-            {/* Expanded View - Hidden by Default */}
-            {isChiangMaiExpanded && (
-              <div className={`expand-enter border-t border-border-subtle px-8 py-8 space-y-8`}>
-                {/* Project Overview */}
-                <div>
-                  <h4 className="text-lg font-bold text-primary mb-3">Project Overview</h4>
-                  <p className="text-text-light leading-relaxed">
-                    Designed and deployed an end-to-end geospatial AI platform aimed at resolving the limitations of traditional, static fire-monitoring dashboards. Focusing on the Chiang Mai basin, this system integrates real-time satellite hotspot data and wind vectors to accurately forecast PM2.5 movement and accumulation across three critical urban zones (Downtown, Doi Suthep, and Mae Rim).
-                  </p>
-                </div>
-
-                {/* Key Features */}
-                <div>
-                  <h4 className="text-lg font-bold text-primary mb-4">Key Features & Engineering Contributions</h4>
-                  <ul className="text-text-light space-y-3">
-                    <li className="flex gap-3">
-                      <span className="text-primary flex-shrink-0">•</span>
-                      <span><strong>Automated Data Integration Pipelines:</strong> Developed robust extraction pipelines utilizing the NASA FIRMS API for real-time Fire Radiative Power (FRP), OpenWeatherMap for dynamic wind vectors, and Air4Thai for baseline truth.</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <span className="text-primary flex-shrink-0">•</span>
-                      <span><strong>Spatial Threat Scoring Algorithm:</strong> Engineered a custom data-weighting logic that calculates a "Spatial Threat Score" by evaluating the intensity of macro-level forest fires against their physical proximity to densely populated micro-grids.</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <span className="text-primary flex-shrink-0">•</span>
-                      <span><strong>Wind-Guided Ensemble Prediction:</strong> Implemented a machine learning architecture (XGBoost) that dynamically shifts pollution risk weightings based on real-time advection (wind direction) to predict localized PM2.5 spikes.</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <span className="text-primary flex-shrink-0">•</span>
-                      <span><strong>Generative AI Mitigation Copilot:</strong> Integrated an LLM-powered "What-If" simulator that translates complex spatial datasets into immediate, actionable disaster-relief protocols and resource allocation strategies for local government authorities.</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <span className="text-primary flex-shrink-0">•</span>
-                      <span><strong>Interactive UI/UX Deployment:</strong> Built a highly responsive, presentation-ready web dashboard using Streamlit, seamlessly embedding the GISTDA Sphere Map to visualize threat zones and simulated spatial data.</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            )}
           </div>
         </div>
       </section>
