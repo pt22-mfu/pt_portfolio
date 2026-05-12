@@ -106,12 +106,12 @@ export default function Home() {
                 Phyo Thant Kyaw
               </h1>
               <p className="text-lg text-text-light font-medium">
-                Computer Engineering Student & Aspiring Data Engineer
+                Aspiring Data Engineer & Machine Learning Specialist
               </p>
             </div>
 
             <p className="text-text-muted text-base leading-relaxed max-w-lg">
-              Building robust data pipelines, uncovering insights, and engineering predictive models. Capable across Data Engineering, Data Science, and Data Analytics.
+              Bridging the gap between complex data and actionable intelligence. Building production-ready data pipelines, engineering predictive models, and architecting end-to-end ML solutions across Data Engineering, Data Science, and Data Analytics.
             </p>
 
             {/* CTA Buttons */}
@@ -501,10 +501,10 @@ export default function Home() {
                 <div className="flex-1">
                   <p className="text-primary text-sm font-mono mb-2">HIGHLIGHT</p>
                   <h3 className="text-2xl font-bold text-text-white mb-3">
-                    MFU PM2.5 Air Quality Forecasting Engine
+                    MFU PM2.5 Prediction Engine (v2) - Champion Model
                   </h3>
                   <p className="text-text-light text-sm leading-relaxed">
-                    End-to-end ML pipeline predicting hyper-local air quality for the MFU valley campus — 5-day forecast, 86.52% accuracy.
+                    Production-ready 5-Model Showdown Architecture dynamically integrating real-time satellite fire hotspot data — 89% accuracy, 5-day forecast, deployed to production.
                   </p>
                 </div>
                 <div className="inline-block px-3 py-1 bg-primary/20 border border-primary/50 rounded-full text-xs font-semibold text-primary flex-shrink-0 ml-4">
@@ -514,7 +514,7 @@ export default function Home() {
 
               {/* Tech Stack Badges - Compact */}
               <div className="flex flex-wrap gap-2 mb-6">
-                {['Python', 'XGBoost', 'Streamlit', 'OpenWeatherMap API', 'MySQL'].map((tech) => (
+                {['Python', 'XGBoost', 'Streamlit', 'NASA FIRMS', 'OpenWeather API'].map((tech) => (
                   <span key={tech} className="inline-block px-3 py-1 bg-black/40 border border-primary/50 rounded-full text-xs font-semibold text-primary">
                     {tech}
                   </span>
@@ -524,17 +524,24 @@ export default function Home() {
               {/* Buttons */}
               <div className="flex flex-col sm:flex-row gap-3">
                 <a
+                  href="https://mfu-pm25-prediction.streamlit.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg font-semibold transition-all duration-300 text-sm"
+                >
+                  🚀 Live Dashboard
+                </a>
+                <a
                   href="https://github.com/pt22-mfu/MFU_PM25_Prediction"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 px-4 py-2 border-2 border-primary text-primary hover:bg-primary/10 rounded-lg font-semibold transition-all duration-300 text-sm"
                 >
-                  <Github size={18} />
-                  View on GitHub
+                  💻 GitHub Repo
                 </a>
                 <button
                   onClick={() => setIsProjectExpanded(!isProjectExpanded)}
-                  className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg font-semibold transition-all duration-300 text-sm"
+                  className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary/20 border border-primary text-primary hover:bg-primary/30 rounded-lg font-semibold transition-all duration-300 text-sm"
                 >
                   {isProjectExpanded ? 'Hide Details' : 'View Details'}
                   <span className={`transition-transform duration-300 ${isProjectExpanded ? 'rotate-180' : ''}`}>
@@ -646,7 +653,7 @@ export default function Home() {
                 <div className="flex-1">
                   <p className="text-primary text-sm font-mono mb-2">FLAGSHIP PROJECT</p>
                   <h3 className="text-2xl font-bold text-text-white mb-2">
-                    Chiang Mai Tri-Node Zone: Geo-Predictive PM2.5 Platform
+                    Chiang Mai Tri-Node Zone: Geo-Predictive Platform
                   </h3>
                   <p className="text-text-muted text-xs mb-2">Geospatial Intelligence for Resilience Hackathon 2026 • Lead Data Engineer & Developer</p>
                   <p className="text-text-light text-sm leading-relaxed">
