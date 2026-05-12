@@ -272,7 +272,7 @@ export default function Home() {
                   <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center border-4 border-background" style={{
                     boxShadow: '0 0 30px rgba(0, 212, 255, 0.8), inset 0 0 20px rgba(0, 212, 255, 0.3)'
                   }}>
-                    <span className="text-background font-bold text-sm">2022</span>
+                    <span className="text-background font-bold text-sm">2023</span>
                   </div>
                 </div>
 
