@@ -547,60 +547,44 @@ export default function Home() {
             {/* Expanded View - Hidden by Default */}
             {isProjectExpanded && (
               <div className={`expand-enter border-t border-border-subtle px-8 py-8 space-y-8`}>
-                {/* Section 1: The Problem */}
+                {/* Project Overview */}
                 <div>
-                  <h4 className="text-lg font-bold text-primary mb-3 flex items-center gap-2">
-                    <span>🔴</span> The Problem
-                  </h4>
+                  <h4 className="text-lg font-bold text-primary mb-3">Project Overview</h4>
                   <p className="text-text-light leading-relaxed">
-                    Northern Thailand suffers from a severe annual haze crisis. The MFU campus sits inside a valley basin where "Temperature Inversion" traps PM2.5 pollution near the ground like a physical lid. Existing global apps (like IQAir/AirVisual) use coarse 9km x 9km grid resolution — far too broad to capture MFU's hyper-local micro-climate. Students were only checking air quality AFTER physically smelling smoke — a reactive and dangerous approach.
+                    Northern Thailand suffers from a severe annual haze crisis. The MFU campus sits inside a valley basin where "Temperature Inversion" traps PM2.5 pollution near the ground like a physical lid. Existing global apps (like IQAir/AirVisual) use coarse 9km x 9km grid resolution — far too broad to capture MFU's hyper-local micro-climate. This system delivers a hyper-local, proactive PM2.5 forecasting solution specifically calibrated for the MFU valley topography, integrating real-time meteorological data to warn students BEFORE hazardous exposure occurs.
                   </p>
                 </div>
 
-                {/* Section 2: The Solution */}
+                {/* Key Features & Engineering Contributions */}
                 <div>
-                  <h4 className="text-lg font-bold text-primary mb-3 flex items-center gap-2">
-                    <span>💡</span> The Solution
-                  </h4>
-                  <p className="text-text-light leading-relaxed">
-                    Built a hyper-local, proactive PM2.5 forecasting system specifically calibrated for the MFU valley topography. The system fetches live meteorological data via OpenWeatherMap API using MFU's exact GPS coordinates and runs it through a custom-trained Machine Learning engine to deliver a 5-day forecast — warning students BEFORE hazardous exposure occurs.
-                  </p>
-                </div>
-
-                {/* Section 3: My Role */}
-                <div>
-                  <h4 className="text-lg font-bold text-primary mb-3 flex items-center gap-2">
-                    <span>👤</span> My Role
-                  </h4>
-                  <ul className="text-text-light space-y-2">
+                  <h4 className="text-lg font-bold text-primary mb-4">Key Features & Engineering Contributions</h4>
+                  <ul className="text-text-light space-y-3">
                     <li className="flex gap-3">
-                      <span className="text-primary">•</span>
-                      <span>Led the Data Engineering pipeline: sourced, cleaned and structured 7 years of historical meteorological data from Chiang Mai (Kaggle)</span>
+                      <span className="text-primary flex-shrink-0">•</span>
+                      <span><strong>Data Engineering Pipeline:</strong> Sourced, cleaned and structured 7 years of historical meteorological data from Chiang Mai (Kaggle) into ML-ready format.</span>
                     </li>
                     <li className="flex gap-3">
-                      <span className="text-primary">•</span>
-                      <span>Designed and built the ETL pipeline (etl_pipeline.py) to process raw CSV data into ML-ready format stored in MySQL database</span>
+                      <span className="text-primary flex-shrink-0">•</span>
+                      <span><strong>ETL Pipeline Development:</strong> Designed and built etl_pipeline.py to process raw CSV data into ML-ready format stored in MySQL database with automated data validation.</span>
                     </li>
                     <li className="flex gap-3">
-                      <span className="text-primary">•</span>
-                      <span>Integrated the OpenWeatherMap API for real-time live inference</span>
+                      <span className="text-primary flex-shrink-0">•</span>
+                      <span><strong>Real-Time API Integration:</strong> Integrated the OpenWeatherMap API for live meteorological data fetching using MFU's exact GPS coordinates for hyper-local accuracy.</span>
                     </li>
                     <li className="flex gap-3">
-                      <span className="text-primary">•</span>
-                      <span>Contributed to ML model training, evaluation and XGBoost selection</span>
+                      <span className="text-primary flex-shrink-0">•</span>
+                      <span><strong>Machine Learning Model Selection:</strong> Evaluated XGBoost, Random Forest, and SVR models; selected XGBoost for superior performance (86.52% R² accuracy) in chaotic valley weather modeling.</span>
                     </li>
                     <li className="flex gap-3">
-                      <span className="text-primary">•</span>
-                      <span>Co-developed the 3-tab Streamlit web dashboard (app_v2.py)</span>
+                      <span className="text-primary flex-shrink-0">•</span>
+                      <span><strong>Interactive Dashboard Deployment:</strong> Co-developed a responsive 3-tab Streamlit web dashboard (app_v2.py) for real-time PM2.5 visualization and 5-day forecasting.</span>
                     </li>
                   </ul>
                 </div>
 
-                {/* Section 4: Full Tech Stack */}
+                {/* Full Tech Stack */}
                 <div>
-                  <h4 className="text-lg font-bold text-primary mb-4 flex items-center gap-2">
-                    <span>🛠️</span> Tech Stack
-                  </h4>
+                  <h4 className="text-lg font-bold text-primary mb-4">Tech Stack</h4>
                   <div className="flex flex-wrap gap-3">
                     {[
                       'Python', 'XGBoost', 'Random Forest', 'SVR', 'Scikit-learn', 'Pandas', 'NumPy',
@@ -613,11 +597,9 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* Section 5: Results & Outcomes - Stat Cards */}
+                {/* Results & Outcomes - Stat Cards */}
                 <div>
-                  <h4 className="text-lg font-bold text-primary mb-6 flex items-center gap-2">
-                    <span>📊</span> Results & Outcomes
-                  </h4>
+                  <h4 className="text-lg font-bold text-primary mb-6">Results & Outcomes</h4>
                   <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-6">
                     {[
                       { value: '86.52%', label: 'XGBoost Accuracy (R²)' },
