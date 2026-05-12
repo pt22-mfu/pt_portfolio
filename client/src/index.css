@@ -47,16 +47,16 @@
 }
 
 :root {
-  /* Cyberpunk Minimalism Color Palette */
-  --primary: #00d4ff; /* Cyan Glow */
+  /* Old Money Gold & Deep Navy Palette */
+  --primary: #D4AF37; /* Warm Gold */
   --primary-foreground: #0f1419; /* Deep Charcoal */
-  --sidebar-primary: #00a8cc; /* Teal Accent */
+  --sidebar-primary: #C9A961; /* Muted Gold */
   --sidebar-primary-foreground: #e8e8e8; /* Off-white */
-  --chart-1: #00d4ff;
-  --chart-2: #00a8cc;
-  --chart-3: #0088aa;
-  --chart-4: #006688;
-  --chart-5: #004466;
+  --chart-1: #D4AF37;
+  --chart-2: #C9A961;
+  --chart-3: #B8956A;
+  --chart-4: #A68860;
+  --chart-5: #8B7355;
   --radius: 0.65rem;
   --background: #0f1419; /* Deep Charcoal */
   --foreground: #e8e8e8; /* Off-white */
@@ -64,27 +64,27 @@
   --card-foreground: #e8e8e8;
   --popover: #1a2332;
   --popover-foreground: #e8e8e8;
-  --secondary: #00a8cc; /* Teal */
+  --secondary: #1A2F4A; /* Deep Navy */
   --secondary-foreground: #0f1419;
   --muted: #3a4a5a; /* Muted gray */
   --muted-foreground: #a0b0c0; /* Light gray */
-  --accent: #00d4ff; /* Cyan Glow */
+  --accent: #D4AF37; /* Gold Accent */
   --accent-foreground: #0f1419;
   --destructive: #ff4444;
   --destructive-foreground: #ffffff;
   --border: #2a3a4a; /* Subtle border */
   --input: #1a2332;
-  --ring: #00d4ff;
+  --ring: #D4AF37;
   --sidebar: #1a2332;
   --sidebar-foreground: #e8e8e8;
-  --sidebar-accent: #00d4ff;
+  --sidebar-accent: #D4AF37;
   --sidebar-accent-foreground: #0f1419;
   --sidebar-border: #2a3a4a;
-  --sidebar-ring: #00d4ff;
+  --sidebar-ring: #D4AF37;
   
   /* Custom PT Portfolio Tokens */
-  --glow-cyan: #00d4ff;
-  --glow-teal: #00a8cc;
+  --glow-gold: #D4AF37;
+  --glow-navy: #1A2F4A;
   --dark-bg: #0f1419;
   --card-bg: #1a2332;
   --text-light: #e8e8e8;
@@ -95,9 +95,9 @@
 
 :root.light {
   /* Light theme for accessibility */
-  --primary: #0088aa; /* Darker teal for light bg */
+  --primary: #8B7355; /* Warm bronze for light bg */
   --primary-foreground: #ffffff;
-  --sidebar-primary: #0066aa;
+  --sidebar-primary: #A68860;
   --sidebar-primary-foreground: #ffffff;
   --background: #f5f7fa; /* Light gray-blue */
   --foreground: #1a2332; /* Dark text */
@@ -105,32 +105,32 @@
   --card-foreground: #1a2332;
   --popover: #ffffff;
   --popover-foreground: #1a2332;
-  --secondary: #0088aa;
+  --secondary: #1A2F4A;
   --secondary-foreground: #ffffff;
   --muted: #d0d8e0; /* Light gray */
   --muted-foreground: #5a6a7a; /* Dark gray */
-  --accent: #0088aa; /* Teal accent */
+  --accent: #8B7355; /* Bronze accent */
   --accent-foreground: #ffffff;
   --destructive: #dd3333;
   --destructive-foreground: #ffffff;
   --border: #e0e8f0; /* Light border */
   --input: #f0f4f8;
-  --ring: #0088aa;
-  --chart-1: #0088aa;
-  --chart-2: #00a8cc;
-  --chart-3: #00d4ff;
-  --chart-4: #66ddff;
-  --chart-5: #99eeff;
+  --ring: #8B7355;
+  --chart-1: #8B7355;
+  --chart-2: #A68860;
+  --chart-3: #B8956A;
+  --chart-4: #C9A961;
+  --chart-5: #D4AF37;
   --sidebar: #ffffff;
   --sidebar-foreground: #1a2332;
-  --sidebar-accent: #0088aa;
+  --sidebar-accent: #8B7355;
   --sidebar-accent-foreground: #ffffff;
   --sidebar-border: #e0e8f0;
-  --sidebar-ring: #0088aa;
+  --sidebar-ring: #8B7355;
   
   /* Custom PT Portfolio Tokens - Light */
-  --glow-cyan: #0088aa;
-  --glow-teal: #0066aa;
+  --glow-gold: #8B7355;
+  --glow-navy: #1A2F4A;
   --dark-bg: #f5f7fa;
   --card-bg: #ffffff;
   --text-light: #1a2332;
@@ -141,9 +141,9 @@
 
 .dark {
   /* Dark theme is default for PT Portfolio */
-  --primary: #00d4ff;
+  --primary: #D4AF37;
   --primary-foreground: #0f1419;
-  --sidebar-primary: #00a8cc;
+  --sidebar-primary: #C9A961;
   --sidebar-primary-foreground: #e8e8e8;
   --background: #0f1419;
   --foreground: #e8e8e8;
@@ -151,28 +151,28 @@
   --card-foreground: #e8e8e8;
   --popover: #1a2332;
   --popover-foreground: #e8e8e8;
-  --secondary: #00a8cc;
+  --secondary: #1A2F4A;
   --secondary-foreground: #0f1419;
   --muted: #3a4a5a;
   --muted-foreground: #a0b0c0;
-  --accent: #00d4ff;
+  --accent: #D4AF37;
   --accent-foreground: #0f1419;
   --destructive: #ff4444;
   --destructive-foreground: #ffffff;
   --border: #2a3a4a;
   --input: #1a2332;
-  --ring: #00d4ff;
-  --chart-1: #00d4ff;
-  --chart-2: #00a8cc;
-  --chart-3: #0088aa;
-  --chart-4: #006688;
-  --chart-5: #004466;
+  --ring: #D4AF37;
+  --chart-1: #D4AF37;
+  --chart-2: #C9A961;
+  --chart-3: #B8956A;
+  --chart-4: #A68860;
+  --chart-5: #8B7355;
   --sidebar: #1a2332;
   --sidebar-foreground: #e8e8e8;
-  --sidebar-accent: #00d4ff;
+  --sidebar-accent: #D4AF37;
   --sidebar-accent-foreground: #0f1419;
   --sidebar-border: #2a3a4a;
-  --sidebar-ring: #00d4ff;
+  --sidebar-ring: #D4AF37;
 }
 
 @layer base {
@@ -253,29 +253,29 @@
   
   /* PT Portfolio Custom Components */
   
-  /* Cyan Glow Effect */
+  /* Gold Glow Effect */
   .glow-cyan {
-    box-shadow: 0 0 20px rgba(0, 212, 255, 0.5), inset 0 0 20px rgba(0, 212, 255, 0.1);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.5), inset 0 0 20px rgba(212, 175, 55, 0.1);
   }
   
   .glow-cyan-border {
-    border: 2px solid #00d4ff;
-    box-shadow: 0 0 15px rgba(0, 212, 255, 0.4), inset 0 0 15px rgba(0, 212, 255, 0.05);
+    border: 2px solid #D4AF37;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4), inset 0 0 15px rgba(212, 175, 55, 0.05);
   }
   
   /* Accent Bar */
   .accent-bar {
-    background: linear-gradient(135deg, #00d4ff, #00a8cc);
+    background: linear-gradient(135deg, #D4AF37, #C9A961);
     height: 4px;
   }
   
   /* Hover Glow Animation */
   @keyframes glow-pulse {
     0%, 100% {
-      box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
     }
     50% {
-      box-shadow: 0 0 30px rgba(0, 212, 255, 0.8);
+      box-shadow: 0 0 30px rgba(212, 175, 55, 0.8);
     }
   }
   
@@ -302,8 +302,8 @@
   /* Data Grid Background */
   .data-grid-bg {
     background-image: 
-      linear-gradient(0deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+      linear-gradient(0deg, rgba(212, 175, 55, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(212, 175, 55, 0.03) 1px, transparent 1px);
     background-size: 50px 50px;
   }
   
