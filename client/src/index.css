@@ -189,22 +189,37 @@
   }
   
   h1 {
-    @apply text-5xl tracking-tight;
+    @apply text-6xl tracking-tight;
     font-family: 'Space Mono', monospace;
   }
   
   h2 {
-    @apply text-4xl;
+    @apply text-5xl;
     font-family: 'Space Mono', monospace;
   }
   
   h3 {
+    @apply text-3xl;
+    font-family: 'Space Mono', monospace;
+  }
+  
+  h4 {
     @apply text-2xl;
     font-family: 'Space Mono', monospace;
   }
   
+  h5 {
+    @apply text-xl;
+    font-family: 'Space Mono', monospace;
+  }
+  
+  p {
+    @apply text-lg leading-relaxed;
+  }
+  
   body {
     font-family: 'Inter', sans-serif;
+    @apply text-base;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
