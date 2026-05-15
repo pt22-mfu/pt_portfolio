@@ -426,16 +426,23 @@ export default function Home() {
               <h3 className="text-xl font-bold text-primary mb-6">Data Analytics</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {[
-                  { name: "SQL", icon: "mysql" },
-                  { name: "Power BI", icon: "powerbi" },
-                  { name: "Tableau", icon: "tableau" },
-                  { name: "Statistical Analysis", icon: "r" },
-                ].map((tech) => (
-                  <div key={tech.name} className="flex items-center gap-4 p-4 bg-black/30 rounded-lg border border-primary/30 hover:border-primary/60 transition-all duration-300 hover:bg-black/50">
-                    <img src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${tech.icon}/${tech.icon}-original.svg`} alt={tech.name} className="w-10 h-10" onError={(e) => {e.currentTarget.style.display = 'none'}} />
-                    <span className="text-base font-semibold text-text-light">{tech.name}</span>
-                  </div>
-                ))}
+                  { name: "SQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg", fallback: "🗄️" },
+                  { name: "Power BI", icon: "https://cdn.jsdelivr.net/npm/simple-icons@v12/icons/powerbi.svg", fallback: "📊" },
+                  { name: "Tableau", icon: "https://cdn.jsdelivr.net/npm/simple-icons@v12/icons/tableau.svg", fallback: "📈" },
+                  { name: "Statistical Analysis", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/r/r-original.svg", fallback: "📉" },
+                ].map((tech) => {
+                  const [imageError, setImageError] = useState(false);
+                  return (
+                    <div key={tech.name} className="flex items-center gap-4 p-4 bg-black/30 rounded-lg border border-primary/30 hover:border-primary/60 transition-all duration-300 hover:bg-black/50">
+                      {!imageError ? (
+                        <img src={tech.icon} alt={tech.name} className="w-10 h-10" style={{ filter: 'brightness(0) invert(1)' }} onError={() => setImageError(true)} />
+                      ) : (
+                        <span className="text-2xl">{tech.fallback}</span>
+                      )}
+                      <span className="text-base font-semibold text-text-light">{tech.name}</span>
+                    </div>
+                  );
+                })}
               </div>
             </div>
 
@@ -444,16 +451,23 @@ export default function Home() {
               <h3 className="text-xl font-bold text-primary mb-6">Cloud & Tools</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {[
-                  { name: "Google Cloud", icon: "googlecloud" },
-                  { name: "BigQuery", icon: "bigquery" },
-                  { name: "Docker", icon: "docker" },
-                  { name: "Git / GitHub", icon: "github" },
-                ].map((tech) => (
-                  <div key={tech.name} className="flex items-center gap-4 p-4 bg-black/30 rounded-lg border border-primary/30 hover:border-primary/60 transition-all duration-300 hover:bg-black/50">
-                    <img src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${tech.icon}/${tech.icon}-original.svg`} alt={tech.name} className="w-10 h-10" onError={(e) => {e.currentTarget.style.display = 'none'}} />
-                    <span className="text-base font-semibold text-text-light">{tech.name}</span>
-                  </div>
-                ))}
+                  { name: "Google Cloud", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg", fallback: "☁️" },
+                  { name: "BigQuery", icon: "https://cdn.jsdelivr.net/npm/simple-icons@v12/icons/googlecloud.svg", fallback: "🔍" },
+                  { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg", fallback: "🐳" },
+                  { name: "Git / GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg", fallback: "🔗" },
+                ].map((tech) => {
+                  const [imageError, setImageError] = useState(false);
+                  return (
+                    <div key={tech.name} className="flex items-center gap-4 p-4 bg-black/30 rounded-lg border border-primary/30 hover:border-primary/60 transition-all duration-300 hover:bg-black/50">
+                      {!imageError ? (
+                        <img src={tech.icon} alt={tech.name} className="w-10 h-10" style={{ filter: tech.name === 'BigQuery' ? 'brightness(0) invert(1)' : 'none' }} onError={() => setImageError(true)} />
+                      ) : (
+                        <span className="text-2xl">{tech.fallback}</span>
+                      )}
+                      <span className="text-base font-semibold text-text-light">{tech.name}</span>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>
