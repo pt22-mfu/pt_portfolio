@@ -106,12 +106,12 @@ export default function Home() {
                 Phyo Thant Kyaw
               </h1>
               <p className="text-lg text-text-light font-medium">
-                Aspiring Data Engineer & Machine Learning Specialist
+                Data & AI Engineer
               </p>
             </div>
 
             <p className="text-text-muted text-base leading-relaxed max-w-lg">
-              Bridging the gap between complex data and actionable intelligence. Building production-ready data pipelines, engineering predictive models, and architecting end-to-end ML solutions across Data Engineering, Data Science, and Data Analytics.
+              Bridging the gap between complex data and actionable intelligence. Building production-ready ETL pipelines, engineering predictive models, and architecting Generative AI (RAG) solutions.
             </p>
 
             {/* CTA Buttons */}
@@ -213,10 +213,10 @@ export default function Home() {
             {/* Main Bio */}
             <div className="lg:col-span-2 space-y-6">
               <p className="text-text-light text-base leading-relaxed">
-                I am a 4th-year Computer Engineering student at Mae Fah Luang University (MFU), expected to graduate in 2027. As a T-Shaped Data Professional, my primary focus and passion lie in Data Engineering and cloud infrastructure, while I maintain proven capabilities in Data Analytics and Data Science.
+                I am a 4th-year Computer Engineering student at Mae Fah Luang University (MFU). Operating as a T-Shaped Data Professional, my core expertise lies in Data Engineering and Cloud Architecture, while I build end-to-end solutions spanning Spatial Data Analytics, Machine Learning, and Generative AI.
               </p>
               <p className="text-text-light text-base leading-relaxed">
-                I am actively seeking roles where I can architect end-to-end data solutions. My experience spans from designing ETL pipelines to building predictive models and creating actionable insights through data visualization.
+                I am actively seeking an internship starting in January 2027 where I can architect automated data pipelines and deploy LLM-powered applications. My experience ranges from optimizing XGBoost models to integrating LangChain and Google Gemini for proactive intelligence.
               </p>
             </div>
 
@@ -472,6 +472,35 @@ export default function Home() {
                   return (
                     <div key={tech.name} className="flex items-center gap-4 p-4 bg-black/30 rounded-lg border border-primary/30 hover:border-primary/60 transition-all duration-300 hover:bg-black/50">
                       {!imageError ? (
+                        <img src={tech.icon} alt={tech.name} className="w-10 h-10" style={{ filter: 'brightness(0) invert(1)' }} onError={() => setImageError(true)} />
+                      ) : (
+                        <span className="text-2xl">{tech.fallback}</span>
+                      )}
+                      <span className="text-base font-semibold text-text-light">{tech.name}</span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* AI & LLMs */}
+            <div>
+              <h3 className="text-xl font-bold text-primary mb-6">AI & LLMs</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {[
+                  { name: "Generative AI & LLMs", icon: "🤖", fallback: "🤖" },
+                  { name: "LangChain", icon: "https://cdn.jsdelivr.net/npm/simple-icons@v12/icons/langchain.svg", fallback: "🔗" },
+                  { name: "Google Gemini", icon: "https://cdn.jsdelivr.net/npm/simple-icons@v12/icons/google.svg", fallback: "✨" },
+                  { name: "RAG (Retrieval-Augmented Generation)", icon: "📚", fallback: "📚" },
+                  { name: "Streamlit", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/streamlit/streamlit-original.svg", fallback: "🎨" },
+                ].map((tech) => {
+                  const [imageError, setImageError] = useState(false);
+                  const isEmoji = tech.icon.length <= 2;
+                  return (
+                    <div key={tech.name} className="flex items-center gap-4 p-4 bg-black/30 rounded-lg border border-primary/30 hover:border-primary/60 transition-all duration-300 hover:bg-black/50">
+                      {isEmoji ? (
+                        <span className="text-2xl">{tech.icon}</span>
+                      ) : !imageError ? (
                         <img src={tech.icon} alt={tech.name} className="w-10 h-10" style={{ filter: 'brightness(0) invert(1)' }} onError={() => setImageError(true)} />
                       ) : (
                         <span className="text-2xl">{tech.fallback}</span>
