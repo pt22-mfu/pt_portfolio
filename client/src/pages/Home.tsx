@@ -467,19 +467,13 @@ export default function Home() {
                   { name: "Power BI", icon: "https://cdn.jsdelivr.net/npm/simple-icons@v12/icons/powerbi.svg", fallback: "📊" },
                   { name: "Tableau", icon: "https://cdn.jsdelivr.net/npm/simple-icons@v12/icons/tableau.svg", fallback: "📈" },
                   { name: "Statistical Analysis", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/r/r-original.svg", fallback: "📉" },
-                ].map((tech) => {
-                  const [imageError, setImageError] = useState(false);
-                  return (
-                    <div key={tech.name} className="flex items-center gap-4 p-4 bg-black/30 rounded-lg border border-primary/30 hover:border-primary/60 transition-all duration-300 hover:bg-black/50">
-                      {!imageError ? (
-                        <img src={tech.icon} alt={tech.name} className="w-10 h-10" style={{ filter: 'brightness(0) invert(1)' }} onError={() => setImageError(true)} />
-                      ) : (
-                        <span className="text-2xl">{tech.fallback}</span>
-                      )}
-                      <span className="text-base font-semibold text-text-light">{tech.name}</span>
-                    </div>
-                  );
-                })}
+                ].map((tech) => (
+                  <div key={tech.name} className="flex items-center gap-4 p-4 bg-black/30 rounded-lg border border-primary/30 hover:border-primary/60 transition-all duration-300 hover:bg-black/50">
+                    <img src={tech.icon} alt={tech.name} className="w-10 h-10" style={{ filter: 'brightness(0) invert(1)' }} onError={(e) => {e.currentTarget.style.display = 'none'}} />
+                    <span className="text-2xl" style={{display: 'none'}}>{tech.fallback}</span>
+                    <span className="text-base font-semibold text-text-light">{tech.name}</span>
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -492,18 +486,18 @@ export default function Home() {
                   { name: "LangChain", icon: "https://cdn.jsdelivr.net/npm/simple-icons@v12/icons/langchain.svg", fallback: "🔗" },
                   { name: "Google Gemini", icon: "https://cdn.jsdelivr.net/npm/simple-icons@v12/icons/google.svg", fallback: "✨" },
                   { name: "RAG (Retrieval-Augmented Generation)", icon: "📚", fallback: "📚" },
+                  { name: "PyTorch", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg", fallback: "🔥" },
+                  { name: "TensorFlow", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg", fallback: "⚡" },
+                  { name: "Google Colab", icon: "https://cdn.jsdelivr.net/npm/simple-icons@v12/icons/googlecolab.svg", fallback: "📓" },
                   { name: "Streamlit", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/streamlit/streamlit-original.svg", fallback: "🎨" },
                 ].map((tech) => {
-                  const [imageError, setImageError] = useState(false);
                   const isEmoji = tech.icon.length <= 2;
                   return (
                     <div key={tech.name} className="flex items-center gap-4 p-4 bg-black/30 rounded-lg border border-primary/30 hover:border-primary/60 transition-all duration-300 hover:bg-black/50">
                       {isEmoji ? (
                         <span className="text-2xl">{tech.icon}</span>
-                      ) : !imageError ? (
-                        <img src={tech.icon} alt={tech.name} className="w-10 h-10" style={{ filter: 'brightness(0) invert(1)' }} onError={() => setImageError(true)} />
                       ) : (
-                        <span className="text-2xl">{tech.fallback}</span>
+                        <img src={tech.icon} alt={tech.name} className="w-10 h-10" style={{ filter: 'brightness(0) invert(1)' }} onError={(e) => {e.currentTarget.style.display = 'none'; const fallback = document.createElement('span'); fallback.textContent = tech.fallback; fallback.className = 'text-2xl'; e.currentTarget.parentElement?.appendChild(fallback);}} />
                       )}
                       <span className="text-base font-semibold text-text-light">{tech.name}</span>
                     </div>
