@@ -213,7 +213,7 @@ export default function Home() {
             {/* Main Bio */}
             <div className="lg:col-span-2 space-y-6">
               <p className="text-text-light text-base leading-relaxed">
-                I am a 3rd-year Computer Engineering student at Mae Fah Luang University (MFU), expected to graduate in 2027. While my primary focus and passion lie in Data Engineering and cloud infrastructure, I maintain a strong 'T-shaped' skill set with proven capabilities in Data Analytics and Data Science.
+                I am a 4th-year Computer Engineering student at Mae Fah Luang University (MFU), expected to graduate in 2027. As a T-Shaped Data Professional, my primary focus and passion lie in Data Engineering and cloud infrastructure, while I maintain proven capabilities in Data Analytics and Data Science.
               </p>
               <p className="text-text-light text-base leading-relaxed">
                 I am actively seeking roles where I can architect end-to-end data solutions. My experience spans from designing ETL pipelines to building predictive models and creating actionable insights through data visualization.
@@ -224,7 +224,7 @@ export default function Home() {
             <div className="space-y-6">
               <div className="bg-card rounded-lg p-6 border border-border-subtle">
                 <p className="text-text-muted text-sm mb-2">Current Status</p>
-                <p className="text-2xl font-bold text-primary">3rd Year</p>
+                <p className="text-2xl font-bold text-primary">4th Year</p>
                 <p className="text-text-muted text-sm">Computer Engineering Student</p>
               </div>
               <div className="bg-card rounded-lg p-6 border border-border-subtle">
@@ -236,6 +236,40 @@ export default function Home() {
                 <p className="text-text-muted text-sm mb-2">Skill Profile</p>
                 <p className="text-2xl font-bold text-primary">T-Shaped</p>
                 <p className="text-text-muted text-sm">Multi-disciplinary</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section
+        id="experience"
+        data-section
+        className={`py-24 relative transition-all duration-700 ${
+          visibleSections['experience'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}
+      >
+        <div className="container">
+          <div className="mb-16">
+            <div className="accent-bar w-16 mb-4" />
+            <h2 className="text-3xl font-bold text-text-white">Experience</h2>
+          </div>
+
+          {/* Experience Card */}
+          <div className="max-w-3xl mx-auto">
+            <div className="bg-card rounded-lg p-8 border-2 border-primary/50 hover:border-primary transition-all duration-300" style={{
+              boxShadow: '0 0 20px rgba(0, 212, 255, 0.2)'
+            }}>
+              <h3 className="text-2xl font-bold text-text-white mb-2">
+                Work Assistant — Web & AI Projects
+              </h3>
+              <p className="text-primary font-semibold mb-6">MFU Learning Innovation Institute (MLii) · May 2026 – Present</p>
+
+              <div className="space-y-3 text-text-light text-base leading-relaxed">
+                <p>• Assisting in the development and maintenance of web applications for university internal systems.</p>
+                <p>• Supporting the integration of AI/ML features into web platforms using Python and modern LLM tools.</p>
+                <p>• Collaborating with academic and technical teams to deliver production-ready digital solutions.</p>
               </div>
             </div>
           </div>
@@ -296,7 +330,10 @@ export default function Home() {
 
                   <div className="space-y-3 mb-4">
                     <p className="text-text-light text-sm">
-                      <span className="text-primary font-semibold">Status:</span> Currently 3rd Year Student
+                      <span className="text-primary font-semibold">Status:</span> Currently 4th Year Student
+                    </p>
+                    <p className="text-text-light text-sm">
+                      <span className="text-primary font-semibold">GPAX:</span> <span className="text-primary font-bold text-base" style={{ textShadow: '0 0 10px rgba(0, 212, 255, 0.6)' }}>3.81</span>
                     </p>
                     <p className="text-text-light text-sm">
                       <span className="text-primary font-semibold">Focus:</span> Data Engineering, Cloud Infrastructure
