@@ -227,11 +227,13 @@ export default function Home() {
                 <p className="text-2xl font-bold text-primary">4th Year</p>
                 <p className="text-text-muted text-sm">Computer Engineering Student</p>
               </div>
+
               <div className="bg-card rounded-lg p-6 border border-border-subtle">
                 <p className="text-text-muted text-sm mb-2">Expected Graduation</p>
                 <p className="text-2xl font-bold text-primary">2027</p>
                 <p className="text-text-muted text-sm">Mae Fah Luang University</p>
               </div>
+
               <div className="bg-card rounded-lg p-6 border border-border-subtle">
                 <p className="text-text-muted text-sm mb-2">Skill Profile</p>
                 <p className="text-2xl font-bold text-primary">T-Shaped</p>
@@ -256,27 +258,32 @@ export default function Home() {
             <h2 className="text-3xl font-bold text-text-white">Experience</h2>
           </div>
 
-          {/* Experience Card */}
-          <div className="max-w-3xl mx-auto">
-            <div className="bg-card rounded-lg p-8 border-2 border-primary/50 hover:border-primary transition-all duration-300" style={{
-              boxShadow: '0 0 20px rgba(0, 212, 255, 0.2)'
-            }}>
-              <h3 className="text-2xl font-bold text-text-white mb-2">
-                Work Assistant — Web & AI Projects
-              </h3>
-              <p className="text-primary font-semibold mb-6">MFU Learning Innovation Institute (MLii) · May 2026 – Present</p>
-
-              <div className="space-y-3 text-text-light text-base leading-relaxed">
-                <p>• Assisting in the development and maintenance of web applications for university internal systems.</p>
-                <p>• Supporting the integration of AI/ML features into web platforms using Python and modern LLM tools.</p>
-                <p>• Collaborating with academic and technical teams to deliver production-ready digital solutions.</p>
+          {/* Work Experience Card */}
+          <div className="bg-card rounded-lg border-2 border-primary/30 p-8 hover:border-primary/60 transition-all duration-300">
+            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
+              <div>
+                <h3 style={{ fontSize: '20px', fontWeight: 700 }} className="text-text-white">
+                  Work Assistant — Web & AI Projects
+                </h3>
+                <p style={{ fontSize: '14px', fontWeight: 600 }} className="text-primary mt-1">
+                  MFU Learning Innovation Institute (MLii)
+                </p>
               </div>
+              <p style={{ fontSize: '13px', fontWeight: 500 }} className="text-text-muted flex-shrink-0">
+                May 2026 – Present
+              </p>
             </div>
+
+            <ul className="space-y-2 text-text-light text-base">
+              <li>• Assisting in the development and maintenance of web applications for university internal systems.</li>
+              <li>• Supporting the integration of AI/ML features into web platforms using Python and modern LLM tools.</li>
+              <li>• Collaborating with academic and technical teams to deliver production-ready digital solutions.</li>
+            </ul>
           </div>
         </div>
       </section>
 
-      {/* Education & Timeline Section */}
+      {/* Academic Background Section */}
       <section
         id="education"
         data-section
@@ -290,72 +297,34 @@ export default function Home() {
             <h2 className="text-3xl font-bold text-text-white">Academic Background</h2>
           </div>
 
-          {/* Timeline Container */}
-          <div className="relative max-w-3xl mx-auto">
-            {/* Timeline Line */}
-            <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-primary via-primary to-primary/30" style={{
-              boxShadow: '0 0 20px rgba(0, 212, 255, 0.5)'
-            }} />
-
-            {/* Education Entries */}
+          <div className="relative">
+            {/* Timeline */}
             <div className="space-y-12">
-              {/* Entry 1: MFU (Current) */}
-              <div className="relative pl-24 animate-in" style={{ animationDelay: '0.1s' }}>
-                {/* Timeline Dot */}
-                <div className="absolute left-0 top-2 w-16 h-16 flex items-center justify-center">
-                  <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center border-4 border-background" style={{
-                    boxShadow: '0 0 30px rgba(0, 212, 255, 0.8), inset 0 0 20px rgba(0, 212, 255, 0.3)'
-                  }}>
-                    <span className="text-background font-bold text-sm">2023</span>
+              {/* MFU - Current */}
+              <div className="flex gap-8">
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-background font-bold text-lg">
+                    2023
                   </div>
+                  <div className="w-1 h-32 bg-gradient-to-b from-primary to-primary/30 mt-4" />
                 </div>
-
-                {/* Card */}
-                <div className="bg-card rounded-lg p-8 border-2 border-primary/50 hover:border-primary transition-all duration-300" style={{
-                  boxShadow: '0 0 20px rgba(0, 212, 255, 0.2)'
-                }}>
-                  {/* Status Badge */}
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="inline-block px-3 py-1 bg-green-500/20 text-green-400 text-xs font-semibold rounded-full border border-green-500/50" style={{
-                      boxShadow: '0 0 10px rgba(34, 197, 94, 0.4)'
-                    }}>
-                      Currently Enrolled
-                    </span>
-                  </div>
-
-                  <h3 className="text-2xl font-bold text-text-white mb-2">
+                <div className="bg-card rounded-lg p-6 border border-primary/30 flex-grow">
+                  <p className="text-primary text-sm font-semibold mb-2">Currently Enrolled</p>
+                  <h3 style={{ fontSize: '20px', fontWeight: 700 }} className="text-text-white mb-2">
                     Bachelor of Engineering – Computer Engineering
                   </h3>
-                  <p className="text-primary font-semibold mb-4">Mae Fah Luang University (MFU), Chiang Rai, Thailand</p>
-
-                  <div className="space-y-3 mb-4">
-                    <p className="text-text-light text-sm">
-                      <span className="text-primary font-semibold">Status:</span> Currently 4th Year Student
-                    </p>
-                    <p className="text-text-light text-sm">
-                      <span className="text-primary font-semibold">GPAX:</span> <span className="text-primary font-bold text-base" style={{ textShadow: '0 0 10px rgba(0, 212, 255, 0.6)' }}>3.81</span>
-                    </p>
-                    <p className="text-text-light text-sm">
-                      <span className="text-primary font-semibold">Focus:</span> Data Engineering, Cloud Infrastructure
-                    </p>
-                    <p className="text-text-light text-sm">
-                      <span className="text-primary font-semibold">Expected Graduation:</span> 2027
-                    </p>
+                  <p className="text-text-muted text-sm mb-4">Mae Fah Luang University (MFU), Chiang Rai, Thailand</p>
+                  <div className="space-y-2 text-sm text-text-light">
+                    <p><span className="text-primary font-semibold">Status:</span> Currently 4th Year Student</p>
+                    <p><span className="text-primary font-semibold">GPAX:</span> <span className="text-primary font-bold">3.81</span></p>
+                    <p><span className="text-primary font-semibold">Focus:</span> Data Engineering, Cloud Infrastructure</p>
+                    <p><span className="text-primary font-semibold">Expected Graduation:</span> 2027</p>
                   </div>
-
-                  <div className="border-t border-border-subtle pt-4">
-                    <p className="text-text-muted text-sm mb-3">
-                      <span className="text-primary font-semibold">Relevant Coursework:</span>
-                    </p>
+                  <div className="mt-4 pt-4 border-t border-border-subtle">
+                    <p className="text-text-muted text-sm font-semibold mb-2">Relevant Coursework:</p>
                     <div className="flex flex-wrap gap-2">
-                      {[
-                        'Data Structures & Algorithms',
-                        'Database Systems',
-                        'Business Data Analytics',
-                        'Cloud Computing',
-                        'Software Engineering'
-                      ].map((course) => (
-                        <span key={course} className="inline-block px-3 py-1 bg-primary/10 text-primary text-xs rounded-full border border-primary/30">
+                      {['Data Structures & Algorithms', 'Database Systems', 'Business Data Analytics', 'Cloud Computing', 'Software Engineering'].map((course) => (
+                        <span key={course} className="text-xs bg-primary/10 border border-primary/40 text-primary px-2 py-1 rounded">
                           {course}
                         </span>
                       ))}
@@ -364,40 +333,23 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Entry 2: MTU (Completed) */}
-              <div className="relative pl-24 animate-in" style={{ animationDelay: '0.2s' }}>
-                {/* Timeline Dot */}
-                <div className="absolute left-0 top-2 w-16 h-16 flex items-center justify-center">
-                  <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center border-4 border-background" style={{
-                    boxShadow: '0 0 30px rgba(0, 212, 255, 0.8), inset 0 0 20px rgba(0, 212, 255, 0.3)'
-                  }}>
-                    <span className="text-background font-bold text-sm">2019</span>
+              {/* MTU - Previous */}
+              <div className="flex gap-8">
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 rounded-full bg-primary/50 flex items-center justify-center text-background font-bold text-lg">
+                    2019
                   </div>
                 </div>
-
-                {/* Card */}
-                <div className="bg-card rounded-lg p-8 border border-border-subtle hover:border-text-muted transition-all duration-300">
-                  <h3 className="text-2xl font-bold text-text-white mb-2">
+                <div className="bg-card rounded-lg p-6 border border-border-subtle flex-grow">
+                  <h3 style={{ fontSize: '20px', fontWeight: 700 }} className="text-text-white mb-2">
                     Bachelor of Engineering – Electronics Engineering
                   </h3>
-                  <p className="text-text-muted font-semibold mb-4">Mandalay Technological University (MTU/MIT), Myanmar</p>
-
-                  <div className="space-y-3 mb-4">
-                    <p className="text-text-light text-sm">
-                      <span className="text-primary font-semibold">Period:</span> Dec 2016 – Sep 2019
-                    </p>
-                    <p className="text-text-light text-sm">
-                      <span className="text-primary font-semibold">Status:</span> Completed up to 3rd Year
-                    </p>
-                    <p className="text-text-light text-sm">
-                      <span className="text-primary font-semibold">GPA:</span> 3.04
-                    </p>
-                  </div>
-
-                  <div className="border-t border-border-subtle pt-4">
-                    <p className="text-text-muted text-sm">
-                      Strong foundation in engineering principles, circuit design, and technical problem-solving.
-                    </p>
+                  <p className="text-text-muted text-sm mb-4">Mandalay Technological University (MTU/MIT), Myanmar</p>
+                  <div className="space-y-2 text-sm text-text-light">
+                    <p><span className="text-primary font-semibold">Period:</span> Dec 2016 – Sep 2019</p>
+                    <p><span className="text-primary font-semibold">Status:</span> Completed up to 3rd Year</p>
+                    <p><span className="text-primary font-semibold">GPA:</span> 3.04</p>
+                    <p className="text-text-muted">Strong foundation in engineering principles, circuit design, and technical problem-solving.</p>
                   </div>
                 </div>
               </div>
@@ -406,11 +358,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Skills Section */}
+      {/* Tech Stack Section */}
       <section
         id="skills"
         data-section
-        className={`py-24 bg-card/30 relative transition-all duration-700 ${
+        className={`py-24 relative transition-all duration-700 ${
           visibleSections['skills'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
       >
@@ -420,115 +372,97 @@ export default function Home() {
             <h2 className="text-3xl font-bold text-text-white">Tech Stack</h2>
           </div>
 
-          {/* Tech Stack Icon Grid */}
-          <div className="space-y-12">
-            {/* Data Engineering */}
-            <div>
-              <h3 className="text-xl font-bold text-primary mb-6">Data Engineering</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {[
-                  { name: "Apache Spark", icon: "spark" },
-                  { name: "Airflow", icon: "apacheairflow" },
-                  { name: "ETL Pipelines", icon: "flow" },
-                  { name: "Cloud Infrastructure", icon: "cloud" },
-                ].map((tech) => (
-                  <div key={tech.name} className="flex items-center gap-4 p-4 bg-black/30 rounded-lg border border-primary/30 hover:border-primary/60 transition-all duration-300 hover:bg-black/50">
-                    <img src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${tech.icon}/${tech.icon}-original.svg`} alt={tech.name} className="w-10 h-10" onError={(e) => {e.currentTarget.style.display = 'none'}} />
-                    <span className="text-base font-semibold text-text-light">{tech.name}</span>
-                  </div>
-                ))}
-              </div>
+          {/* Data Engineering */}
+          <div className="mb-12">
+            <h3 className="text-primary text-lg font-bold mb-6">Data Engineering</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {[
+                { name: 'Apache Spark', icon: '🔥' },
+                { name: 'Airflow', icon: '⬆️' },
+                { name: 'ETL Pipelines', icon: '🔄' },
+                { name: 'Cloud Infrastructure', icon: '☁️' },
+              ].map((tech) => (
+                <div key={tech.name} className="bg-card rounded-lg p-4 border border-border-subtle hover:border-primary transition-all">
+                  <span className="text-2xl mr-2">{tech.icon}</span>
+                  <span className="text-text-white font-semibold">{tech.name}</span>
+                </div>
+              ))}
             </div>
+          </div>
 
-            {/* Data Science */}
-            <div>
-              <h3 className="text-xl font-bold text-primary mb-6">Data Science</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {[
-                  { name: "Python", icon: "python" },
-                  { name: "Machine Learning", icon: "tensorflow" },
-                  { name: "Scikit-learn", icon: "scikitlearn" },
-                  { name: "Pandas / NumPy", icon: "pandas" },
-                ].map((tech) => (
-                  <div key={tech.name} className="flex items-center gap-4 p-4 bg-black/30 rounded-lg border border-primary/30 hover:border-primary/60 transition-all duration-300 hover:bg-black/50">
-                    <img src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${tech.icon}/${tech.icon}-original.svg`} alt={tech.name} className="w-10 h-10" onError={(e) => {e.currentTarget.style.display = 'none'}} />
-                    <span className="text-base font-semibold text-text-light">{tech.name}</span>
-                  </div>
-                ))}
-              </div>
+          {/* Data Science */}
+          <div className="mb-12">
+            <h3 className="text-primary text-lg font-bold mb-6">Data Science</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {[
+                { name: 'Python', icon: '🐍' },
+                { name: 'Machine Learning', icon: '🤖' },
+                { name: 'Scikit-learn', icon: '📊' },
+                { name: 'Pandas / NumPy', icon: '📈' },
+              ].map((tech) => (
+                <div key={tech.name} className="bg-card rounded-lg p-4 border border-border-subtle hover:border-primary transition-all">
+                  <span className="text-2xl mr-2">{tech.icon}</span>
+                  <span className="text-text-white font-semibold">{tech.name}</span>
+                </div>
+              ))}
             </div>
+          </div>
 
-            {/* Data Analytics */}
-            <div>
-              <h3 className="text-xl font-bold text-primary mb-6">Data Analytics</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {[
-                  { name: "SQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg", fallback: "🗄️" },
-                  { name: "Power BI", icon: "https://cdn.jsdelivr.net/npm/simple-icons@v12/icons/powerbi.svg", fallback: "📊" },
-                  { name: "Tableau", icon: "https://cdn.jsdelivr.net/npm/simple-icons@v12/icons/tableau.svg", fallback: "📈" },
-                  { name: "Statistical Analysis", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/r/r-original.svg", fallback: "📉" },
-                ].map((tech) => (
-                  <div key={tech.name} className="flex items-center gap-4 p-4 bg-black/30 rounded-lg border border-primary/30 hover:border-primary/60 transition-all duration-300 hover:bg-black/50">
-                    <img src={tech.icon} alt={tech.name} className="w-10 h-10" style={{ filter: 'brightness(0) invert(1)' }} onError={(e) => {e.currentTarget.style.display = 'none'}} />
-                    <span className="text-2xl" style={{display: 'none'}}>{tech.fallback}</span>
-                    <span className="text-base font-semibold text-text-light">{tech.name}</span>
-                  </div>
-                ))}
-              </div>
+          {/* Data Analytics */}
+          <div className="mb-12">
+            <h3 className="text-primary text-lg font-bold mb-6">Data Analytics</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {[
+                { name: 'SQL', icon: '🗄️' },
+                { name: 'Power BI', icon: '📊' },
+                { name: 'Tableau', icon: '📉' },
+                { name: 'Statistical Analysis', icon: '📐' },
+              ].map((tech) => (
+                <div key={tech.name} className="bg-card rounded-lg p-4 border border-border-subtle hover:border-primary transition-all">
+                  <span className="text-2xl mr-2">{tech.icon}</span>
+                  <span className="text-text-white font-semibold">{tech.name}</span>
+                </div>
+              ))}
             </div>
+          </div>
 
-            {/* AI & LLMs */}
-            <div>
-              <h3 className="text-xl font-bold text-primary mb-6">AI & LLMs</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {[
-                  { name: "Generative AI & LLMs", icon: "🤖", fallback: "🤖" },
-                  { name: "LangChain", icon: "https://cdn.jsdelivr.net/npm/simple-icons@v12/icons/langchain.svg", fallback: "🔗" },
-                  { name: "Google Gemini", icon: "https://cdn.jsdelivr.net/npm/simple-icons@v12/icons/google.svg", fallback: "✨" },
-                  { name: "RAG (Retrieval-Augmented Generation)", icon: "📚", fallback: "📚" },
-                  { name: "PyTorch", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg", fallback: "🔥" },
-                  { name: "TensorFlow", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg", fallback: "⚡" },
-                  { name: "Google Colab", icon: "https://cdn.jsdelivr.net/npm/simple-icons@v12/icons/googlecolab.svg", fallback: "📓" },
-                  { name: "Streamlit", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/streamlit/streamlit-original.svg", fallback: "🎨" },
-                ].map((tech) => {
-                  const isEmoji = tech.icon.length <= 2;
-                  return (
-                    <div key={tech.name} className="flex items-center gap-4 p-4 bg-black/30 rounded-lg border border-primary/30 hover:border-primary/60 transition-all duration-300 hover:bg-black/50">
-                      {isEmoji ? (
-                        <span className="text-2xl">{tech.icon}</span>
-                      ) : (
-                        <img src={tech.icon} alt={tech.name} className="w-10 h-10" style={{ filter: 'brightness(0) invert(1)' }} onError={(e) => {e.currentTarget.style.display = 'none'; const fallback = document.createElement('span'); fallback.textContent = tech.fallback; fallback.className = 'text-2xl'; e.currentTarget.parentElement?.appendChild(fallback);}} />
-                      )}
-                      <span className="text-base font-semibold text-text-light">{tech.name}</span>
-                    </div>
-                  );
-                })}
-              </div>
+          {/* AI & LLMs */}
+          <div className="mb-12">
+            <h3 className="text-primary text-lg font-bold mb-6">AI & LLMs</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {[
+                { name: 'Generative AI & LLMs', icon: '🤖' },
+                { name: 'LangChain', icon: '🔗' },
+                { name: 'Google Gemini', icon: '✨' },
+                { name: 'RAG (Retrieval-Augmented Generation)', icon: '📚' },
+                { name: 'PyTorch', icon: '🔥' },
+                { name: 'TensorFlow', icon: '⚡' },
+                { name: 'Google Colab', icon: '📓' },
+                { name: 'Streamlit', icon: '🎨' },
+              ].map((tech) => (
+                <div key={tech.name} className="bg-card rounded-lg p-4 border border-border-subtle hover:border-primary transition-all">
+                  <span className="text-2xl mr-2">{tech.icon}</span>
+                  <span className="text-text-white font-semibold">{tech.name}</span>
+                </div>
+              ))}
             </div>
+          </div>
 
-            {/* Cloud & Tools */}
-            <div>
-              <h3 className="text-xl font-bold text-primary mb-6">Cloud & Tools</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {[
-                  { name: "Google Cloud", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg", fallback: "☁️" },
-                  { name: "BigQuery", icon: "https://cdn.jsdelivr.net/npm/simple-icons@v12/icons/googlecloud.svg", fallback: "🔍" },
-                  { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg", fallback: "🐳" },
-                  { name: "Git / GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg", fallback: "🔗" },
-                ].map((tech) => {
-                  const [imageError, setImageError] = useState(false);
-                  return (
-                    <div key={tech.name} className="flex items-center gap-4 p-4 bg-black/30 rounded-lg border border-primary/30 hover:border-primary/60 transition-all duration-300 hover:bg-black/50">
-                      {!imageError ? (
-                        <img src={tech.icon} alt={tech.name} className="w-10 h-10" style={{ filter: tech.name === 'BigQuery' ? 'brightness(0) invert(1)' : 'none' }} onError={() => setImageError(true)} />
-                      ) : (
-                        <span className="text-2xl">{tech.fallback}</span>
-                      )}
-                      <span className="text-base font-semibold text-text-light">{tech.name}</span>
-                    </div>
-                  );
-                })}
-              </div>
+          {/* Cloud & Tools */}
+          <div>
+            <h3 className="text-primary text-lg font-bold mb-6">Cloud & Tools</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {[
+                { name: 'Google Cloud', icon: '☁️' },
+                { name: 'BigQuery', icon: '📊' },
+                { name: 'Docker', icon: '🐳' },
+                { name: 'Git / GitHub', icon: '🔗' },
+              ].map((tech) => (
+                <div key={tech.name} className="bg-card rounded-lg p-4 border border-border-subtle hover:border-primary transition-all">
+                  <span className="text-2xl mr-2">{tech.icon}</span>
+                  <span className="text-text-white font-semibold">{tech.name}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -548,7 +482,7 @@ export default function Home() {
             <h2 className="text-3xl font-bold text-text-white">Languages</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* English */}
             <div className="bg-card rounded-lg p-6 border border-border-subtle hover:border-primary transition-all duration-300">
               <h3 className="text-primary font-bold mb-4 text-base">English</h3>
@@ -692,7 +626,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Certifications Section - Modern Card Grid */}
+      {/* Certifications Section - Horizontal Card Layout with SVG Logos */}
       <section
         id="certifications"
         data-section
@@ -707,13 +641,13 @@ export default function Home() {
             <p className="text-text-muted text-base mt-4">Professional certifications demonstrating expertise in data engineering, analytics, and AI.</p>
           </div>
 
-          {/* Certifications Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Certifications List - Horizontal Cards */}
+          <div className="space-y-4">
             {[
               {
                 title: "IBM Data Engineering Professional Certificate",
                 issuer: "IBM",
-                issuerLogo: "🔵",
+                logoUrl: "https://cdn.simpleicons.org/ibm/0530AD",
                 date: "May 2026",
                 link: "https://www.coursera.org/account/accomplishments/professional-cert/PEQB40RH0NUU",
                 tags: ["Apache Spark", "Airflow", "Python"],
@@ -721,7 +655,7 @@ export default function Home() {
               {
                 title: "Google Data Analytics Professional Certificate",
                 issuer: "Google",
-                issuerLogo: "🔴",
+                logoUrl: "https://cdn.simpleicons.org/google",
                 date: "Mar 2026",
                 link: "https://www.coursera.org/account/accomplishments/professional-cert/CT58UMUB0V4R",
                 tags: ["BigQuery", "Tableau", "SQL"],
@@ -729,15 +663,15 @@ export default function Home() {
               {
                 title: "Crash Course on Python",
                 issuer: "Google",
-                issuerLogo: "🔴",
+                logoUrl: "https://cdn.simpleicons.org/google",
                 date: "Nov 2025",
                 link: "https://www.coursera.org/account/accomplishments/verify/VBZJW4B7JFFQ",
                 tags: ["Python", "OOP", "Debugging"],
               },
               {
                 title: "SQL for Data Science",
-                issuer: "University of California, Davis",
-                issuerLogo: "🎓",
+                issuer: "UC Davis / Coursera",
+                logoUrl: "https://cdn.simpleicons.org/coursera/0056D2",
                 date: "July 2025",
                 link: "https://www.coursera.org/account/accomplishments/verify/KSRTIHE6BHO8",
                 tags: ["SQL", "Database Design", "Queries"],
@@ -745,7 +679,7 @@ export default function Home() {
               {
                 title: "Google Prompting Essentials",
                 issuer: "Google",
-                issuerLogo: "🔴",
+                logoUrl: "https://cdn.simpleicons.org/google",
                 date: "Sep 2025",
                 link: "https://www.coursera.org/account/accomplishments/specialization/HA7IOPDF4WUF",
                 tags: ["Prompt Engineering", "LLMs", "AI"],
@@ -753,7 +687,7 @@ export default function Home() {
               {
                 title: "Google AI Essentials",
                 issuer: "Google",
-                issuerLogo: "🔴",
+                logoUrl: "https://cdn.simpleicons.org/google",
                 date: "Feb 2025",
                 link: "https://www.coursera.org/account/accomplishments/verify/SPPAZGDMT9EO",
                 tags: ["Generative AI", "AI Basics", "Ethics"],
@@ -761,7 +695,7 @@ export default function Home() {
               {
                 title: "Build Data Lakes and Data Warehouses",
                 issuer: "Google Cloud",
-                issuerLogo: "☁️",
+                logoUrl: "https://cdn.simpleicons.org/googlecloud/4285F4",
                 date: "Mar 2026",
                 link: "https://www.coursera.org/account/accomplishments/verify/M8M3B0Y7QGVV",
                 tags: ["Data Warehousing", "Cloud", "Architecture"],
@@ -772,61 +706,64 @@ export default function Home() {
                 href={cert.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative"
+                className="group block"
               >
-                {/* Card Background with Hover Effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                
-                {/* Card Container */}
-                <div className="relative bg-card rounded-xl border-2 border-border-subtle group-hover:border-primary/60 transition-all duration-300 overflow-hidden h-full" style={{
+                {/* Horizontal Card Container */}
+                <div className="relative bg-card rounded-lg border-2 border-border-subtle group-hover:border-primary/60 transition-all duration-300 overflow-hidden" style={{
                   boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)',
-                  transform: 'translateZ(0)',
                 }}>
-                  <div className="p-6 space-y-4 flex flex-col h-full">
-                    {/* Issuer Badge with Logo */}
-                    <div className="flex items-center gap-2">
-                      <span style={{ fontSize: '24px' }}>{cert.issuerLogo}</span>
-                      <span style={{ fontSize: '12px', fontWeight: 600 }} className="text-primary uppercase tracking-wider">
-                        {cert.issuer}
-                      </span>
-                    </div>
-
-                    {/* Title */}
-                    <h3 style={{ fontSize: '18px', fontWeight: 700, lineHeight: '1.4' }} className="text-text-white group-hover:text-primary transition-colors">
-                      {cert.title}
-                    </h3>
-
-                    {/* Date */}
-                    <p style={{ fontSize: '13px', fontWeight: 500 }} className="text-text-muted">
-                      {cert.date}
-                    </p>
-
-                    {/* Tech Tags */}
-                    <div className="flex flex-wrap gap-2 pt-2 mt-auto">
-                      {cert.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          style={{
-                            fontSize: '11px',
-                            fontWeight: 600,
-                            padding: '4px 10px',
-                          }}
-                          className="inline-block bg-primary/10 border border-primary/40 text-primary rounded-full"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-
-                    {/* View Credential Button */}
-                    <div className="flex items-center justify-between pt-4 mt-auto">
-                      <span style={{ fontSize: '12px', fontWeight: 600 }} className="text-primary/70 group-hover:text-primary transition-colors">
-                        View Credential
-                      </span>
-                      <ExternalLink
-                        size={16}
-                        className="text-primary opacity-60 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1"
+                  <div className="flex flex-col md:flex-row items-start md:items-center gap-6 p-6">
+                    {/* Logo Section - Left Side */}
+                    <div className="flex-shrink-0 w-20 h-20 md:w-24 md:h-24 bg-black/20 rounded-lg flex items-center justify-center border border-primary/20">
+                      <img
+                        src={cert.logoUrl}
+                        alt={cert.issuer}
+                        className="w-16 h-16 md:w-20 md:h-20 object-contain"
+                        onError={(e) => {
+                          e.currentTarget.style.display = 'none';
+                        }}
                       />
+                    </div>
+
+                    {/* Content Section - Right Side */}
+                    <div className="flex-grow min-w-0">
+                      {/* Issuer Name */}
+                      <p style={{ fontSize: '12px', fontWeight: 600 }} className="text-primary uppercase tracking-wider mb-2">
+                        {cert.issuer}
+                      </p>
+
+                      {/* Certificate Title */}
+                      <h3 style={{ fontSize: '18px', fontWeight: 700, lineHeight: '1.4' }} className="text-text-white group-hover:text-primary transition-colors mb-2">
+                        {cert.title}
+                      </h3>
+
+                      {/* Date */}
+                      <p style={{ fontSize: '13px', fontWeight: 500 }} className="text-text-muted mb-3">
+                        {cert.date}
+                      </p>
+
+                      {/* Tech Tags */}
+                      <div className="flex flex-wrap gap-2">
+                        {cert.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            style={{
+                              fontSize: '11px',
+                              fontWeight: 600,
+                              padding: '4px 10px',
+                            }}
+                            className="inline-block bg-primary/10 border border-primary/40 text-primary rounded-full"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* View Credential Link - Right */}
+                    <div className="flex-shrink-0 flex items-center gap-2 text-primary/70 group-hover:text-primary transition-colors">
+                      <span style={{ fontSize: '12px', fontWeight: 600 }}>View</span>
+                      <ExternalLink size={16} className="group-hover:translate-x-1 transition-transform" />
                     </div>
                   </div>
                 </div>
@@ -866,28 +803,26 @@ export default function Home() {
                     alt="Volunteer Explainer: Vibe Coding & RAG"
                     className="relative rounded-lg w-full h-auto object-cover shadow-lg"
                   />
-                  <p className="text-text-muted text-sm mt-4 text-center italic">
-                    Receiving a souvenir for correctly solving and explaining the coding problem to the class.
-                  </p>
                 </div>
               </div>
 
               {/* Right: Content */}
-              <div className="flex flex-col justify-center space-y-6">
+              <div className="flex flex-col justify-center space-y-4">
                 <div>
-                  <p className="text-primary text-sm font-mono mb-2">April 18, 2026</p>
+                  <p className="text-primary text-sm font-semibold mb-2">April 18, 2026</p>
                   <h3 className="text-2xl font-bold text-text-white mb-4">
                     Volunteer Explainer: Vibe Coding & RAG
                   </h3>
                 </div>
 
-                <p className="text-text-light leading-relaxed">
+                <p className="text-text-light text-base leading-relaxed">
                   During our Business Data Analytics course (guided by Ajarn Khwunta Kirimasthong), we had an insightful guest lecture on Vibe Coding and RAG. The session was delivered by Asst. Prof. Nongnuch Ketui, Ph.D., who serves as the Vice President of the Artificial Intelligence Association of Thailand (AIAT) and is a prominent AI researcher. During the hands-on activity, I volunteered to solve a data analytics coding problem and explain the logic to the class. It was a rewarding opportunity to share my approach. I was honored to receive a special souvenir from Asst. Prof. Nongnuch in recognition of providing a correct solution and volunteering as an explainer.
                 </p>
 
                 <div className="pt-4 border-t border-border-subtle">
+                  <p className="text-primary font-semibold mb-2">Key Takeaway:</p>
                   <p className="text-text-muted text-sm">
-                    <span className="text-primary font-semibold">Key Takeaway:</span> Collaboration and knowledge sharing are essential in data analytics. This experience reinforced my commitment to continuous learning and helping others understand complex concepts.
+                    Collaboration and knowledge sharing are essential in data analytics. This experience reinforced my commitment to continuous learning and helping others understand complex concepts.
                   </p>
                 </div>
               </div>
@@ -905,15 +840,12 @@ export default function Home() {
         }`}
       >
         <div className="container">
-          <div className="max-w-2xl mx-auto text-center">
-            <div className="mb-8">
-              <p className="text-primary text-sm font-mono tracking-wider uppercase mb-4">
-                Get In Touch
-              </p>
-              <h2 className="text-4xl font-bold text-text-white mb-6">
+          <div className="text-center space-y-8">
+            <div>
+              <h2 className="text-4xl font-bold text-text-white mb-4">
                 Let's build something <span className="text-primary">data-driven</span>
               </h2>
-              <p className="text-text-light text-lg leading-relaxed">
+              <p className="text-text-muted text-lg max-w-2xl mx-auto">
                 I'm currently open to internship and full-time opportunities in Data Engineering, Data Science, or Data Analytics. Feel free to reach out!
               </p>
             </div>
@@ -921,7 +853,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
               <a
                 href="mailto:phyothantkyaw22.pku@gmail.com"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg transition-all duration-300 font-semibold hover:shadow-lg hover:shadow-primary/50"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg transition-all duration-300 font-semibold"
               >
                 <Mail size={20} />
                 Email Me
@@ -939,13 +871,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="py-8 border-t border-border-subtle text-center text-text-muted">
-        <p className="text-sm">
-          © 2025 Phyo Thant Kyaw. All rights reserved.
-        </p>
-      </footer>
     </div>
   );
 }
