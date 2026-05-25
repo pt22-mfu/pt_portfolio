@@ -647,7 +647,7 @@ export default function Home() {
               {
                 title: "IBM Data Engineering Professional Certificate",
                 issuer: "IBM",
-                logoUrl: "https://cdn.simpleicons.org/ibm/0530AD",
+                logoUrl: "https://cdn.simpleicons.org/ibm/0F62FE",
                 date: "May 2026",
                 link: "https://www.coursera.org/account/accomplishments/professional-cert/PEQB40RH0NUU",
                 tags: ["Apache Spark", "Airflow", "Python"],
@@ -655,7 +655,7 @@ export default function Home() {
               {
                 title: "Google Data Analytics Professional Certificate",
                 issuer: "Google",
-                logoUrl: "https://cdn.simpleicons.org/google",
+                logoUrl: "https://cdn.simpleicons.org/google/4285F4",
                 date: "Mar 2026",
                 link: "https://www.coursera.org/account/accomplishments/professional-cert/CT58UMUB0V4R",
                 tags: ["BigQuery", "Tableau", "SQL"],
@@ -663,7 +663,7 @@ export default function Home() {
               {
                 title: "Crash Course on Python",
                 issuer: "Google",
-                logoUrl: "https://cdn.simpleicons.org/google",
+                logoUrl: "https://cdn.simpleicons.org/google/4285F4",
                 date: "Nov 2025",
                 link: "https://www.coursera.org/account/accomplishments/verify/VBZJW4B7JFFQ",
                 tags: ["Python", "OOP", "Debugging"],
@@ -679,7 +679,7 @@ export default function Home() {
               {
                 title: "Google Prompting Essentials",
                 issuer: "Google",
-                logoUrl: "https://cdn.simpleicons.org/google",
+                logoUrl: "https://cdn.simpleicons.org/google/4285F4",
                 date: "Sep 2025",
                 link: "https://www.coursera.org/account/accomplishments/specialization/HA7IOPDF4WUF",
                 tags: ["Prompt Engineering", "LLMs", "AI"],
@@ -687,7 +687,7 @@ export default function Home() {
               {
                 title: "Google AI Essentials",
                 issuer: "Google",
-                logoUrl: "https://cdn.simpleicons.org/google",
+                logoUrl: "https://cdn.simpleicons.org/google/4285F4",
                 date: "Feb 2025",
                 link: "https://www.coursera.org/account/accomplishments/verify/SPPAZGDMT9EO",
                 tags: ["Generative AI", "AI Basics", "Ethics"],
@@ -695,7 +695,7 @@ export default function Home() {
               {
                 title: "Build Data Lakes and Data Warehouses",
                 issuer: "Google Cloud",
-                logoUrl: "https://cdn.simpleicons.org/googlecloud/4285F4",
+                logoUrl: "https://cdn.simpleicons.org/googlecloud/EA4335",
                 date: "Mar 2026",
                 link: "https://www.coursera.org/account/accomplishments/verify/M8M3B0Y7QGVV",
                 tags: ["Data Warehousing", "Cloud", "Architecture"],
