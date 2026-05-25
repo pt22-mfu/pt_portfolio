@@ -695,7 +695,7 @@ export default function Home() {
               {
                 title: "Build Data Lakes and Data Warehouses",
                 issuer: "Google Cloud",
-                logoUrl: "https://cdn.simpleicons.org/googlecloud/EA4335",
+                logoUrl: "/manus-storage/google_cloud_logo_26860e64.webp",
                 date: "Mar 2026",
                 link: "https://www.coursera.org/account/accomplishments/verify/M8M3B0Y7QGVV",
                 tags: ["Data Warehousing", "Cloud", "Architecture"],
