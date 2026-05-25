@@ -671,7 +671,7 @@ export default function Home() {
               {
                 title: "SQL for Data Science",
                 issuer: "UC Davis / Coursera",
-                logoUrl: "https://cdn.simpleicons.org/coursera/0056D2",
+                logoUrl: "/manus-storage/pasted_file_GU9jui_image_33703abb.png",
                 date: "July 2025",
                 link: "https://www.coursera.org/account/accomplishments/verify/KSRTIHE6BHO8",
                 tags: ["SQL", "Database Design", "Queries"],
