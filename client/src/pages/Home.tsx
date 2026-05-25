@@ -692,57 +692,79 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Certifications Section */}
+      {/* Certifications Section - Modern Card Grid */}
       <section
         id="certifications"
         data-section
-        className={`py-24 bg-card/30 relative transition-all duration-700 ${
+        className={`py-24 relative transition-all duration-700 ${
           visibleSections['certifications'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
       >
         <div className="container">
           <div className="mb-16">
             <div className="accent-bar w-16 mb-4" />
-            <h2 className="text-3xl font-bold text-text-white">Certifications</h2>
+            <h2 style={{ fontSize: '32px', fontWeight: 700 }} className="text-text-white">Certifications & Credentials</h2>
+            <p className="text-text-muted text-base mt-4">Professional certifications demonstrating expertise in data engineering, analytics, and AI.</p>
           </div>
 
+          {/* Certifications Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                title: "Python",
-                issuer: "Google",
-                date: "Nov 2025",
-                link: "https://www.coursera.org/account/accomplishments/verify/VBZJW4B7JFFQ",
+                title: "IBM Data Engineering Professional Certificate",
+                issuer: "IBM",
+                issuerLogo: "🔵",
+                date: "May 2026",
+                link: "https://www.coursera.org/account/accomplishments/professional-cert/PEQB40RH0NUU",
+                tags: ["Apache Spark", "Airflow", "Python"],
               },
               {
-                title: "Build Data Lakes and Data Warehouses",
-                issuer: "Google Cloud",
-                date: "Mar 2026",
-                link: "https://www.coursera.org/account/accomplishments/verify/M8M3B0Y7QGVV",
-              },
-              {
-                title: "Google Data Analytics Professional",
+                title: "Google Data Analytics Professional Certificate",
                 issuer: "Google",
+                issuerLogo: "🔴",
                 date: "Mar 2026",
                 link: "https://www.coursera.org/account/accomplishments/professional-cert/CT58UMUB0V4R",
+                tags: ["BigQuery", "Tableau", "SQL"],
+              },
+              {
+                title: "Crash Course on Python",
+                issuer: "Google",
+                issuerLogo: "🔴",
+                date: "Nov 2025",
+                link: "https://www.coursera.org/account/accomplishments/verify/VBZJW4B7JFFQ",
+                tags: ["Python", "OOP", "Debugging"],
               },
               {
                 title: "SQL for Data Science",
-                issuer: "University of California",
+                issuer: "University of California, Davis",
+                issuerLogo: "🎓",
                 date: "July 2025",
                 link: "https://www.coursera.org/account/accomplishments/verify/KSRTIHE6BHO8",
+                tags: ["SQL", "Database Design", "Queries"],
               },
               {
                 title: "Google Prompting Essentials",
                 issuer: "Google",
+                issuerLogo: "🔴",
                 date: "Sep 2025",
                 link: "https://www.coursera.org/account/accomplishments/specialization/HA7IOPDF4WUF",
+                tags: ["Prompt Engineering", "LLMs", "AI"],
               },
               {
                 title: "Google AI Essentials",
                 issuer: "Google",
+                issuerLogo: "🔴",
                 date: "Feb 2025",
                 link: "https://www.coursera.org/account/accomplishments/verify/SPPAZGDMT9EO",
+                tags: ["Generative AI", "AI Basics", "Ethics"],
+              },
+              {
+                title: "Build Data Lakes and Data Warehouses",
+                issuer: "Google Cloud",
+                issuerLogo: "☁️",
+                date: "Mar 2026",
+                link: "https://www.coursera.org/account/accomplishments/verify/M8M3B0Y7QGVV",
+                tags: ["Data Warehousing", "Cloud", "Architecture"],
               },
             ].map((cert, index) => (
               <a
@@ -750,18 +772,64 @@ export default function Home() {
                 href={cert.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group bg-card rounded-lg p-6 border border-border-subtle hover:border-primary transition-all duration-300 cursor-pointer hover:shadow-lg hover:shadow-primary/20"
+                className="group relative"
               >
-                <div className="flex items-start justify-between mb-4">
-                  <div>
-                    <p className="text-primary text-sm font-mono mb-1">{cert.issuer}</p>
-                    <h4 className="text-lg font-bold text-text-white group-hover:text-primary transition-colors">
+                {/* Card Background with Hover Effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                
+                {/* Card Container */}
+                <div className="relative bg-card rounded-xl border-2 border-border-subtle group-hover:border-primary/60 transition-all duration-300 overflow-hidden h-full" style={{
+                  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)',
+                  transform: 'translateZ(0)',
+                }}>
+                  <div className="p-6 space-y-4 flex flex-col h-full">
+                    {/* Issuer Badge with Logo */}
+                    <div className="flex items-center gap-2">
+                      <span style={{ fontSize: '24px' }}>{cert.issuerLogo}</span>
+                      <span style={{ fontSize: '12px', fontWeight: 600 }} className="text-primary uppercase tracking-wider">
+                        {cert.issuer}
+                      </span>
+                    </div>
+
+                    {/* Title */}
+                    <h3 style={{ fontSize: '18px', fontWeight: 700, lineHeight: '1.4' }} className="text-text-white group-hover:text-primary transition-colors">
                       {cert.title}
-                    </h4>
+                    </h3>
+
+                    {/* Date */}
+                    <p style={{ fontSize: '13px', fontWeight: 500 }} className="text-text-muted">
+                      {cert.date}
+                    </p>
+
+                    {/* Tech Tags */}
+                    <div className="flex flex-wrap gap-2 pt-2 mt-auto">
+                      {cert.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          style={{
+                            fontSize: '11px',
+                            fontWeight: 600,
+                            padding: '4px 10px',
+                          }}
+                          className="inline-block bg-primary/10 border border-primary/40 text-primary rounded-full"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* View Credential Button */}
+                    <div className="flex items-center justify-between pt-4 mt-auto">
+                      <span style={{ fontSize: '12px', fontWeight: 600 }} className="text-primary/70 group-hover:text-primary transition-colors">
+                        View Credential
+                      </span>
+                      <ExternalLink
+                        size={16}
+                        className="text-primary opacity-60 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1"
+                      />
+                    </div>
                   </div>
-                  <ExternalLink className="text-primary opacity-0 group-hover:opacity-100 transition-opacity" size={20} />
                 </div>
-                <p className="text-text-muted text-sm">{cert.date}</p>
               </a>
             ))}
           </div>
