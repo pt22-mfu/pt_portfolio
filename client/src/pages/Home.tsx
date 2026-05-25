@@ -647,7 +647,7 @@ export default function Home() {
               {
                 title: "IBM Data Engineering Professional Certificate",
                 issuer: "IBM",
-                logoUrl: "https://cdn.simpleicons.org/ibm/0F62FE",
+                logoUrl: "/manus-storage/ibm_official_logo_89ae39a2.webp",
                 date: "May 2026",
                 link: "https://www.coursera.org/account/accomplishments/professional-cert/PEQB40RH0NUU",
                 tags: ["Apache Spark", "Airflow", "Python"],
