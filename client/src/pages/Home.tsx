@@ -655,7 +655,7 @@ export default function Home() {
               {
                 title: "Google Data Analytics Professional Certificate",
                 issuer: "Google",
-                logoUrl: "https://cdn.simpleicons.org/google/4285F4",
+                logoUrl: "/manus-storage/pasted_file_ObW2XW_image_b718fe37.png",
                 date: "Mar 2026",
                 link: "https://www.coursera.org/account/accomplishments/professional-cert/CT58UMUB0V4R",
                 tags: ["BigQuery", "Tableau", "SQL"],
@@ -663,7 +663,7 @@ export default function Home() {
               {
                 title: "Crash Course on Python",
                 issuer: "Google",
-                logoUrl: "https://cdn.simpleicons.org/google/4285F4",
+                logoUrl: "/manus-storage/pasted_file_ObW2XW_image_b718fe37.png",
                 date: "Nov 2025",
                 link: "https://www.coursera.org/account/accomplishments/verify/VBZJW4B7JFFQ",
                 tags: ["Python", "OOP", "Debugging"],
@@ -679,7 +679,7 @@ export default function Home() {
               {
                 title: "Google Prompting Essentials",
                 issuer: "Google",
-                logoUrl: "https://cdn.simpleicons.org/google/4285F4",
+                logoUrl: "/manus-storage/pasted_file_ObW2XW_image_b718fe37.png",
                 date: "Sep 2025",
                 link: "https://www.coursera.org/account/accomplishments/specialization/HA7IOPDF4WUF",
                 tags: ["Prompt Engineering", "LLMs", "AI"],
@@ -687,7 +687,7 @@ export default function Home() {
               {
                 title: "Google AI Essentials",
                 issuer: "Google",
-                logoUrl: "https://cdn.simpleicons.org/google/4285F4",
+                logoUrl: "/manus-storage/pasted_file_ObW2XW_image_b718fe37.png",
                 date: "Feb 2025",
                 link: "https://www.coursera.org/account/accomplishments/verify/SPPAZGDMT9EO",
                 tags: ["Generative AI", "AI Basics", "Ethics"],
