@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Mail, Github, ExternalLink, ChevronDown, Download, Linkedin, Zap, Database, BarChart3, Brain, Cloud, Code2, GitBranch, BookOpen, Sparkles, Cpu, Flame, Link2, LayoutGrid, Gauge, MapPin } from "lucide-react";
+import { Mail, Github, ExternalLink, ChevronDown, Download, Linkedin, Zap, Database, BarChart3, Brain, Cloud, Code2, GitBranch, BookOpen, Sparkles, Cpu, Flame, Link2, LayoutGrid, Gauge, MapPin, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 /**
@@ -12,6 +12,7 @@ import { useEffect, useState } from "react";
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [visibleSections, setVisibleSections] = useState<Record<string, boolean>>({});
+  const [selectedProject, setSelectedProject] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -568,7 +569,7 @@ export default function Home() {
                   </a>
                   <button
                     className="inline-flex items-center justify-center gap-2 px-4 py-3 border-2 border-primary/50 text-primary/70 hover:border-primary hover:text-primary rounded-lg transition-all duration-300 font-semibold text-sm flex-1"
-                    onClick={() => alert('See Details feature coming soon')}
+                    onClick={() => setSelectedProject('mfu-pm25')}
                   >
                     <ExternalLink size={18} />
                     See Details
@@ -621,7 +622,7 @@ export default function Home() {
                   </a>
                   <button
                     className="inline-flex items-center justify-center gap-2 px-4 py-3 border-2 border-primary/50 text-primary/70 hover:border-primary hover:text-primary rounded-lg transition-all duration-300 font-semibold text-sm flex-1"
-                    onClick={() => alert('See Details feature coming soon')}
+                    onClick={() => setSelectedProject('chiang-mai')}
                   >
                     <ExternalLink size={18} />
                     See Details
@@ -632,6 +633,169 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Project Details Modal */}
+      {selectedProject && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+          <div className="bg-card rounded-xl border-2 border-primary/50 max-w-3xl w-full max-h-[90vh] overflow-y-auto" style={{
+            boxShadow: '0 0 40px rgba(0, 212, 255, 0.3)'
+          }}>
+            <div className="sticky top-0 bg-card border-b border-primary/30 flex items-center justify-between p-6">
+              <h2 className="text-2xl font-bold text-text-white">
+                {selectedProject === 'mfu-pm25' ? 'MFU PM2.5 GeoAI Warning System' : 'Chiang Mai Tri-Node Zone'}
+              </h2>
+              <button
+                onClick={() => setSelectedProject(null)}
+                className="p-2 hover:bg-primary/10 rounded-lg transition-all"
+              >
+                <X size={24} className="text-primary" />
+              </button>
+            </div>
+
+            <div className="p-8 space-y-8">
+              {selectedProject === 'mfu-pm25' ? (
+                <>
+                  <div className="space-y-4">
+                    <h3 className="text-xl font-bold text-primary">Overview</h3>
+                    <p className="text-text-light leading-relaxed">
+                      Traditional weather-only models often fail to predict PM2.5 spikes in localized valleys like the MFU microclimate. To solve this, I architected an end-to-end GeoAI Warning System that actively integrates meteorological data with real-time satellite fire hotspots, achieving an 85.90% prediction accuracy for 5-day proactive forecasting.
+                    </p>
+                  </div>
+
+                  <div className="space-y-4">
+                    <h3 className="text-xl font-bold text-primary">Automated ETL & Feature Engineering</h3>
+                    <p className="text-text-light leading-relaxed">
+                      Engineered a robust data pipeline ingesting real-time data from OpenWeather API and NASA FIRMS (VIIRS). Created 18 unique features, including a custom "Distance-Decay Fire Pressure Index" to quantify regional agricultural burning impact.
+                    </p>
+                  </div>
+
+                  <div className="space-y-4">
+                    <h3 className="text-xl font-bold text-primary">4-Model Defense Showdown</h3>
+                    <p className="text-text-light leading-relaxed">
+                      Designed a dynamic scientific pipeline evaluating a LightGBM Champion Model against XGBoost, SVR, and MLR to scientifically justify the necessity of non-linear tree-based algorithms.
+                    </p>
+                  </div>
+
+                  <div className="space-y-4">
+                    <h3 className="text-xl font-bold text-primary">Generative AI Campus Advisory</h3>
+                    <p className="text-text-light leading-relaxed">
+                      Integrated Google Gemini API to serve as a Mitigation Copilot, translating complex spatial data into actionable, multi-lingual situational advisories with a robust fallback mechanism for 100% uptime.
+                    </p>
+                  </div>
+
+                  <div className="space-y-4">
+                    <h3 className="text-xl font-bold text-primary">Geospatial Visualization</h3>
+                    <p className="text-text-light leading-relaxed">
+                      Integrated the GISTDA Sphere Map API to render interactive, localized prediction boundaries and nearby fire activity.
+                    </p>
+                  </div>
+
+                  <div className="space-y-4 pt-4 border-t border-primary/30">
+                    <h3 className="text-lg font-bold text-primary">Tech Stack</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {['Python', 'LightGBM', 'Streamlit', 'NASA FIRMS', 'OpenWeather API', 'Gemini AI', 'GISTDA'].map((tech) => (
+                        <span key={tech} className="inline-block px-3 py-1.5 bg-black/40 border border-primary/50 rounded-full text-primary text-xs font-semibold">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row gap-3 pt-4">
+                    <a
+                      href="https://mfu-pm25-geoai-warning-system.streamlit.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 px-4 py-3 bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg transition-all duration-300 font-semibold text-sm flex-1"
+                    >
+                      <Sparkles size={18} />
+                      Live Dashboard
+                    </a>
+                    <a
+                      href="https://github.com/pt22-mfu/mfu-pm25-geoai-warning"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 px-4 py-3 border-2 border-primary text-primary hover:bg-primary/10 rounded-lg transition-all duration-300 font-semibold text-sm flex-1"
+                    >
+                      <Github size={18} />
+                      GitHub Repo
+                    </a>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="space-y-4">
+                    <h3 className="text-xl font-bold text-primary">Overview</h3>
+                    <p className="text-text-light leading-relaxed">
+                      Developed for the Geospatial Intelligence for Resilience Hackathon, this system solves the challenge of forecasting where PM2.5 will accumulate based on wind direction and topography in the Chiang Mai basin.
+                    </p>
+                  </div>
+
+                  <div className="space-y-4">
+                    <h3 className="text-xl font-bold text-primary">Tri-Node Spatial Architecture</h3>
+                    <p className="text-text-light leading-relaxed">
+                      Divided the target area into three distinct forecast zones (Z1: City, Z2: Doi Suthep, Z3: Mae Rim).
+                    </p>
+                  </div>
+
+                  <div className="space-y-4">
+                    <h3 className="text-xl font-bold text-primary">Spatial Threat Scoring</h3>
+                    <p className="text-text-light leading-relaxed">
+                      Engineered a dynamic threat scoring logic that assigns higher weights to severe fire hotspots based on Fire Radiative Power (FRP) and their physical proximity to the Tri-Node zones.
+                    </p>
+                  </div>
+
+                  <div className="space-y-4">
+                    <h3 className="text-xl font-bold text-primary">Wind-Guided AI Predictions</h3>
+                    <p className="text-text-light leading-relaxed">
+                      The XGBoost model actively adjusts pollution risk levels dynamically. For instance, if real-time wind patterns shift from the north, the system automatically elevates the risk for southern urban zones.
+                    </p>
+                  </div>
+
+                  <div className="space-y-4">
+                    <h3 className="text-xl font-bold text-primary">Generative AI Mitigation Copilot</h3>
+                    <p className="text-text-light leading-relaxed">
+                      Built a "What-If Simulator" for local government authorities. The LLM acts as a virtual consultant, evaluating the AI's predictions to recommend proactive resource allocations (e.g., dispatching water trucks to vulnerable areas or ordering targeted school closures) before pollution reaches critical levels.
+                    </p>
+                  </div>
+
+                  <div className="space-y-4 pt-4 border-t border-primary/30">
+                    <h3 className="text-lg font-bold text-primary">Tech Stack</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {['Python', 'XGBoost', 'Streamlit', 'LangChain', 'Google Gemini', 'NASA FIRMS', 'GISTDA'].map((tech) => (
+                        <span key={tech} className="inline-block px-3 py-1.5 bg-black/40 border border-primary/50 rounded-full text-primary text-xs font-semibold">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row gap-3 pt-4">
+                    <a
+                      href="https://chiangmai-trinode-zone-pm25-prediction.streamlit.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 px-4 py-3 bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg transition-all duration-300 font-semibold text-sm flex-1"
+                    >
+                      <Sparkles size={18} />
+                      Live Dashboard
+                    </a>
+                    <a
+                      href="https://github.com/pt22-mfu/chiangmai-trinode-pm25"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 px-4 py-3 border-2 border-primary text-primary hover:bg-primary/10 rounded-lg transition-all duration-300 font-semibold text-sm flex-1"
+                    >
+                      <Github size={18} />
+                      GitHub Repo
+                    </a>
+                  </div>
+                </>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Certifications Section */}
       <section
