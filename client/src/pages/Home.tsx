@@ -312,16 +312,7 @@ export default function Home() {
                     <p><span className="text-primary font-semibold">Focus:</span> Data Engineering, Cloud Infrastructure</p>
                     <p><span className="text-primary font-semibold">Expected Graduation:</span> 2027</p>
                   </div>
-                  <div className="mt-4 pt-4 border-t border-border-subtle">
-                    <p className="text-text-muted text-sm font-semibold mb-3">Relevant Coursework:</p>
-                    <div className="flex flex-wrap gap-2">
-                      {['Data Structures & Algorithms', 'Database Systems', 'Business Data Analytics', 'Cloud Computing', 'Software Engineering'].map((course) => (
-                        <span key={course} className="text-xs bg-primary/10 border border-primary/40 text-primary px-3 py-1.5 rounded-full font-medium">
-                          {course}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+
                 </div>
               </div>
 
