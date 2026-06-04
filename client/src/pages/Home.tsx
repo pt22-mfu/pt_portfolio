@@ -296,11 +296,16 @@ export default function Home() {
                   <div className="w-1 h-32 bg-gradient-to-b from-primary to-primary/30 mt-4" />
                 </div>
                 <div className="bg-card rounded-lg p-6 border border-primary/30 flex-grow">
-                  <p className="text-primary text-sm font-semibold mb-2">Currently Enrolled</p>
-                  <h3 className="text-xl font-bold text-text-white mb-2">
-                    Bachelor of Engineering – Computer Engineering
-                  </h3>
-                  <p className="text-text-muted text-sm mb-4">Mae Fah Luang University (MFU), Chiang Rai, Thailand</p>
+                  <div className="flex items-start gap-4 mb-4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsUV1OLFzikxsMB_iue3priwGmciZc_MEnGw&s" alt="MFU Logo" className="w-14 h-14 object-contain flex-shrink-0" />
+                    <div className="flex-grow">
+                      <p className="text-primary text-sm font-semibold mb-2">Currently Enrolled</p>
+                      <h3 className="text-xl font-bold text-text-white mb-1">
+                        Bachelor of Engineering – Computer Engineering
+                      </h3>
+                      <p className="text-text-muted text-sm">Mae Fah Luang University (MFU), Chiang Rai, Thailand</p>
+                    </div>
+                  </div>
                   <div className="space-y-2 text-sm text-text-light">
                     <p><span className="text-primary font-semibold">Status:</span> Currently 4th Year Student</p>
                     <p><span className="text-primary font-semibold">GPAX:</span> <span className="text-primary font-bold">3.84</span></p>
@@ -328,10 +333,15 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="bg-card rounded-lg p-6 border border-border-subtle flex-grow">
-                  <h3 className="text-xl font-bold text-text-white mb-2">
-                    Bachelor of Engineering – Electronics Engineering
-                  </h3>
-                  <p className="text-text-muted text-sm mb-4">Mandalay Technological University (MTU/MIT), Myanmar</p>
+                  <div className="flex items-start gap-4 mb-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/1/11/Logo_of_MTU.png" alt="MTU Logo" className="w-14 h-14 object-contain flex-shrink-0" />
+                    <div className="flex-grow">
+                      <h3 className="text-xl font-bold text-text-white mb-1">
+                        Bachelor of Engineering – Electronics Engineering
+                      </h3>
+                      <p className="text-text-muted text-sm">Mandalay Technological University (MTU/MIT), Myanmar</p>
+                    </div>
+                  </div>
                   <div className="space-y-2 text-sm text-text-light">
                     <p><span className="text-primary font-semibold">Period:</span> Dec 2016 – Sep 2019</p>
                     <p><span className="text-primary font-semibold">Status:</span> Completed up to 3rd Year</p>
@@ -531,7 +541,7 @@ export default function Home() {
             }}>
               <div className="p-8 space-y-6">
                 <h3 className="text-2xl font-bold text-text-white leading-tight">
-                  MFU PM2.5 GeoAI Warning System (Champion Model)
+                  MFU PM2.5 GeoAI Warning System
                 </h3>
 
                 <p className="text-text-light text-base leading-relaxed">
