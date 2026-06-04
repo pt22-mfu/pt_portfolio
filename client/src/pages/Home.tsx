@@ -42,7 +42,7 @@ export default function Home() {
           isScrolled ? "bg-background/80 backdrop-blur-md border-b border-border-subtle" : ""
         }`}
       >
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-4">
+        <div className="container max-w-7xl mx-auto px-4 px-6 px-8 flex items-center justify-between py-4">
           <div className="text-2xl font-bold">
             <span className="text-primary">PT</span>
           </div>
@@ -60,7 +60,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
         <div
-          className="absolute inset-0 data-grid-bg"
+          className="absolute inset-0 "
           style={{
             backgroundImage: `url('https://d2xsxph8kpxj0f.cloudfront.net/310519663493646000/aW35T6wqwCw6MNGKZMLhKb/hero-bg-buFoMFUDwY8UzpxRWTJzGb.webp')`,
             backgroundSize: "cover",
@@ -70,7 +70,7 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/50 to-background" />
 
-        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto px-4 px-6 px-8 py-20">
           {/* Left: Text Content */}
           <div className="space-y-8 animate-in">
             <div className="space-y-4">
@@ -131,13 +131,13 @@ export default function Home() {
                 href="https://github.com/pt22-mfu"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full border-2 border-primary flex items-center justify-center hover:bg-primary/10 transition-all duration-300"
+                className="w-12 rounded-full border-2 border-primary flex items-center justify-center hover:bg-primary/10 transition-all duration-300"
               >
                 <Github size={20} className="text-primary" />
               </a>
               <a
                 href="mailto:phyothantkyaw22.pku@gmail.com"
-                className="w-12 h-12 rounded-full border-2 border-primary flex items-center justify-center hover:bg-primary/10 transition-all duration-300"
+                className="w-12 rounded-full border-2 border-primary flex items-center justify-center hover:bg-primary/10 transition-all duration-300"
               >
                 <Mail size={20} className="text-primary" />
               </a>
@@ -145,7 +145,7 @@ export default function Home() {
                 href="https://www.linkedin.com/in/phyo-thant-kyaw-2816332a4/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full border-2 border-primary flex items-center justify-center hover:bg-primary/10 transition-all duration-300"
+                className="w-12 rounded-full border-2 border-primary flex items-center justify-center hover:bg-primary/10 transition-all duration-300"
               >
                 <Linkedin size={20} className="text-primary" />
               </a>
@@ -183,7 +183,7 @@ export default function Home() {
           visibleSections['about'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
       >
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container max-w-7xl mx-auto px-4 px-6 px-8">
           <div className="mb-16">
             <div className="accent-bar w-16 mb-4" />
             <h2 className="text-3xl font-bold text-text-white">About Me</h2>
@@ -232,7 +232,7 @@ export default function Home() {
           visibleSections['experience'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
       >
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container max-w-7xl mx-auto px-4 px-6 px-8">
           <div className="mb-16">
             <div className="accent-bar w-16 mb-4" />
             <h2 className="text-3xl font-bold text-text-white">Experience</h2>
@@ -279,7 +279,7 @@ export default function Home() {
           visibleSections['education'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
       >
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container max-w-7xl mx-auto px-4 px-6 px-8">
           <div className="mb-16">
             <div className="accent-bar w-16 mb-4" />
             <h2 className="text-3xl font-bold text-text-white">Academic Background</h2>
@@ -290,7 +290,7 @@ export default function Home() {
               {/* MFU - Current */}
               <div className="flex gap-8">
                 <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-background font-bold text-lg">
+                  <div className="w-12 rounded-full bg-primary flex items-center justify-center text-background font-bold text-lg">
                     2023
                   </div>
                   <div className="w-1 h-32 bg-gradient-to-b from-primary to-primary/30 mt-4" />
@@ -319,7 +319,7 @@ export default function Home() {
               {/* MTU - Previous */}
               <div className="flex gap-8">
                 <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 rounded-full bg-primary/50 flex items-center justify-center text-background font-bold text-lg">
+                  <div className="w-12 rounded-full bg-primary/50 flex items-center justify-center text-background font-bold text-lg">
                     2019
                   </div>
                 </div>
@@ -354,7 +354,7 @@ export default function Home() {
           visibleSections['skills'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
       >
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container max-w-7xl mx-auto px-4 px-6 px-8">
           <div className="mb-16">
             <div className="accent-bar w-16 mb-4" />
             <h2 className="text-3xl font-bold text-text-white">Tech Stack</h2>
@@ -489,7 +489,7 @@ export default function Home() {
           visibleSections['languages'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
       >
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container max-w-7xl mx-auto px-4 px-6 px-8">
           <div className="mb-16">
             <div className="accent-bar w-16 mb-4" />
             <h2 className="text-3xl font-bold text-text-white">Languages</h2>
@@ -518,7 +518,7 @@ export default function Home() {
           visibleSections['projects'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
       >
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container max-w-7xl mx-auto px-4 px-6 px-8">
           <div className="mb-16">
             <div className="accent-bar w-16 mb-4" />
             <h2 className="text-3xl font-bold text-text-white">Featured Projects</h2>
@@ -806,7 +806,7 @@ export default function Home() {
           visibleSections['certifications'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
       >
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container max-w-7xl mx-auto px-4 px-6 px-8">
           <div className="mb-16">
             <div className="accent-bar w-16 mb-4" />
             <h2 className="text-3xl font-bold text-text-white">Certifications & Credentials</h2>
@@ -940,7 +940,7 @@ export default function Home() {
           visibleSections['activities'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
       >
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container max-w-7xl mx-auto px-4 px-6 px-8">
           <div className="mb-16">
             <p className="text-primary text-sm font-mono tracking-wider uppercase mb-4">
               Beyond the Classroom
@@ -997,7 +997,7 @@ export default function Home() {
           visibleSections['contact'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
       >
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container max-w-7xl mx-auto px-4 px-6 px-8">
           <div className="text-center space-y-8">
             <div>
               <h2 className="text-4xl font-bold text-text-white mb-4">

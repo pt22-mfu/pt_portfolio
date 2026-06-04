@@ -1,11 +1,11 @@
-@import "tailwindcss";
+@tailwind base;
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
 /* PT Portfolio Design System */
-/* Cyberpunk Minimalism with Cyan Glow Accents */
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap');
+/* Professional Navy, White, and Slate Enterprise Aesthetic */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -47,146 +47,144 @@
 }
 
 :root {
-  /* Cyberpunk Minimalism Color Palette */
-  --primary: #00d4ff; /* Cyan Glow */
-  --primary-foreground: #0f1419; /* Deep Charcoal */
-  --sidebar-primary: #00a8cc; /* Teal Accent */
-  --sidebar-primary-foreground: #e8e8e8; /* Off-white */
-  --chart-1: #00d4ff;
-  --chart-2: #00a8cc;
-  --chart-3: #0088aa;
-  --chart-4: #006688;
-  --chart-5: #004466;
-  --radius: 0.65rem;
-  --background: #0f1419; /* Deep Charcoal */
-  --foreground: #e8e8e8; /* Off-white */
-  --card: #1a2332; /* Slightly lighter charcoal */
-  --card-foreground: #e8e8e8;
-  --popover: #1a2332;
-  --popover-foreground: #e8e8e8;
-  --secondary: #00a8cc; /* Teal */
-  --secondary-foreground: #0f1419;
-  --muted: #3a4a5a; /* Muted gray */
-  --muted-foreground: #a0b0c0; /* Light gray */
-  --accent: #00d4ff; /* Cyan Glow */
-  --accent-foreground: #0f1419;
-  --destructive: #ff4444;
+  /* Navy, White, and Slate Professional Palette */
+  --primary: #1e3a8a; /* Royal Blue */
+  --primary-foreground: #ffffff;
+  --sidebar-primary: #1e3a8a;
+  --sidebar-primary-foreground: #ffffff;
+  --chart-1: #1e3a8a;
+  --chart-2: #3b82f6;
+  --chart-3: #60a5fa;
+  --chart-4: #93c5fd;
+  --chart-5: #dbeafe;
+  --radius: 0.5rem;
+  --background: #f4f7f9; /* Clean Light Background */
+  --foreground: #0f172a; /* Deep Navy Blue */
+  --card: #ffffff; /* Pure White */
+  --card-foreground: #0f172a;
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
+  --secondary: #475569; /* Muted Slate */
+  --secondary-foreground: #ffffff;
+  --muted: #dbe3ea; /* Subtle Border */
+  --muted-foreground: #475569;
+  --accent: #1e3a8a; /* Royal Blue */
+  --accent-foreground: #ffffff;
+  --destructive: #dc2626;
   --destructive-foreground: #ffffff;
-  --border: #2a3a4a; /* Subtle border */
-  --input: #1a2332;
-  --ring: #00d4ff;
-  --sidebar: #1a2332;
-  --sidebar-foreground: #e8e8e8;
-  --sidebar-accent: #00d4ff;
-  --sidebar-accent-foreground: #0f1419;
-  --sidebar-border: #2a3a4a;
-  --sidebar-ring: #00d4ff;
+  --border: #dbe3ea; /* Subtle Border */
+  --input: #f4f7f9;
+  --ring: #1e3a8a;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #0f172a;
+  --sidebar-accent: #1e3a8a;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #dbe3ea;
+  --sidebar-ring: #1e3a8a;
   
   /* Custom PT Portfolio Tokens */
-  --glow-cyan: #00d4ff;
-  --glow-teal: #00a8cc;
-  --dark-bg: #0f1419;
-  --card-bg: #1a2332;
-  --text-light: #e8e8e8;
-  --text-white: #ffffff;
-  --text-muted: #a0b0c0;
-  --border-subtle: #2a3a4a;
+  --navy-dark: #0f172a;
+  --navy-primary: #1e3a8a;
+  --slate-muted: #475569;
+  --white-pure: #ffffff;
+  --bg-light: #f4f7f9;
+  --border-subtle: #dbe3ea;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --status-good: #15803d;
+  --status-moderate: #b7791f;
+  --status-unhealthy: #dc2626;
+  --status-hazardous: #7e22ce;
 }
 
 :root.light {
-  /* Light theme for accessibility */
-  --primary: #0088aa; /* Darker teal for light bg */
+  /* Light theme (default) */
+  --primary: #1e3a8a;
   --primary-foreground: #ffffff;
-  --sidebar-primary: #0066aa;
+  --sidebar-primary: #1e3a8a;
   --sidebar-primary-foreground: #ffffff;
-  --background: #f5f7fa; /* Light gray-blue */
-  --foreground: #1a2332; /* Dark text */
-  --card: #ffffff; /* White cards */
-  --card-foreground: #1a2332;
+  --background: #f4f7f9;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
   --popover: #ffffff;
-  --popover-foreground: #1a2332;
-  --secondary: #0088aa;
+  --popover-foreground: #0f172a;
+  --secondary: #475569;
   --secondary-foreground: #ffffff;
-  --muted: #d0d8e0; /* Light gray */
-  --muted-foreground: #5a6a7a; /* Dark gray */
-  --accent: #0088aa; /* Teal accent */
+  --muted: #dbe3ea;
+  --muted-foreground: #475569;
+  --accent: #1e3a8a;
   --accent-foreground: #ffffff;
-  --destructive: #dd3333;
+  --destructive: #dc2626;
   --destructive-foreground: #ffffff;
-  --border: #e0e8f0; /* Light border */
-  --input: #f0f4f8;
-  --ring: #0088aa;
-  --chart-1: #0088aa;
-  --chart-2: #00a8cc;
-  --chart-3: #00d4ff;
-  --chart-4: #66ddff;
-  --chart-5: #99eeff;
+  --border: #dbe3ea;
+  --input: #f4f7f9;
+  --ring: #1e3a8a;
+  --chart-1: #1e3a8a;
+  --chart-2: #3b82f6;
+  --chart-3: #60a5fa;
+  --chart-4: #93c5fd;
+  --chart-5: #dbeafe;
   --sidebar: #ffffff;
-  --sidebar-foreground: #1a2332;
-  --sidebar-accent: #0088aa;
+  --sidebar-foreground: #0f172a;
+  --sidebar-accent: #1e3a8a;
   --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: #e0e8f0;
-  --sidebar-ring: #0088aa;
-  
-  /* Custom PT Portfolio Tokens - Light */
-  --glow-cyan: #0088aa;
-  --glow-teal: #0066aa;
-  --dark-bg: #f5f7fa;
-  --card-bg: #ffffff;
-  --text-light: #1a2332;
-  --text-white: #000000;
-  --text-muted: #5a6a7a;
-  --border-subtle: #e0e8f0;
+  --sidebar-border: #dbe3ea;
+  --sidebar-ring: #1e3a8a;
 }
 
 .dark {
-  /* Dark theme is default for PT Portfolio */
-  --primary: #00d4ff;
-  --primary-foreground: #0f1419;
-  --sidebar-primary: #00a8cc;
-  --sidebar-primary-foreground: #e8e8e8;
-  --background: #0f1419;
-  --foreground: #e8e8e8;
-  --card: #1a2332;
-  --card-foreground: #e8e8e8;
-  --popover: #1a2332;
-  --popover-foreground: #e8e8e8;
-  --secondary: #00a8cc;
-  --secondary-foreground: #0f1419;
-  --muted: #3a4a5a;
-  --muted-foreground: #a0b0c0;
-  --accent: #00d4ff;
-  --accent-foreground: #0f1419;
-  --destructive: #ff4444;
+  /* Dark theme alternative */
+  --primary: #1e3a8a;
+  --primary-foreground: #ffffff;
+  --sidebar-primary: #1e3a8a;
+  --sidebar-primary-foreground: #ffffff;
+  --background: #f4f7f9;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
+  --secondary: #475569;
+  --secondary-foreground: #ffffff;
+  --muted: #dbe3ea;
+  --muted-foreground: #475569;
+  --accent: #1e3a8a;
+  --accent-foreground: #ffffff;
+  --destructive: #dc2626;
   --destructive-foreground: #ffffff;
-  --border: #2a3a4a;
-  --input: #1a2332;
-  --ring: #00d4ff;
-  --chart-1: #00d4ff;
-  --chart-2: #00a8cc;
-  --chart-3: #0088aa;
-  --chart-4: #006688;
-  --chart-5: #004466;
-  --sidebar: #1a2332;
-  --sidebar-foreground: #e8e8e8;
-  --sidebar-accent: #00d4ff;
-  --sidebar-accent-foreground: #0f1419;
-  --sidebar-border: #2a3a4a;
-  --sidebar-ring: #00d4ff;
+  --border: #dbe3ea;
+  --input: #f4f7f9;
+  --ring: #1e3a8a;
+  --chart-1: #1e3a8a;
+  --chart-2: #3b82f6;
+  --chart-3: #60a5fa;
+  --chart-4: #93c5fd;
+  --chart-5: #dbeafe;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #0f172a;
+  --sidebar-accent: #1e3a8a;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #dbe3ea;
+  --sidebar-ring: #1e3a8a;
 }
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    border-color: var(--border);
+    outline-color: rgba(30, 58, 138, 0.5);
   }
   body {
-    @apply bg-background text-foreground font-sans;
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: 'Inter', sans-serif;
   }
   
   /* Typography System */
-  /* Strict Typography Hierarchy */
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: #0f172a;
   }
   
   h1 {
@@ -206,197 +204,129 @@
   h3 {
     font-size: 24px;
     font-weight: 700;
-    line-height: 1.3;
+    line-height: 1.4;
   }
   
   h4 {
     font-size: 18px;
-    font-weight: 500;
-    line-height: 1.4;
-    color: rgba(255, 255, 255, 0.7);
-  }
-  
-  h5 {
-    font-size: 16px;
     font-weight: 600;
-    line-height: 1.4;
+    line-height: 1.5;
   }
   
   p {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.6;
     font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #0f172a;
   }
   
-  body {
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.6;
+  a {
+    color: var(--primary);
+    transition: color 0.2s;
   }
-  button:not(:disabled),
-  [role="button"]:not([aria-disabled="true"]),
-  [type="button"]:not(:disabled),
-  [type="submit"]:not(:disabled),
-  [type="reset"]:not(:disabled),
-  a[href],
-  select:not(:disabled),
-  input[type="checkbox"]:not(:disabled),
-  input[type="radio"]:not(:disabled) {
-    @apply cursor-pointer;
+  
+  a:hover {
+    color: rgba(30, 58, 138, 0.8);
   }
 }
 
 @layer components {
-  /**
-   * Custom container utility that centers content and adds responsive padding.
-   */
   .container {
-    width: 100%;
+    max-width: 80rem;
     margin-left: auto;
     margin-right: auto;
     padding-left: 1rem;
     padding-right: 1rem;
   }
-
-  .flex {
-    min-height: 0;
-    min-width: 0;
-  }
-
+  
   @media (min-width: 640px) {
     .container {
       padding-left: 1.5rem;
       padding-right: 1.5rem;
     }
   }
-
+  
   @media (min-width: 1024px) {
     .container {
       padding-left: 2rem;
       padding-right: 2rem;
-      max-width: 1280px;
     }
   }
   
-  /* PT Portfolio Custom Components */
-  
-  /* Subtle Cyan Accent */
-  .glow-cyan {
-    border: 1px solid rgba(0, 212, 255, 0.3);
-    box-shadow: none;
-  }
-  
-  .glow-cyan-border {
-    border: 1px solid #00d4ff;
-    box-shadow: none;
-  }
-  
-  /* Accent Bar */
   .accent-bar {
-    background: linear-gradient(135deg, #00d4ff, #00a8cc);
-    height: 4px;
-  }
-  
-  /* Subtle Hover Animation */
-  @keyframes glow-pulse {
-    0%, 100% {
-      border-color: rgba(0, 212, 255, 0.5);
-    }
-    50% {
-      border-color: rgba(0, 212, 255, 0.8);
-    }
-  }
-  
-  .hover-glow:hover {
-    animation: glow-pulse 2s ease-in-out infinite;
-  }
-  
-  /* Entrance Animation */
-  @keyframes fadeInScale {
-    from {
-      opacity: 0;
-      transform: scale(0.95);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-  
-  .animate-in {
-    animation: fadeInScale 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-  }
-  
-  /* Data Grid Background */
-  .data-grid-bg {
-    background-image: 
-      linear-gradient(0deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
-    background-size: 50px 50px;
-  }
-  
-  /* Green Pulse Animation for Status Dot */
-  @keyframes pulse-green {
-    0%, 100% {
-      box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.4);
-    }
-    50% {
-      box-shadow: 0 0 0 4px rgba(0, 255, 136, 0);
-    }
-  }
-  
-  .pulse-dot {
-    animation: pulse-green 2s infinite;
-  }
-  
-  /* Green Glow Border Animation for Badge */
-  @keyframes badge-glow {
-    0%, 100% {
-      border-color: rgba(0, 255, 136, 0.5);
-    }
-    50% {
-      border-color: rgba(0, 255, 136, 0.8);
-    }
+    width: 0.25rem;
+    height: 3rem;
+    background-color: var(--primary);
+    border-radius: 9999px;
   }
   
   .badge-glow {
-    animation: badge-glow 3s ease-in-out infinite;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    background-color: white;
+    border: 1px solid rgba(30, 58, 138, 0.2);
+    backdrop-filter: blur(4px);
   }
   
-  /* Expand/Collapse Animation */
-  @keyframes slideDown {
-    from {
-      opacity: 0;
-      max-height: 0;
-      overflow: hidden;
-    }
-    to {
-      opacity: 1;
-      max-height: 1000px;
-      overflow: visible;
-    }
+  .pulse-dot {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
   
-  @keyframes slideUp {
-    from {
-      opacity: 1;
-      max-height: 1000px;
-      overflow: visible;
-    }
-    to {
-      opacity: 0;
-      max-height: 0;
-      overflow: hidden;
-    }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
   }
   
-  .expand-enter {
-    animation: slideDown 0.3s ease-out forwards;
+  .card-shadow {
+    box-shadow: 0 10px 26px rgba(15, 23, 42, 0.055);
   }
   
-  .expand-exit {
-    animation: slideUp 0.3s ease-out forwards;
+  .button-primary {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
   }
+  
+  .button-primary:hover {
+    background-color: rgba(30, 58, 138, 0.9);
+  }
+  
+  .button-secondary {
+    padding: 0.75rem 1.5rem;
+    background-color: white;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .button-secondary:hover {
+    background-color: rgba(30, 58, 138, 0.05);
+  }
+  
+  .text-primary {
+    color: var(--primary);
+  }
+  
+  .text-secondary {
+    color: var(--secondary);
+  }
+  
+  .text-muted {
+    color: var(--muted-foreground);
+  }
+}
+
+/* Smooth transitions */
+* {
+  transition: colors 0.2s;
 }
