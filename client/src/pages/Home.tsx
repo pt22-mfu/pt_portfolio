@@ -950,6 +950,45 @@ export default function Home() {
             </h2>
           </div>
 
+          {/* New Entry: UI Presentation & Stakeholder Review */}
+          <div className="bg-card rounded-lg border border-border-subtle overflow-hidden hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 mb-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8">
+              {/* Left: Image */}
+              <div className="flex items-center justify-center">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg blur-xl" />
+                  <img
+                    src="/manus-storage/ChatGPTImageJun15,2026,03_15_37PM_bb496584.png"
+                    alt="UI Presentation & Stakeholder Review: AI-Integrated Nursing Project"
+                    className="relative rounded-lg w-full h-auto object-cover shadow-lg"
+                  />
+                </div>
+              </div>
+
+              {/* Right: Content */}
+              <div className="flex flex-col justify-center space-y-4">
+                <div>
+                  <p className="text-primary text-sm font-semibold mb-2">June 15, 2026</p>
+                  <h3 className="text-2xl font-bold text-text-white mb-4">
+                    UI Presentation & Stakeholder Review: AI-Integrated Nursing Project
+                  </h3>
+                </div>
+
+                <p className="text-text-light text-base leading-relaxed">
+                  Conducted a UI presentation and project review at the MFU Learning Innovation Institute (MLii) with the founding professor and senior faculty members from the School of Nursing. During the one-hour session, we discussed project details, gathered domain-specific suggestions, and reviewed the current progress. This modern web AI integration is my first solo full-stack project. During the meeting, my senior lead, P'First, provided essential support in communicating the underlying technical architecture and system capabilities to the academic stakeholders.
+                </p>
+
+                <div className="pt-4 border-t border-border-subtle">
+                  <p className="text-primary font-semibold mb-2">Key Takeaway:</p>
+                  <p className="text-text-muted text-sm">
+                    Successfully delivering a technical project requires translating complex AI and web integrations into practical value for domain experts. Navigating these stakeholder discussions is a critical skill that is greatly enhanced by effective senior mentorship.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Original Entry: Volunteer Explainer */}
           <div className="bg-card rounded-lg border border-border-subtle overflow-hidden hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8">
               {/* Left: Image */}
