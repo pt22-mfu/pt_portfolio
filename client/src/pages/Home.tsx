@@ -975,7 +975,7 @@ export default function Home() {
                 </div>
 
                 <p className="text-text-light text-base leading-relaxed">
-                  Conducted a UI presentation and project review at the MFU Learning Innovation Institute (MLii) with the founding professor and senior faculty members from the School of Nursing. During the one-hour session, we discussed project details, gathered domain-specific suggestions, and reviewed the current progress. This modern web AI integration is my first solo full-stack project. During the meeting, my senior lead, P'First, provided essential support in communicating the underlying technical architecture and system capabilities to the academic stakeholders.
+                  Conducted a UI presentation and project review at the MFU Learning Innovation Institute (MLii) with two professors from the School of Nursing. During the one-hour session, we discussed project details, gathered domain-specific suggestions, and reviewed the current progress. This modern web AI integration is my first solo full-stack project. During the meeting, my senior lead, P'First, provided essential support in communicating the underlying technical architecture and system capabilities to the academic stakeholders.
                 </p>
 
                 <div className="pt-4 border-t border-border-subtle">
