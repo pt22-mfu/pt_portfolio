@@ -187,38 +187,52 @@ export default function Home() {
         <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16">
             <div className="accent-bar w-16 mb-4" />
-            <h2 className="text-3xl font-bold text-text-white">About Me</h2>
+            <h2 className="text-4xl font-bold text-text-white">About Me</h2>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
             {/* Main Bio */}
-            <div className="lg:col-span-2 space-y-6">
-              <p className="text-text-light text-base leading-relaxed">
-                I am a 4th-year Computer Engineering student at Mae Fah Luang University (MFU). Operating as a T-Shaped Data Professional, my core expertise lies in Data Engineering and Cloud Architecture, while I build end-to-end solutions spanning Spatial Data Analytics, Machine Learning, and Generative AI.
-              </p>
-              <p className="text-text-light text-base leading-relaxed">
-                I am actively seeking an internship starting in January 2027 where I can architect automated data pipelines and deploy LLM-powered applications. My experience ranges from optimizing machine learning models to integrating LangChain and Google Gemini for enterprise intelligence.
-              </p>
+            <div className="lg:col-span-2 space-y-8">
+              <div className="space-y-4">
+                <h3 className="text-xl font-bold text-primary">Who I Am</h3>
+                <p className="text-text-light text-base leading-relaxed">
+                  I am a 4th-year Computer Engineering student at Mae Fah Luang University (MFU), operating as a T-Shaped Data Professional. My core expertise lies in Data Engineering and Cloud Architecture, enabling me to architect production-ready systems that scale.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-xl font-bold text-primary">What I Build</h3>
+                <p className="text-text-light text-base leading-relaxed">
+                  I specialize in end-to-end solutions spanning Spatial Data Analytics, Machine Learning, and Generative AI. From automated ETL pipelines to AI-powered applications, I focus on solving real-world problems with measurable impact. My recent work includes geospatial forecasting systems and LLM-integrated platforms.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-xl font-bold text-primary">Current Focus</h3>
+                <p className="text-text-light text-base leading-relaxed">
+                  I am actively seeking an internship starting January 2027 where I can architect automated data pipelines and deploy LLM-powered applications. My immediate focus is optimizing machine learning models and integrating LangChain and Google Gemini for enterprise intelligence solutions.
+                </p>
+              </div>
             </div>
 
             {/* Stats */}
             <div className="space-y-6">
-              <div className="bg-card rounded-lg p-6 border border-border-subtle hover:border-primary/50 transition-all">
-                <p className="text-text-muted text-sm mb-2 font-semibold">Current Status</p>
-                <p className="text-2xl font-bold text-primary">4th Year</p>
+              <div className="bg-card rounded-lg p-6 border border-border-subtle hover:border-primary/50 transition-all duration-300">
+                <p className="text-text-muted text-xs mb-3 font-semibold uppercase tracking-wide">Current Status</p>
+                <p className="text-3xl font-bold text-primary mb-1">4th Year</p>
                 <p className="text-text-muted text-sm">Computer Engineering</p>
               </div>
 
-              <div className="bg-card rounded-lg p-6 border border-border-subtle hover:border-primary/50 transition-all">
-                <p className="text-text-muted text-sm mb-2 font-semibold">Expected Graduation</p>
-                <p className="text-2xl font-bold text-primary">2027</p>
+              <div className="bg-card rounded-lg p-6 border border-border-subtle hover:border-primary/50 transition-all duration-300">
+                <p className="text-text-muted text-xs mb-3 font-semibold uppercase tracking-wide">Expected Graduation</p>
+                <p className="text-3xl font-bold text-primary mb-1">2027</p>
                 <p className="text-text-muted text-sm">Mae Fah Luang University</p>
               </div>
 
-              <div className="bg-card rounded-lg p-6 border border-border-subtle hover:border-primary/50 transition-all">
-                <p className="text-text-muted text-sm mb-2 font-semibold">Skill Profile</p>
-                <p className="text-2xl font-bold text-primary">T-Shaped</p>
-                <p className="text-text-muted text-sm">Multi-disciplinary</p>
+              <div className="bg-card rounded-lg p-6 border border-border-subtle hover:border-primary/50 transition-all duration-300">
+                <p className="text-text-muted text-xs mb-3 font-semibold uppercase tracking-wide">Profile</p>
+                <p className="text-3xl font-bold text-primary mb-1">T-Shaped</p>
+                <p className="text-text-muted text-sm">Multi-disciplinary expertise</p>
               </div>
             </div>
           </div>
@@ -362,44 +376,21 @@ export default function Home() {
           </div>
 
           {/* Data Engineering */}
-          <div className="mb-12">
+          <div className="mb-16">
             <h3 className="text-primary text-lg font-bold mb-6 flex items-center gap-2">
-              <Database size={20} /> Data Engineering
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {[
-                { name: 'Apache Spark', icon: Flame },
-                { name: 'Airflow', icon: Zap },
-                { name: 'ETL Pipelines', icon: LayoutGrid },
-                { name: 'Cloud Infrastructure', icon: Cloud },
-              ].map((tech) => {
-                const IconComponent = tech.icon;
-                return (
-                  <div key={tech.name} className="bg-card rounded-lg p-4 border border-border-subtle hover:border-primary transition-all">
-                    <IconComponent size={24} className="text-primary mb-2" />
-                    <span className="text-text-white font-semibold text-sm">{tech.name}</span>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Data Science */}
-          <div className="mb-12">
-            <h3 className="text-primary text-lg font-bold mb-6 flex items-center gap-2">
-              <Brain size={20} /> Data Science
+              <Database size={20} /> Programming
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
                 { name: 'Python', icon: Code2 },
+                { name: 'ETL Pipelines', icon: LayoutGrid },
                 { name: 'Machine Learning', icon: Cpu },
-                { name: 'Scikit-learn', icon: BarChart3 },
-                { name: 'Pandas / NumPy', icon: LayoutGrid },
+                { name: 'Data Structures', icon: Database },
               ].map((tech) => {
                 const IconComponent = tech.icon;
                 return (
-                  <div key={tech.name} className="bg-card rounded-lg p-4 border border-border-subtle hover:border-primary transition-all">
-                    <IconComponent size={24} className="text-primary mb-2" />
+                  <div key={tech.name} className="bg-card rounded-lg p-5 border border-border-subtle hover:border-primary/50 transition-all duration-300 hover:bg-card/80">
+                    <IconComponent size={24} className="text-primary mb-3" />
                     <span className="text-text-white font-semibold text-sm">{tech.name}</span>
                   </div>
                 );
@@ -407,22 +398,22 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Data Analytics */}
-          <div className="mb-12">
+          {/* Data & Databases */}
+          <div className="mb-16">
             <h3 className="text-primary text-lg font-bold mb-6 flex items-center gap-2">
-              <BarChart3 size={20} /> Data Analytics
+              <Database size={20} /> Data & Databases
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
                 { name: 'SQL', icon: Database },
-                { name: 'Power BI', icon: BarChart3 },
-                { name: 'Tableau', icon: Gauge },
-                { name: 'Statistical Analysis', icon: LayoutGrid },
+                { name: 'BigQuery', icon: BarChart3 },
+                { name: 'Apache Spark', icon: Flame },
+                { name: 'Pandas / NumPy', icon: LayoutGrid },
               ].map((tech) => {
                 const IconComponent = tech.icon;
                 return (
-                  <div key={tech.name} className="bg-card rounded-lg p-4 border border-border-subtle hover:border-primary transition-all">
-                    <IconComponent size={24} className="text-primary mb-2" />
+                  <div key={tech.name} className="bg-card rounded-lg p-5 border border-border-subtle hover:border-primary/50 transition-all duration-300 hover:bg-card/80">
+                    <IconComponent size={24} className="text-primary mb-3" />
                     <span className="text-text-white font-semibold text-sm">{tech.name}</span>
                   </div>
                 );
@@ -430,26 +421,26 @@ export default function Home() {
             </div>
           </div>
 
-          {/* AI & LLMs */}
-          <div className="mb-12">
+          {/* AI & Machine Learning */}
+          <div className="mb-16">
             <h3 className="text-primary text-lg font-bold mb-6 flex items-center gap-2">
-              <Sparkles size={20} /> AI & LLMs
+              <Sparkles size={20} /> AI & Machine Learning
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
                 { name: 'Generative AI & LLMs', icon: Brain },
                 { name: 'LangChain', icon: Link2 },
                 { name: 'Google Gemini', icon: Sparkles },
-                { name: 'RAG (Retrieval-Augmented Generation)', icon: BookOpen },
                 { name: 'PyTorch', icon: Flame },
                 { name: 'TensorFlow', icon: Zap },
-                { name: 'Google Colab', icon: Code2 },
-                { name: 'Streamlit', icon: LayoutGrid },
+                { name: 'Scikit-learn', icon: BarChart3 },
+                { name: 'RAG Systems', icon: BookOpen },
+                { name: 'Model Optimization', icon: Cpu },
               ].map((tech) => {
                 const IconComponent = tech.icon;
                 return (
-                  <div key={tech.name} className="bg-card rounded-lg p-4 border border-border-subtle hover:border-primary transition-all">
-                    <IconComponent size={24} className="text-primary mb-2" />
+                  <div key={tech.name} className="bg-card rounded-lg p-5 border border-border-subtle hover:border-primary/50 transition-all duration-300 hover:bg-card/80">
+                    <IconComponent size={24} className="text-primary mb-3" />
                     <span className="text-text-white font-semibold text-sm">{tech.name}</span>
                   </div>
                 );
@@ -457,22 +448,45 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Cloud & Tools */}
-          <div>
+          {/* Web & Cloud */}
+          <div className="mb-16">
             <h3 className="text-primary text-lg font-bold mb-6 flex items-center gap-2">
-              <Cloud size={20} /> Cloud & Tools
+              <Cloud size={20} /> Web Development & Cloud
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
+                { name: 'Streamlit', icon: LayoutGrid },
                 { name: 'Google Cloud', icon: Cloud },
-                { name: 'BigQuery', icon: Database },
                 { name: 'Docker', icon: Code2 },
                 { name: 'Git / GitHub', icon: GitBranch },
               ].map((tech) => {
                 const IconComponent = tech.icon;
                 return (
-                  <div key={tech.name} className="bg-card rounded-lg p-4 border border-border-subtle hover:border-primary transition-all">
-                    <IconComponent size={24} className="text-primary mb-2" />
+                  <div key={tech.name} className="bg-card rounded-lg p-5 border border-border-subtle hover:border-primary/50 transition-all duration-300 hover:bg-card/80">
+                    <IconComponent size={24} className="text-primary mb-3" />
+                    <span className="text-text-white font-semibold text-sm">{tech.name}</span>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Tools & Platforms */}
+          <div>
+            <h3 className="text-primary text-lg font-bold mb-6 flex items-center gap-2">
+              <Zap size={20} /> Tools & Platforms
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {[
+                { name: 'Airflow', icon: Zap },
+                { name: 'Power BI', icon: BarChart3 },
+                { name: 'Tableau', icon: Gauge },
+                { name: 'Google Colab', icon: Code2 },
+              ].map((tech) => {
+                const IconComponent = tech.icon;
+                return (
+                  <div key={tech.name} className="bg-card rounded-lg p-5 border border-border-subtle hover:border-primary/50 transition-all duration-300 hover:bg-card/80">
+                    <IconComponent size={24} className="text-primary mb-3" />
                     <span className="text-text-white font-semibold text-sm">{tech.name}</span>
                   </div>
                 );
@@ -526,36 +540,41 @@ export default function Home() {
           </div>
 
           {/* Projects Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* PROJECT 1: MFU PM2.5 */}
-            <div className="bg-card rounded-xl border-2 border-primary/50 hover:border-primary transition-all duration-300 overflow-hidden" style={{
-              boxShadow: '0 0 30px rgba(0, 212, 255, 0.2)'
+          <div className="space-y-8">
+            {/* PROJECT 1: MFU PM2.5 - FEATURED */}
+            <div className="bg-card rounded-xl border border-primary/40 hover:border-primary/80 transition-all duration-300 overflow-hidden group" style={{
+              boxShadow: '0 0 20px rgba(34, 211, 238, 0.1)'
             }}>
-              <div className="p-8 space-y-6">
-                <h3 className="text-2xl font-bold text-text-white leading-tight">
-                  MFU PM2.5 GeoAI Warning System
-                </h3>
+              <div className="p-8 sm:p-10 space-y-6">
+                <div className="space-y-3">
+                  <div className="inline-block px-3 py-1 bg-primary/10 border border-primary/30 rounded-full">
+                    <span className="text-primary text-xs font-bold uppercase tracking-wide">Featured Project</span>
+                  </div>
+                  <h3 className="text-3xl font-bold text-text-white leading-tight">
+                    MFU PM2.5 GeoAI Warning System
+                  </h3>
+                </div>
 
                 <p className="text-text-light text-base leading-relaxed">
                   Production-ready 4-Model Showdown Architecture dynamically integrating real-time satellite fire hotspot data. Achieved 85.9% accuracy with LightGBM for localized 5-day forecasting, deployed to production with a multi-lingual Gemini AI Campus Advisory.
                 </p>
 
                 {/* Tech Stack Badges */}
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 pt-2">
                   {['Python', 'LightGBM', 'Streamlit', 'NASA FIRMS', 'OpenWeather API', 'Gemini AI'].map((tech) => (
-                    <span key={tech} className="inline-block px-3 py-1.5 bg-black/40 border border-primary/50 rounded-full text-primary text-xs font-semibold">
+                    <span key={tech} className="inline-block px-3 py-1.5 bg-black/30 border border-primary/40 rounded-full text-primary text-xs font-semibold hover:border-primary/70 transition-all">
                       {tech}
                     </span>
                   ))}
                 </div>
 
                 {/* Buttons */}
-                <div className="flex flex-col sm:flex-row gap-3 pt-4">
+                <div className="flex flex-col sm:flex-row gap-3 pt-6">
                   <a
                     href="https://mfu-pm25-prediction.streamlit.app/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 px-4 py-3 bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg transition-all duration-300 font-semibold text-sm flex-1"
+                    className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg transition-all duration-300 font-semibold text-sm flex-1 group-hover:shadow-lg group-hover:shadow-primary/20"
                   >
                     <Sparkles size={18} />
                     Live Dashboard
@@ -564,13 +583,13 @@ export default function Home() {
                     href="https://github.com/pt22-mfu/MFU_PM25_Prediction"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 px-4 py-3 border-2 border-primary text-primary hover:bg-primary/10 rounded-lg transition-all duration-300 font-semibold text-sm flex-1"
+                    className="inline-flex items-center justify-center gap-2 px-5 py-3 border border-primary/50 text-primary hover:border-primary hover:bg-primary/5 rounded-lg transition-all duration-300 font-semibold text-sm flex-1"
                   >
                     <Github size={18} />
                     GitHub Repo
                   </a>
                   <button
-                    className="inline-flex items-center justify-center gap-2 px-4 py-3 border-2 border-primary/50 text-primary/70 hover:border-primary hover:text-primary rounded-lg transition-all duration-300 font-semibold text-sm flex-1"
+                    className="inline-flex items-center justify-center gap-2 px-5 py-3 border border-primary/30 text-primary/70 hover:border-primary hover:text-primary hover:bg-primary/5 rounded-lg transition-all duration-300 font-semibold text-sm flex-1"
                     onClick={() => setSelectedProject('mfu-pm25')}
                   >
                     <ExternalLink size={18} />
@@ -580,35 +599,40 @@ export default function Home() {
               </div>
             </div>
 
-            {/* PROJECT 2: CHIANG MAI */}
-            <div className="bg-card rounded-xl border-2 border-primary/50 hover:border-primary transition-all duration-300 overflow-hidden" style={{
-              boxShadow: '0 0 30px rgba(0, 212, 255, 0.2)'
+            {/* PROJECT 2: CHIANG MAI - FEATURED */}
+            <div className="bg-card rounded-xl border border-primary/40 hover:border-primary/80 transition-all duration-300 overflow-hidden group" style={{
+              boxShadow: '0 0 20px rgba(34, 211, 238, 0.1)'
             }}>
-              <div className="p-8 space-y-6">
-                <h3 className="text-2xl font-bold text-text-white leading-tight">
-                  Chiang Mai Tri-Node Zone: Geo-Predictive Platform
-                </h3>
+              <div className="p-8 sm:p-10 space-y-6">
+                <div className="space-y-3">
+                  <div className="inline-block px-3 py-1 bg-primary/10 border border-primary/30 rounded-full">
+                    <span className="text-primary text-xs font-bold uppercase tracking-wide">Featured Project</span>
+                  </div>
+                  <h3 className="text-3xl font-bold text-text-white leading-tight">
+                    Chiang Mai Tri-Node Zone: Geo-Predictive Platform
+                  </h3>
+                </div>
 
                 <p className="text-text-light text-base leading-relaxed">
                   End-to-end geospatial AI platform integrating real-time NASA FIRMS (VIIRS) satellite data and wind vectors to forecast PM2.5 movement across three critical Chiang Mai urban zones (Z1: City, Z2: Doi Suthep, Z3: Mae Rim). Features a Spatial Threat Score and a Generative AI Mitigation Copilot to translate complex spatial data into proactive action plans for local authorities.
                 </p>
 
                 {/* Tech Stack Badges */}
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 pt-2">
                   {['Python', 'XGBoost', 'Streamlit', 'LangChain', 'Google Gemini', 'NASA FIRMS', 'GISTDA'].map((tech) => (
-                    <span key={tech} className="inline-block px-3 py-1.5 bg-black/40 border border-primary/50 rounded-full text-primary text-xs font-semibold">
+                    <span key={tech} className="inline-block px-3 py-1.5 bg-black/30 border border-primary/40 rounded-full text-primary text-xs font-semibold hover:border-primary/70 transition-all">
                       {tech}
                     </span>
                   ))}
                 </div>
 
                 {/* Buttons */}
-                <div className="flex flex-col sm:flex-row gap-3 pt-4">
+                <div className="flex flex-col sm:flex-row gap-3 pt-6">
                   <a
                     href="https://chiangmai-trinode-zone-pm25-prediction.streamlit.app/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 px-4 py-3 bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg transition-all duration-300 font-semibold text-sm flex-1"
+                    className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg transition-all duration-300 font-semibold text-sm flex-1 group-hover:shadow-lg group-hover:shadow-primary/20"
                   >
                     <Sparkles size={18} />
                     Live Dashboard
@@ -617,13 +641,13 @@ export default function Home() {
                     href="https://github.com/pt22-mfu/chiangmai-trinode-pm25"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 px-4 py-3 border-2 border-primary text-primary hover:bg-primary/10 rounded-lg transition-all duration-300 font-semibold text-sm flex-1"
+                    className="inline-flex items-center justify-center gap-2 px-5 py-3 border border-primary/50 text-primary hover:border-primary hover:bg-primary/5 rounded-lg transition-all duration-300 font-semibold text-sm flex-1"
                   >
                     <Github size={18} />
                     GitHub Repo
                   </a>
                   <button
-                    className="inline-flex items-center justify-center gap-2 px-4 py-3 border-2 border-primary/50 text-primary/70 hover:border-primary hover:text-primary rounded-lg transition-all duration-300 font-semibold text-sm flex-1"
+                    className="inline-flex items-center justify-center gap-2 px-5 py-3 border border-primary/30 text-primary/70 hover:border-primary hover:text-primary hover:bg-primary/5 rounded-lg transition-all duration-300 font-semibold text-sm flex-1"
                     onClick={() => setSelectedProject('chiang-mai')}
                   >
                     <ExternalLink size={18} />
