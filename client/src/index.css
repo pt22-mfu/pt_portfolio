@@ -47,50 +47,50 @@
 }
 
 :root {
-  /* Cyberpunk Minimalism Color Palette */
-  --primary: #00d4ff; /* Cyan Glow */
-  --primary-foreground: #0f1419; /* Deep Charcoal */
-  --sidebar-primary: #00a8cc; /* Teal Accent */
-  --sidebar-primary-foreground: #e8e8e8; /* Off-white */
-  --chart-1: #00d4ff;
-  --chart-2: #00a8cc;
-  --chart-3: #0088aa;
-  --chart-4: #006688;
-  --chart-5: #004466;
+  /* Premium Dark Navy Theme with Controlled Cyan Accents */
+  --primary: #22D3EE; /* Primary Cyan */
+  --primary-foreground: #050B14; /* Navy Black */
+  --sidebar-primary: #06B6D4; /* Strong Cyan */
+  --sidebar-primary-foreground: #F8FAFC; /* Main text */
+  --chart-1: #22D3EE;
+  --chart-2: #06B6D4;
+  --chart-3: #0891B2;
+  --chart-4: #0E7490;
+  --chart-5: #155E75;
   --radius: 0.65rem;
-  --background: #0f1419; /* Deep Charcoal */
-  --foreground: #e8e8e8; /* Off-white */
-  --card: #1a2332; /* Slightly lighter charcoal */
-  --card-foreground: #e8e8e8;
-  --popover: #1a2332;
-  --popover-foreground: #e8e8e8;
-  --secondary: #00a8cc; /* Teal */
-  --secondary-foreground: #0f1419;
-  --muted: #3a4a5a; /* Muted gray */
-  --muted-foreground: #a0b0c0; /* Light gray */
-  --accent: #00d4ff; /* Cyan Glow */
-  --accent-foreground: #0f1419;
-  --destructive: #ff4444;
-  --destructive-foreground: #ffffff;
-  --border: #2a3a4a; /* Subtle border */
-  --input: #1a2332;
-  --ring: #00d4ff;
-  --sidebar: #1a2332;
-  --sidebar-foreground: #e8e8e8;
-  --sidebar-accent: #00d4ff;
-  --sidebar-accent-foreground: #0f1419;
-  --sidebar-border: #2a3a4a;
-  --sidebar-ring: #00d4ff;
+  --background: #050B14; /* Navy Black Background */
+  --foreground: #F8FAFC; /* Main text */
+  --card: #0A1420; /* Surface */
+  --card-foreground: #F8FAFC;
+  --popover: #0E1B2A; /* Elevated surface */
+  --popover-foreground: #F8FAFC;
+  --secondary: #06B6D4; /* Strong Cyan */
+  --secondary-foreground: #050B14;
+  --muted: #475569; /* Muted text */
+  --muted-foreground: #A8B3C2; /* Secondary text */
+  --accent: #22D3EE; /* Primary Cyan */
+  --accent-foreground: #050B14;
+  --destructive: #EF4444;
+  --destructive-foreground: #FFFFFF;
+  --border: #1E293B; /* Subtle border */
+  --input: #0A1420;
+  --ring: #22D3EE;
+  --sidebar: #0A1420;
+  --sidebar-foreground: #F8FAFC;
+  --sidebar-accent: #22D3EE;
+  --sidebar-accent-foreground: #050B14;
+  --sidebar-border: #1E293B;
+  --sidebar-ring: #22D3EE;
   
   /* Custom PT Portfolio Tokens */
-  --glow-cyan: #00d4ff;
-  --glow-teal: #00a8cc;
-  --dark-bg: #0f1419;
-  --card-bg: #1a2332;
-  --text-light: #e8e8e8;
-  --text-white: #ffffff;
-  --text-muted: #a0b0c0;
-  --border-subtle: #2a3a4a;
+  --primary-cyan: #22D3EE;
+  --strong-cyan: #06B6D4;
+  --navy-black: #050B14;
+  --surface: #0A1420;
+  --elevated-surface: #0E1B2A;
+  --main-text: #F8FAFC;
+  --secondary-text: #A8B3C2;
+  --border-subtle: #1E293B;
 }
 
 :root.light {

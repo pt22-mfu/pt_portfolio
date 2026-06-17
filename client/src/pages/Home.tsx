@@ -39,105 +39,106 @@ export default function Home() {
       {/* Navigation */}
       <nav
         className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-          isScrolled ? "bg-background/80 backdrop-blur-md border-b border-border-subtle" : ""
+          isScrolled 
+            ? "bg-background/70 backdrop-blur-xl border-b border-border-subtle/50" 
+            : "bg-transparent"
         }`}
       >
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-4">
-          <div className="text-2xl font-bold">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-4">
+          <div className="text-2xl font-bold tracking-tighter">
             <span className="text-primary">PT</span>
           </div>
-          <div className="hidden md:flex items-center gap-8">
-            <a href="#about" className="text-text-muted hover:text-primary transition-colors text-sm font-medium">About</a>
-            <a href="#projects" className="text-text-muted hover:text-primary transition-colors text-sm font-medium">Projects</a>
-            <a href="#skills" className="text-text-muted hover:text-primary transition-colors text-sm font-medium">Skills</a>
-            <a href="#certifications" className="text-text-muted hover:text-primary transition-colors text-sm font-medium">Certifications</a>
-            <a href="#activities" className="text-text-muted hover:text-primary transition-colors text-sm font-medium">Activities</a>
-            <a href="#contact" className="text-text-muted hover:text-primary transition-colors text-sm font-medium">Contact</a>
+          
+          <div className="hidden md:flex items-center gap-1">
+            <a href="#about" className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+              visibleSections["about"] ? "text-primary bg-primary/10" : "text-secondary-text hover:text-primary hover:bg-primary/5"
+            }`}>About</a>
+            <a href="#projects" className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+              visibleSections["projects"] ? "text-primary bg-primary/10" : "text-secondary-text hover:text-primary hover:bg-primary/5"
+            }`}>Projects</a>
+            <a href="#skills" className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+              visibleSections["skills"] ? "text-primary bg-primary/10" : "text-secondary-text hover:text-primary hover:bg-primary/5"
+            }`}>Skills</a>
+            <a href="#certifications" className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+              visibleSections["certifications"] ? "text-primary bg-primary/10" : "text-secondary-text hover:text-primary hover:bg-primary/5"
+            }`}>Certifications</a>
+            <a href="#activities" className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+              visibleSections["activities"] ? "text-primary bg-primary/10" : "text-secondary-text hover:text-primary hover:bg-primary/5"
+            }`}>Activities</a>
+            <a href="#contact" className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+              visibleSections["contact"] ? "text-primary bg-primary/10" : "text-secondary-text hover:text-primary hover:bg-primary/5"
+            }`}>Contact</a>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-        <div
-          className="absolute inset-0 data-grid-bg"
-          style={{
-            backgroundImage: `url('https://d2xsxph8kpxj0f.cloudfront.net/310519663493646000/aW35T6wqwCw6MNGKZMLhKb/hero-bg-buFoMFUDwY8UzpxRWTJzGb.webp')`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            opacity: 0.3,
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/50 to-background" />
+      <section className="relative min-h-screen flex items-center justify-center pt-24 pb-12 overflow-hidden">
+        {/* Subtle background gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-elevated-surface" />
+        
+        {/* Subtle cyan glow - restrained */}
+        <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
 
-        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Left: Text Content */}
-          <div className="space-y-8 animate-in">
-            <div className="space-y-4">
-              <p className="text-primary text-sm font-mono tracking-wider uppercase">
+          <div className="space-y-8">
+            <div className="space-y-6">
+              <p className="text-primary text-xs font-mono tracking-widest uppercase font-semibold">
                 Portfolio / 2025
               </p>
               
-              <div className="badge-glow inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/40 border border-green-500/50 backdrop-blur-sm w-fit">
-                <div className="pulse-dot w-2.5 h-2.5 rounded-full bg-green-400" />
-                <span className="text-xs font-semibold text-green-400 tracking-wide">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/30 w-fit">
+                <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                <span className="text-xs font-medium text-primary tracking-wide">
                   Available for Internship · Starting January 2027
                 </span>
               </div>
               
-              <h1 className="text-5xl lg:text-6xl font-bold text-primary leading-tight">
+              <h1 className="text-6xl lg:text-7xl font-bold text-main-text leading-tight tracking-tight">
                 Phyo Thant Kyaw
               </h1>
-              <p className="text-xl text-text-light font-medium">
+              <p className="text-2xl text-primary font-semibold">
                 Enterprise Data & AI Engineer
               </p>
             </div>
 
-            <p className="text-text-muted text-base leading-relaxed max-w-lg">
+            <p className="text-secondary-text text-lg leading-relaxed max-w-xl">
               Architecting production-ready data pipelines and AI systems. Specializing in ETL automation, predictive modeling, and enterprise-scale cloud infrastructure.
             </p>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button
-                className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-base font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-primary/50"
+            {/* CTA Buttons - Only 2 main buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 pt-6">
+              <button
                 onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
+                className="bg-primary text-background hover:bg-strong-cyan px-8 py-3 text-base font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-primary/20"
               >
                 View Projects
-              </Button>
+              </button>
               <a
                 href="https://d2xsxph8kpxj0f.cloudfront.net/310519663493646000/aW35T6wqwCw6MNGKZMLhKb/DataEngineer_PT_Resume_50c0ce36.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-8 py-6 border-2 border-primary text-primary hover:bg-primary/10 rounded-lg transition-all duration-300 font-semibold"
+                className="inline-flex items-center justify-center gap-2 px-8 py-3 border-2 border-primary text-primary hover:bg-primary/10 rounded-lg transition-all duration-300 font-semibold"
               >
                 <Download size={20} />
                 Download CV
               </a>
-              <a
-                href="https://github.com/pt22-mfu"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-8 py-6 border-2 border-primary text-primary hover:bg-primary/10 rounded-lg transition-all duration-300 font-semibold"
-              >
-                <Github size={20} />
-                GitHub
-              </a>
             </div>
 
             {/* Social Links */}
-            <div className="flex gap-4 pt-4">
+            <div className="flex gap-3 pt-4">
               <a
                 href="https://github.com/pt22-mfu"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full border-2 border-primary flex items-center justify-center hover:bg-primary/10 transition-all duration-300"
+                className="w-11 h-11 rounded-lg border border-primary/50 flex items-center justify-center hover:bg-primary/10 hover:border-primary transition-all duration-300"
               >
                 <Github size={20} className="text-primary" />
               </a>
               <a
                 href="mailto:phyothantkyaw22.pku@gmail.com"
-                className="w-12 h-12 rounded-full border-2 border-primary flex items-center justify-center hover:bg-primary/10 transition-all duration-300"
+                className="w-11 h-11 rounded-lg border border-primary/50 flex items-center justify-center hover:bg-primary/10 hover:border-primary transition-all duration-300"
               >
                 <Mail size={20} className="text-primary" />
               </a>
@@ -145,7 +146,7 @@ export default function Home() {
                 href="https://www.linkedin.com/in/phyo-thant-kyaw-2816332a4/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full border-2 border-primary flex items-center justify-center hover:bg-primary/10 transition-all duration-300"
+                className="w-11 h-11 rounded-lg border border-primary/50 flex items-center justify-center hover:bg-primary/10 hover:border-primary transition-all duration-300"
               >
                 <Linkedin size={20} className="text-primary" />
               </a>
@@ -155,9 +156,9 @@ export default function Home() {
           {/* Right: Profile Image */}
           <div className="relative flex justify-center items-center lg:justify-end">
             <div
-              className="w-72 h-72 lg:w-80 lg:h-80 rounded-3xl border-4 border-primary flex items-center justify-center overflow-hidden"
+              className="w-72 h-72 lg:w-80 lg:h-80 rounded-2xl border border-primary/30 flex items-center justify-center overflow-hidden bg-elevated-surface"
               style={{
-                boxShadow: "0 0 40px rgba(0, 212, 255, 0.4), inset 0 0 40px rgba(0, 212, 255, 0.1)",
+                boxShadow: "0 0 30px rgba(34, 211, 238, 0.15), inset 0 0 30px rgba(34, 211, 238, 0.05)",
               }}
             >
               <img
