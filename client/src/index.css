@@ -179,8 +179,33 @@
   * {
     @apply border-border outline-ring/50;
   }
+  
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  
   body {
     @apply bg-background text-foreground font-sans;
+  }
+  
+  /* Visible focus states for keyboard navigation */
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+  
+  a:focus-visible,
+  button:focus-visible,
+  [role="button"]:focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
   }
   
   /* Typography System */
@@ -245,6 +270,22 @@
   input[type="checkbox"]:not(:disabled),
   input[type="radio"]:not(:disabled) {
     @apply cursor-pointer;
+  }
+  
+  /* Improve link visibility */
+  a {
+    color: inherit;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Ensure sufficient color contrast */
+  button:disabled,
+  [aria-disabled="true"] {
+    opacity: 0.5;
+    cursor: not-allowed;
   }
 }
 
@@ -313,6 +354,12 @@
     animation: glow-pulse 2s ease-in-out infinite;
   }
   
+  @media (prefers-reduced-motion: reduce) {
+    .hover-glow:hover {
+      animation: none;
+    }
+  }
+  
   /* Entrance Animation */
   @keyframes fadeInScale {
     from {
@@ -327,6 +374,13 @@
   
   .animate-in {
     animation: fadeInScale 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .animate-in {
+      animation: none;
+      opacity: 1;
+    }
   }
   
   /* Data Grid Background */
@@ -349,6 +403,12 @@
   
   .pulse-dot {
     animation: pulse-green 2s infinite;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .pulse-dot {
+      animation: none;
+    }
   }
   
   /* Green Glow Border Animation for Badge */
