@@ -82,8 +82,8 @@ export default function Home() {
 
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Left: Text Content */}
-          <div className="space-y-8">
-            <div className="space-y-6">
+          <div className="space-y-6">
+            <div className="space-y-3">
               <p className="text-primary text-xs font-mono tracking-widest uppercase font-semibold">
                 Portfolio / 2025
               </p>
@@ -95,20 +95,26 @@ export default function Home() {
                 </span>
               </div>
               
-              <h1 className="text-6xl lg:text-7xl font-bold text-main-text leading-tight tracking-tight">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/5 border border-primary/20 w-fit">
+                <span className="text-xs font-medium text-secondary-text tracking-wide">
+                  🇲🇲 Myanmar National · Non-Immigrant ED Plus Visa · No Sponsorship Required for 16-week Co-op
+                </span>
+              </div>
+              
+              <h1 className="text-5xl lg:text-6xl font-bold text-main-text leading-tight tracking-tight">
                 Phyo Thant Kyaw
               </h1>
-              <p className="text-2xl text-primary font-semibold">
+              <p className="text-xl text-primary font-semibold">
                 Enterprise Data & AI Engineer
               </p>
             </div>
 
-            <p className="text-secondary-text text-lg leading-relaxed max-w-xl">
+            <p className="text-secondary-text text-base leading-relaxed max-w-xl">
               Architecting production-ready data pipelines and AI systems. Specializing in ETL automation, predictive modeling, and enterprise-scale cloud infrastructure.
             </p>
 
-            {/* CTA Buttons - Only 2 main buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-6">
+            {/* CTA Buttons - View Projects + 2 CV Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <button
                 onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
                 className="bg-primary text-background hover:bg-strong-cyan px-8 py-3 text-base font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-primary/20"
@@ -116,13 +122,22 @@ export default function Home() {
                 View Projects
               </button>
               <a
-                href="https://d2xsxph8kpxj0f.cloudfront.net/310519663493646000/aW35T6wqwCw6MNGKZMLhKb/DataEngineer_PT_Resume_50c0ce36.pdf"
+                href="#cv-data-engineer"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-8 py-3 border-2 border-primary text-primary hover:bg-primary/10 rounded-lg transition-all duration-300 font-semibold"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-primary text-primary hover:bg-primary/10 rounded-lg transition-all duration-300 font-semibold text-sm"
               >
-                <Download size={20} />
-                Download CV
+                <Download size={18} />
+                Data Engineer CV
+              </a>
+              <a
+                href="#cv-ai-developer"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-primary text-primary hover:bg-primary/10 rounded-lg transition-all duration-300 font-semibold text-sm"
+              >
+                <Download size={18} />
+                AI Developer CV
               </a>
             </div>
 
@@ -264,22 +279,22 @@ export default function Home() {
                 </p>
               </div>
               <p className="text-text-muted text-sm font-semibold flex-shrink-0">
-                May 2026 – Present
+                May 2026 – Jul 2026
               </p>
             </div>
 
             <ul className="space-y-3 text-text-light text-base">
               <li className="flex gap-3">
                 <span className="text-primary font-bold">•</span>
-                <span>Assisting in the development and maintenance of web applications for university internal systems.</span>
+                <span>Architected a Zero-Budget Hybrid AI Evaluation Engine for a clinical web platform, combining a fast rule-based matcher (less than 500ms) with Google Gemini 1.5 Flash LLM for semantic assessment.</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-primary font-bold">•</span>
-                <span>Supporting the integration of AI/ML features into web platforms using Python and modern LLM tools.</span>
+                <span>Authored the comprehensive Software Requirements Specification (SRS) and developed a functional UI prototype using Next.js 14 and Tailwind CSS.</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-primary font-bold">•</span>
-                <span>Collaborating with academic and technical teams to deliver production-ready digital solutions.</span>
+                <span>Engineered a secure, Thai PDPA-compliant PostgreSQL database architecture via Supabase and optimized API response times with Upstash Redis caching.</span>
               </li>
             </ul>
           </div>
@@ -514,7 +529,7 @@ export default function Home() {
             {[
               { name: 'English', level: 'Fluent' },
               { name: 'Myanmar', level: 'Native / Fluent' },
-              { name: 'Japanese', level: 'Basic' },
+              { name: 'Thai', level: 'Basic' },
             ].map((lang) => (
               <div key={lang.name} className="bg-card rounded-lg p-6 border border-border-subtle hover:border-primary transition-all duration-300">
                 <h3 className="text-primary font-bold mb-2 text-base">{lang.name}</h3>
@@ -561,7 +576,7 @@ export default function Home() {
 
                 {/* Tech Stack Badges */}
                 <div className="flex flex-wrap gap-2 pt-2">
-                  {['Python', 'LightGBM', 'Streamlit', 'NASA FIRMS', 'OpenWeather API', 'Gemini AI'].map((tech) => (
+                  {['Python', 'LightGBM', 'Streamlit', 'NASA FIRMS', 'OpenWeather API', 'Gemini AI', 'GISTDA'].map((tech) => (
                     <span key={tech} className="inline-block px-3 py-1.5 bg-black/30 border border-primary/40 rounded-full text-primary text-xs font-semibold hover:border-primary/70 transition-all">
                       {tech}
                     </span>
@@ -653,6 +668,52 @@ export default function Home() {
                     <ExternalLink size={18} />
                     See Details
                   </button>
+                </div>
+              </div>
+            </div>
+
+            {/* PROJECT 3: Clinical Scenario - NEW */}
+            <div className="bg-card rounded-xl border border-primary/40 hover:border-primary/80 transition-all duration-300 overflow-hidden group" style={{
+              boxShadow: '0 0 20px rgba(34, 211, 238, 0.1)'
+            }}>
+              <div className="p-8 sm:p-10 space-y-6">
+                <div className="space-y-3">
+                  <h3 className="text-3xl font-bold text-text-white leading-tight">
+                    Web-Based Clinical Scenario with AI Feedback System
+                  </h3>
+                </div>
+
+                <p className="text-text-light text-base leading-relaxed">
+                  An interactive clinical evaluation platform built for the School of Nursing (MFU), delivering 12 patient scenarios across 6 body systems to 4th-year nursing students. Features AI-powered feedback using Gemini 1.5 Flash for real-time assessment.
+                </p>
+
+                {/* Tech Stack Badges */}
+                <div className="flex flex-wrap gap-2 pt-2">
+                  {['Next.js 14', 'TypeScript', 'Tailwind CSS', 'Prisma', 'PostgreSQL', 'Supabase', 'Upstash Redis', 'Gemini 1.5 Flash'].map((tech) => (
+                    <span key={tech} className="inline-block px-3 py-1.5 bg-black/30 border border-primary/40 rounded-full text-primary text-xs font-semibold hover:border-primary/70 transition-all">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Status Line */}
+                <div className="pt-2 border-t border-primary/20">
+                  <p className="text-text-muted text-sm italic">
+                    Working UI prototype and system architecture completed. Full backend integration paused pending administrative budget confirmation.
+                  </p>
+                </div>
+
+                {/* Buttons */}
+                <div className="flex flex-col sm:flex-row gap-3 pt-6">
+                  <a
+                    href="https://github.com/pt22-mfu/nursing-clinical-scenario-ai-feedback"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 px-5 py-3 border border-primary/50 text-primary hover:border-primary hover:bg-primary/5 rounded-lg transition-all duration-300 font-semibold text-sm flex-1"
+                  >
+                    <Github size={18} />
+                    GitHub Repo
+                  </a>
                 </div>
               </div>
             </div>
