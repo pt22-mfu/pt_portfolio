@@ -122,7 +122,7 @@ export default function Home() {
                 View Projects
               </button>
               <a
-                href="#cv-data-engineer"
+                href="/manus-storage/DE_Engr_Pt_Resume_dc83107a.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-primary text-primary hover:bg-primary/10 rounded-lg transition-all duration-300 font-semibold text-sm"
@@ -131,7 +131,7 @@ export default function Home() {
                 Data Engineer CV
               </a>
               <a
-                href="#cv-ai-developer"
+                href="/manus-storage/AI_Eng_Pt_Resume_3205a2cf.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-primary text-primary hover:bg-primary/10 rounded-lg transition-all duration-300 font-semibold text-sm"
@@ -694,6 +694,16 @@ export default function Home() {
                       {tech}
                     </span>
                   ))}
+                </div>
+
+                {/* Screenshot Gallery */}
+                <div className="pt-4 space-y-3">
+                  <h4 className="text-sm font-semibold text-primary">Platform Screenshots</h4>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    <img src="/manus-storage/screenshot1_bc32bd10.png" alt="Clinical Scenario Interface" className="w-full h-auto rounded-lg border border-primary/30 hover:border-primary/70 transition-all duration-300 object-cover" />
+                    <img src="/manus-storage/screenshot2_af536263.png" alt="Patient Assessment Screen" className="w-full h-auto rounded-lg border border-primary/30 hover:border-primary/70 transition-all duration-300 object-cover" />
+                    <img src="/manus-storage/screenshot3_e7a9d187.png" alt="AI Feedback Results" className="w-full h-auto rounded-lg border border-primary/30 hover:border-primary/70 transition-all duration-300 object-cover" />
+                  </div>
                 </div>
 
                 {/* Status Line */}
