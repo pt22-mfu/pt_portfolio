@@ -122,7 +122,7 @@ export default function Home() {
                 View Projects
               </button>
               <a
-                href="/manus-storage/DE_Engr_Pt_Resume_dc83107a.pdf"
+                href="/DE_Engr_Pt_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-primary text-primary hover:bg-primary/10 rounded-lg transition-all duration-300 font-semibold text-sm"
@@ -131,7 +131,7 @@ export default function Home() {
                 Data Engineer CV
               </a>
               <a
-                href="/manus-storage/AI_Eng_Pt_Resume_3205a2cf.pdf"
+                href="/AI_Eng_Pt_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-primary text-primary hover:bg-primary/10 rounded-lg transition-all duration-300 font-semibold text-sm"
@@ -140,6 +140,7 @@ export default function Home() {
                 AI Developer CV
               </a>
             </div>
+
 
             {/* Social Links */}
             <div className="flex gap-3 pt-4">
@@ -177,7 +178,7 @@ export default function Home() {
               }}
             >
               <img
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663493646000/aW35T6wqwCw6MNGKZMLhKb/PtCV_ff732073.png"
+                src="/profile-photo.png"
                 alt="Phyo Thant Kyaw"
                 className="w-full h-full object-cover"
               />
@@ -700,11 +701,12 @@ export default function Home() {
                 <div className="pt-4 space-y-3">
                   <h4 className="text-sm font-semibold text-primary">Platform Screenshots</h4>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                    <img src="/manus-storage/screenshot1_bc32bd10.png" alt="Clinical Scenario Interface" className="w-full h-auto rounded-lg border border-primary/30 hover:border-primary/70 transition-all duration-300 object-cover" />
-                    <img src="/manus-storage/screenshot2_af536263.png" alt="Patient Assessment Screen" className="w-full h-auto rounded-lg border border-primary/30 hover:border-primary/70 transition-all duration-300 object-cover" />
-                    <img src="/manus-storage/screenshot3_e7a9d187.png" alt="AI Feedback Results" className="w-full h-auto rounded-lg border border-primary/30 hover:border-primary/70 transition-all duration-300 object-cover" />
+                    <img src="/screenshot1.png" alt="Clinical Scenario Interface" className="w-full h-auto rounded-lg border border-primary/30 hover:border-primary/70 transition-all duration-300 object-cover" />
+                    <img src="/screenshot2.png" alt="Patient Assessment Screen" className="w-full h-auto rounded-lg border border-primary/30 hover:border-primary/70 transition-all duration-300 object-cover" />
+                    <img src="/screenshot3.png" alt="AI Feedback Results" className="w-full h-auto rounded-lg border border-primary/30 hover:border-primary/70 transition-all duration-300 object-cover" />
                   </div>
                 </div>
+
 
                 {/* Status Line */}
                 <div className="pt-2 border-t border-primary/20">
