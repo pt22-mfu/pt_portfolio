@@ -42,10 +42,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Vite's default build output — adjust if package.json build
-          # script outputs somewhere else (check for a "dist" folder
-          # after running `pnpm run build` locally to confirm)
-          path: ./client/dist
+          path: ./dist
 
   deploy:
     needs: build
