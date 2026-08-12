@@ -122,7 +122,7 @@ export default function Home() {
                 View Projects
               </button>
               <a
-                href="/DE_Engr_Pt_Resume.pdf"
+                href={`${import.meta.env.BASE_URL}DE_Engr_Pt_Resume.pdf`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-primary text-primary hover:bg-primary/10 rounded-lg transition-all duration-300 font-semibold text-sm"
@@ -131,7 +131,7 @@ export default function Home() {
                 Data Engineer CV
               </a>
               <a
-                href="/AI_Eng_Pt_Resume.pdf"
+                href={`${import.meta.env.BASE_URL}AI_Eng_Pt_Resume.pdf`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-primary text-primary hover:bg-primary/10 rounded-lg transition-all duration-300 font-semibold text-sm"
@@ -178,7 +178,7 @@ export default function Home() {
               }}
             >
               <img
-                src="/profile-photo.png"
+                src={`${import.meta.env.BASE_URL}profile-photo.png`}
                 alt="Phyo Thant Kyaw"
                 className="w-full h-full object-cover"
               />
@@ -701,9 +701,9 @@ export default function Home() {
                 <div className="pt-4 space-y-3">
                   <h4 className="text-sm font-semibold text-primary">Platform Screenshots</h4>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                    <img src="/screenshot1.png" alt="Clinical Scenario Interface" className="w-full h-auto rounded-lg border border-primary/30 hover:border-primary/70 transition-all duration-300 object-cover" />
-                    <img src="/screenshot2.png" alt="Patient Assessment Screen" className="w-full h-auto rounded-lg border border-primary/30 hover:border-primary/70 transition-all duration-300 object-cover" />
-                    <img src="/screenshot3.png" alt="AI Feedback Results" className="w-full h-auto rounded-lg border border-primary/30 hover:border-primary/70 transition-all duration-300 object-cover" />
+                    <img src={`${import.meta.env.BASE_URL}screenshot1.png`} alt="Clinical Scenario Interface" className="w-full h-auto rounded-lg border border-primary/30 hover:border-primary/70 transition-all duration-300 object-cover" />
+                    <img src={`${import.meta.env.BASE_URL}screenshot2.png`} alt="Patient Assessment Screen" className="w-full h-auto rounded-lg border border-primary/30 hover:border-primary/70 transition-all duration-300 object-cover" />
+                    <img src={`${import.meta.env.BASE_URL}screenshot3.png`} alt="AI Feedback Results" className="w-full h-auto rounded-lg border border-primary/30 hover:border-primary/70 transition-all duration-300 object-cover" />
                   </div>
                 </div>
 
@@ -917,7 +917,7 @@ export default function Home() {
               {
                 title: "IBM Data Engineering Professional Certificate",
                 issuer: "IBM",
-                logoUrl: "/manus-storage/ibm_official_logo_89ae39a2.webp",
+                logoUrl: `${import.meta.env.BASE_URL}ibm_official_logo.webp`,
                 date: "May 2026",
                 link: "https://www.coursera.org/account/accomplishments/professional-cert/PEQB40RH0NUU",
                 tags: ["Apache Spark", "Airflow", "Python"],
@@ -925,7 +925,7 @@ export default function Home() {
               {
                 title: "Google Data Analytics Professional Certificate",
                 issuer: "Google",
-                logoUrl: "/manus-storage/pasted_file_ObW2XW_image_b718fe37.png",
+                logoUrl: `${import.meta.env.BASE_URL}google_logo.png`,
                 date: "Mar 2026",
                 link: "https://www.coursera.org/account/accomplishments/professional-cert/CT58UMUB0V4R",
                 tags: ["BigQuery", "Tableau", "SQL"],
@@ -933,7 +933,7 @@ export default function Home() {
               {
                 title: "Crash Course on Python",
                 issuer: "Google",
-                logoUrl: "/manus-storage/pasted_file_ObW2XW_image_b718fe37.png",
+                logoUrl: `${import.meta.env.BASE_URL}google_logo.png`,
                 date: "Nov 2025",
                 link: "https://www.coursera.org/account/accomplishments/verify/VBZJW4B7JFFQ",
                 tags: ["Python", "OOP", "Debugging"],
@@ -941,7 +941,7 @@ export default function Home() {
               {
                 title: "SQL for Data Science",
                 issuer: "UC Davis / Coursera",
-                logoUrl: "/manus-storage/pasted_file_GU9jui_image_33703abb.png",
+                logoUrl: `${import.meta.env.BASE_URL}uc-davis-logo.png`,
                 date: "July 2025",
                 link: "https://www.coursera.org/account/accomplishments/verify/KSRTIHE6BHO8",
                 tags: ["SQL", "Database Design", "Queries"],
@@ -949,7 +949,7 @@ export default function Home() {
               {
                 title: "Google Prompting Essentials",
                 issuer: "Google",
-                logoUrl: "/manus-storage/pasted_file_ObW2XW_image_b718fe37.png",
+                logoUrl: `${import.meta.env.BASE_URL}google_logo.png`,
                 date: "Sep 2025",
                 link: "https://www.coursera.org/account/accomplishments/specialization/HA7IOPDF4WUF",
                 tags: ["Prompt Engineering", "LLMs", "AI"],
@@ -957,7 +957,7 @@ export default function Home() {
               {
                 title: "Google AI Essentials",
                 issuer: "Google",
-                logoUrl: "/manus-storage/pasted_file_ObW2XW_image_b718fe37.png",
+                logoUrl: `${import.meta.env.BASE_URL}google_logo.png`,
                 date: "Feb 2025",
                 link: "https://www.coursera.org/account/accomplishments/verify/SPPAZGDMT9EO",
                 tags: ["Generative AI", "AI Basics", "Ethics"],
@@ -965,7 +965,7 @@ export default function Home() {
               {
                 title: "Build Data Lakes and Data Warehouses",
                 issuer: "Google Cloud",
-                logoUrl: "/manus-storage/google_cloud_logo_26860e64.webp",
+                logoUrl: `${import.meta.env.BASE_URL}google-cloud-logo.webp`,
                 date: "Mar 2026",
                 link: "https://www.coursera.org/account/accomplishments/verify/M8M3B0Y7QGVV",
                 tags: ["Data Warehousing", "Cloud", "Architecture"],
@@ -1056,7 +1056,7 @@ export default function Home() {
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg blur-xl" />
                   <img
-                    src="/manus-storage/ChatGPTImageJun15,2026,03_15_37PM_bb496584.png"
+                    src={`${import.meta.env.BASE_URL}activity-presentation.png`}
                     alt="UI Presentation & Stakeholder Review: AI-Integrated Nursing Project"
                     className="relative rounded-lg w-full h-auto object-cover shadow-lg"
                   />
@@ -1094,7 +1094,7 @@ export default function Home() {
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg blur-xl" />
                   <img
-                    src="/manus-storage/photo_2026-05-06_20-53-36_a8a9e5ac.jpg"
+                    src={`${import.meta.env.BASE_URL}activity-workshop.jpg`}
                     alt="Volunteer Explainer: Vibe Coding & RAG"
                     className="relative rounded-lg w-full h-auto object-cover shadow-lg"
                   />
