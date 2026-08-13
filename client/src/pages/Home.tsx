@@ -627,12 +627,12 @@ export default function Home() {
                 </div>
 
                 <p className="text-text-light text-base leading-relaxed">
-                  Production-ready 4-Model Showdown Architecture dynamically integrating real-time satellite fire hotspot data. Achieved 85.9% accuracy with LightGBM for localized 5-day forecasting, deployed to production with a multi-lingual Gemini AI Campus Advisory.
+                  Senior-project GeoAI warning system for the MFU Valley. A 4-model forecasting pipeline using a strict chronological split and a 5-year localized Chiang Rai dataset, where LightGBM emerged as champion with 85.90% R² (MAE: 3.21). Integrates NASA FIRMS fire-pressure features, OpenWeatherMap and Air4Thai data, GISTDA Sphere visualization, and Gemini multilingual advisories in a live Streamlit dashboard.
                 </p>
 
                 {/* Tech Stack Badges */}
                 <div className="flex flex-wrap gap-2 pt-2">
-                  {['Python', 'LightGBM', 'Streamlit', 'NASA FIRMS', 'OpenWeather API', 'Gemini AI', 'GISTDA'].map((tech) => (
+                  {['Python', 'LightGBM', 'XGBoost', 'Streamlit', 'NASA FIRMS', 'OpenWeatherMap', 'Air4Thai', 'GISTDA Sphere', 'Gemini AI'].map((tech) => (
                     <span key={tech} className="inline-block px-3 py-1.5 bg-black/30 border border-primary/40 rounded-full text-primary text-xs font-semibold hover:border-primary/70 transition-all">
                       {tech}
                     </span>
@@ -642,7 +642,7 @@ export default function Home() {
                 {/* Buttons */}
                 <div className="flex flex-col sm:flex-row gap-3 pt-6">
                   <a
-                    href="https://mfu-pm25-prediction.streamlit.app/"
+                    href="https://mfu-pm25-geoai-warning-system.streamlit.app/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg transition-all duration-300 font-semibold text-sm flex-1 group-hover:shadow-lg group-hover:shadow-primary/20"
@@ -651,7 +651,7 @@ export default function Home() {
                     Live Dashboard
                   </a>
                   <a
-                    href="https://github.com/pt22-mfu/MFU_PM25_Prediction"
+                    href="https://github.com/pt22-mfu/mfu-pm25-geoai-warning"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 px-5 py-3 border border-primary/50 text-primary hover:border-primary hover:bg-primary/5 rounded-lg transition-all duration-300 font-semibold text-sm flex-1"
@@ -812,42 +812,42 @@ export default function Home() {
                   <div className="space-y-4">
                     <h3 className="text-xl font-bold text-primary">Overview</h3>
                     <p className="text-text-light leading-relaxed">
-                      Traditional weather-only models often fail to predict PM2.5 spikes in localized valleys like the MFU microclimate. To solve this, I architected an end-to-end GeoAI Warning System that actively integrates meteorological data with real-time satellite fire hotspots, achieving an 85.90% prediction accuracy for 5-day proactive forecasting.
+                      This senior-project GeoAI Warning System provides localized, real-time PM2.5 forecasting for the Mae Fah Luang University Valley. It upgrades the SP1 baseline with a strict localized focus using a 5-year Chiang Rai dataset and a 5-day proactive forecasting workflow.
                     </p>
                   </div>
 
                   <div className="space-y-4">
                     <h3 className="text-xl font-bold text-primary">Automated ETL & Feature Engineering</h3>
                     <p className="text-text-light leading-relaxed">
-                      Engineered a robust data pipeline ingesting real-time data from OpenWeather API and NASA FIRMS (VIIRS). Created 18 unique features, including a custom "Distance-Decay Fire Pressure Index" to quantify regional agricultural burning impact.
+                      Engineered data pipelines that combine OpenWeatherMap and Air4Thai meteorological data with NASA FIRMS (VIIRS) hotspots. The system transforms hotspots into Fire Count and Distance-Decay Fire Pressure features across 25km, 50km, and 100km radiuses, with data-validation checkpoints and a graceful fallback architecture for stable delivery during API downtime.
                     </p>
                   </div>
 
                   <div className="space-y-4">
                     <h3 className="text-xl font-bold text-primary">4-Model Defense Showdown</h3>
                     <p className="text-text-light leading-relaxed">
-                      Designed a dynamic scientific pipeline evaluating a LightGBM Champion Model against XGBoost, SVR, and MLR to scientifically justify the necessity of non-linear tree-based algorithms.
+                      Evaluated LightGBM, XGBoost, SVR, and MLR using a strict chronological split (train: 2020–2023, validation: 2024, test: 2025) with a focus on burning-season MAE. The fire-integrated LightGBM champion achieved R²: 85.90% and MAE: 3.21; XGBoost achieved R²: 85.03% and MAE: 3.19.
                     </p>
                   </div>
 
                   <div className="space-y-4">
                     <h3 className="text-xl font-bold text-primary">Generative AI Campus Advisory</h3>
                     <p className="text-text-light leading-relaxed">
-                      Integrated Google Gemini API to serve as a Mitigation Copilot, translating complex spatial data into actionable, multi-lingual situational advisories with a robust fallback mechanism for 100% uptime.
+                      Integrated Google Gemini AI to translate the forecasting and spatial context into actionable, multi-lingual situational advisories, supported by a graceful fallback architecture during API downtime.
                     </p>
                   </div>
 
                   <div className="space-y-4">
                     <h3 className="text-xl font-bold text-primary">Geospatial Visualization</h3>
                     <p className="text-text-light leading-relaxed">
-                      Integrated the GISTDA Sphere Map API to render interactive, localized prediction boundaries and nearby fire activity.
+                      Integrated the GISTDA Sphere API to render interactive localized campus maps, prediction boundaries, and nearby fire activity.
                     </p>
                   </div>
 
                   <div className="space-y-4 pt-4 border-t border-primary/30">
                     <h3 className="text-lg font-bold text-primary">Tech Stack</h3>
                     <div className="flex flex-wrap gap-2">
-                      {['Python', 'LightGBM', 'Streamlit', 'NASA FIRMS', 'OpenWeather API', 'Gemini AI', 'GISTDA'].map((tech) => (
+                      {['Python', 'LightGBM', 'XGBoost', 'Streamlit', 'NASA FIRMS', 'OpenWeatherMap', 'Air4Thai', 'GISTDA Sphere', 'Gemini AI'].map((tech) => (
                         <span key={tech} className="inline-block px-3 py-1.5 bg-black/40 border border-primary/50 rounded-full text-primary text-xs font-semibold">
                           {tech}
                         </span>
