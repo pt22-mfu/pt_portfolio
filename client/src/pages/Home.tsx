@@ -557,7 +557,62 @@ export default function Home() {
 
           {/* Projects Grid */}
           <div className="space-y-8">
-            {/* PROJECT 1: MFU PM2.5 - FEATURED */}
+            {/* PROJECT 1: AI Vision QC Inspector - FEATURED */}
+            <div className="bg-card rounded-xl border border-primary/40 hover:border-primary/80 transition-all duration-300 overflow-hidden group" style={{
+              boxShadow: '0 0 20px rgba(34, 211, 238, 0.1)'
+            }}>
+              <div className="p-8 sm:p-10 space-y-6">
+                <div className="space-y-3">
+                  <div className="inline-block px-3 py-1 bg-primary/10 border border-primary/30 rounded-full">
+                    <span className="text-primary text-xs font-bold uppercase tracking-wide">Featured Project</span>
+                  </div>
+                  <h3 className="text-3xl font-bold text-text-white leading-tight">
+                    AI Vision QC Inspector
+                  </h3>
+                </div>
+
+                <p className="text-text-light text-base leading-relaxed">
+                  A computer-vision quality-control tool that classifies manufacturing parts as defective or OK using transfer learning (TensorFlow/MobileNetV2), then uses Gemini 2.5 Flash to auto-generate a plain-language QA report for production supervisors. Deployed live on Streamlit Cloud. Built and deployed end-to-end, including debugging real production deployment issues (Python version conflicts, deprecated SDK migration, dependency resolution).
+                </p>
+
+                <p className="text-text-muted text-sm leading-relaxed">
+                  <span className="font-semibold text-primary">Key result:</span> 89.4% validation accuracy after 5 epochs of transfer learning, trained on 6,633 images.
+                </p>
+
+                {/* Tech Stack Badges */}
+                <div className="flex flex-wrap gap-2 pt-2">
+                  {['TensorFlow', 'MobileNetV2', 'Gemini 2.5 Flash', 'Streamlit', 'Transfer Learning', 'Google Colab'].map((tech) => (
+                    <span key={tech} className="inline-block px-3 py-1.5 bg-black/30 border border-primary/40 rounded-full text-primary text-xs font-semibold hover:border-primary/70 transition-all">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Buttons */}
+                <div className="flex flex-col sm:flex-row gap-3 pt-6">
+                  <a
+                    href="https://ai-vision-qc-inspector-by-pt.streamlit.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg transition-all duration-300 font-semibold text-sm flex-1 group-hover:shadow-lg group-hover:shadow-primary/20"
+                  >
+                    <Sparkles size={18} />
+                    Live Demo
+                  </a>
+                  <a
+                    href="https://github.com/pt22-mfu/ai-vision-qc-inspector"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 px-5 py-3 border border-primary/50 text-primary hover:border-primary hover:bg-primary/5 rounded-lg transition-all duration-300 font-semibold text-sm flex-1"
+                  >
+                    <Github size={18} />
+                    GitHub Repo
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* PROJECT 2: MFU PM2.5 - FEATURED */}
             <div className="bg-card rounded-xl border border-primary/40 hover:border-primary/80 transition-all duration-300 overflow-hidden group" style={{
               boxShadow: '0 0 20px rgba(34, 211, 238, 0.1)'
             }}>
@@ -615,7 +670,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* PROJECT 2: CHIANG MAI - FEATURED */}
+            {/* PROJECT 3: CHIANG MAI - FEATURED */}
             <div className="bg-card rounded-xl border border-primary/40 hover:border-primary/80 transition-all duration-300 overflow-hidden group" style={{
               boxShadow: '0 0 20px rgba(34, 211, 238, 0.1)'
             }}>
@@ -673,7 +728,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* PROJECT 3: Clinical Scenario - NEW */}
+            {/* PROJECT 4: Clinical Scenario */}
             <div className="bg-card rounded-xl border border-primary/40 hover:border-primary/80 transition-all duration-300 overflow-hidden group" style={{
               boxShadow: '0 0 20px rgba(34, 211, 238, 0.1)'
             }}>
