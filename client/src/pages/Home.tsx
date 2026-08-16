@@ -1178,6 +1178,44 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          {/* Activity: Next Gen Leader */}
+          <div className="bg-card rounded-lg border border-border-subtle overflow-hidden hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 mt-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8">
+              {/* Left: Image */}
+              <div className="flex items-center justify-center">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg blur-xl" />
+                  <img
+                    src={`${import.meta.env.BASE_URL}MFU_upskill_pt.png`}
+                    alt="Next Gen Leader MFU Internship Upskill and Reskill certificate"
+                    className="relative rounded-lg w-full h-auto object-cover shadow-lg"
+                  />
+                </div>
+              </div>
+
+              {/* Right: Content */}
+              <div className="flex flex-col justify-center space-y-4">
+                <div>
+                  <p className="text-primary text-sm font-semibold mb-2">April 3, 2026</p>
+                  <h3 className="text-2xl font-bold text-text-white mb-4">
+                    Next Gen Leader (MFU Internship Upskill & Reskill)
+                  </h3>
+                </div>
+
+                <p className="text-text-light text-base leading-relaxed">
+                  Participated in an intensive leadership and soft skills training program designed to prepare students for professional internships and effective team collaboration.
+                </p>
+
+                <div className="pt-4 border-t border-border-subtle">
+                  <p className="text-primary font-semibold mb-2">Key Takeaway:</p>
+                  <p className="text-text-muted text-sm">
+                    Developed essential soft skills and a leadership mindset required for corporate environments and cross-functional team collaborations.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
