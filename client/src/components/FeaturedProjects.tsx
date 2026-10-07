@@ -1,4 +1,5 @@
 import { ArrowUpRight, BookOpen, Github, Layers3 } from "lucide-react";
+import ProjectImage from "./ProjectImage";
 
 const linkStyle =
   "inline-flex items-center justify-center gap-2 rounded-lg px-4 py-3 text-sm font-semibold transition-colors border border-primary/35 hover:bg-primary/10 hover:border-primary";
@@ -18,21 +19,62 @@ export default function FeaturedProjects({
               MFU PM2.5 GeoAI Warning
             </h3>
             <p className="text-secondary-text">
-              Making air-quality estimates easier to understand through
-              environmental data, machine learning, maps and multilingual AI
-              guidance.
+              Turns PM2.5, weather and fire data into campus air-quality
+              estimates, maps and guidance that users can understand.
             </p>
-            <div className="space-y-3">
-              <p>
-                <strong className="text-primary">My contribution:</strong> Data
-                preparation, feature engineering, model evaluation, dashboard
-                development and AI advisory integration.
-              </p>
-              <p className="text-secondary-text">
-                <strong className="text-foreground">Workflow:</strong> PM2.5 +
-                weather + fire data → model estimates → map and AI advisory.
-              </p>
-            </div>
+            <dl className="space-y-4 leading-relaxed">
+              <div>
+                <dt className="font-semibold text-primary">The problem</dt>
+                <dd className="text-secondary-text">
+                  A PM2.5 number alone does not explain local conditions or what
+                  a campus user can do.
+                </dd>
+              </div>
+              <div>
+                <dt className="font-semibold text-primary">What I built</dt>
+                <dd className="text-secondary-text">
+                  As technical lead, I prepared the data, engineered features,
+                  evaluated models, and built the dashboard and multilingual AI
+                  advisory.
+                </dd>
+              </div>
+              <div>
+                <dt className="font-semibold text-primary">How it works</dt>
+                <dd className="text-secondary-text">
+                  Align PM2.5, weather and fire data → estimate air quality with
+                  ML → show maps and explain the supplied results with an LLM.
+                </dd>
+              </div>
+            </dl>
+            <details className="rounded-xl border border-primary/20 p-4">
+              <summary className="cursor-pointer text-sm font-semibold text-primary">
+                Engineering decisions
+              </summary>
+              <div className="mt-3 space-y-3 text-sm text-secondary-text leading-relaxed">
+                <p>
+                  <strong className="text-foreground">
+                    Consistent inputs:
+                  </strong>{" "}
+                  Daily weather aggregation, wind-unit conversion and circular
+                  wind direction keep live inputs aligned with the historical
+                  features.
+                </p>
+                <p>
+                  <strong className="text-foreground">
+                    Measured improvement:
+                  </strong>{" "}
+                  Compared weather-only and weather-plus-fire models using the
+                  same chronological split.
+                </p>
+                <p>
+                  <strong className="text-foreground">
+                    Separate responsibilities:
+                  </strong>{" "}
+                  ML estimates PM2.5; the LLM explains the supplied context.
+                  Future daily outputs are scenario projections.
+                </p>
+              </div>
+            </details>
             <div className="flex flex-wrap gap-2">
               {[
                 "Python",
@@ -126,22 +168,60 @@ export default function FeaturedProjects({
               RiskDesk — Transaction Review
             </h3>
             <p className="text-secondary-text">
-              A Java-backed review workspace that connects transaction rules,
-              supporting evidence, AI explanations and a human review decision.
+              Helps a reviewer move from unusual transaction signals to the
+              evidence, an AI explanation and a recorded human decision.
             </p>
-            <div className="space-y-3">
-              <p>
-                <strong className="text-primary">My contribution:</strong>{" "}
-                Spring Boot APIs, PostgreSQL integration, rule logic, React
-                interface, Gemini explanations, deployment and technical
-                documentation.
-              </p>
-              <p className="text-secondary-text">
-                <strong className="text-foreground">Workflow:</strong> Fictional
-                transactions → rule findings → evidence-grounded explanation →
-                reviewer notes.
-              </p>
-            </div>
+            <dl className="space-y-4 leading-relaxed">
+              <div>
+                <dt className="font-semibold text-primary">The problem</dt>
+                <dd className="text-secondary-text">
+                  A flagged transaction needs a clear reason and supporting
+                  evidence before a reviewer can decide what to check next.
+                </dd>
+              </div>
+              <div>
+                <dt className="font-semibold text-primary">What I built</dt>
+                <dd className="text-secondary-text">
+                  Built the Java APIs, SQL persistence, rule logic, React
+                  interface and Gemini integration, then deployed the demo and
+                  documented the system.
+                </dd>
+              </div>
+              <div>
+                <dt className="font-semibold text-primary">How it works</dt>
+                <dd className="text-secondary-text">
+                  Load fictional transactions → apply rules in Java → link
+                  findings to evidence → generate an explanation → save reviewer
+                  notes.
+                </dd>
+              </div>
+            </dl>
+            <details className="rounded-xl border border-primary/20 p-4">
+              <summary className="cursor-pointer text-sm font-semibold text-primary">
+                Engineering decisions
+              </summary>
+              <div className="mt-3 space-y-3 text-sm text-secondary-text leading-relaxed">
+                <p>
+                  <strong className="text-foreground">Rules before AI:</strong>{" "}
+                  Java computes the findings and score. The LLM explains
+                  supplied evidence and possible legitimate reasons; it does not
+                  decide whether fraud occurred.
+                </p>
+                <p>
+                  <strong className="text-foreground">Human review:</strong>{" "}
+                  Findings link to the relevant transactions, and reviewer notes
+                  are stored separately from the automated analysis.
+                </p>
+                <p>
+                  <strong className="text-foreground">
+                    Deployed workflow:
+                  </strong>{" "}
+                  React and Spring Boot run together on Render, with PostgreSQL
+                  persistence through Supabase. The public demo uses fictional
+                  data.
+                </p>
+              </div>
+            </details>
             <div className="flex flex-wrap gap-2">
               {[
                 "Java / Spring Boot",
@@ -184,25 +264,22 @@ export default function FeaturedProjects({
           </div>
           <div className="case-evidence p-6 sm:p-8 flex flex-col justify-center gap-5">
             <p className="case-eyebrow">Evidence before explanation</p>
-            <a
-              href="https://transaction-risk-review.onrender.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block rounded-lg border border-primary/25 overflow-hidden"
-              aria-label="Open RiskDesk live demo"
-            >
-              <img
-                src={`${import.meta.env.BASE_URL}riskdesk-desktop.png`}
-                alt="RiskDesk transaction review dashboard with an account queue, rule findings and reviewer controls"
-                className="w-full h-auto"
-                loading="lazy"
-                width={1440}
-                height={1000}
-              />
-            </a>
+            <ProjectImage
+              src={`${import.meta.env.BASE_URL}riskdesk-desktop.png`}
+              title="RiskDesk transaction review workspace"
+              alt="Teal-blue RiskDesk dashboard showing the account queue, review score and transaction summary"
+              width={1440}
+              height={1000}
+            />
+            <div className="text-sm leading-relaxed text-secondary-text">
+              <strong className="text-foreground">Try the workflow:</strong>{" "}
+              Open a demo account, follow a rule to its evidence transactions,
+              then explore AI analysis and reviewer notes.
+            </div>
             <p className="text-sm text-secondary-text">
-              Synthetic data only. The heuristic score prioritizes review; it is
-              not a fraud probability. AI explanations support a human decision.
+              Synthetic data only. The score prioritizes review, not fraud
+              probability. Saving notes requires reviewer access; AI analysis
+              depends on API availability.
             </p>
           </div>
         </div>

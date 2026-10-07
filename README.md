@@ -62,3 +62,8 @@ pnpm run dev
 - **RiskDesk** — Java/Spring Boot APIs, React/TypeScript interface, PostgreSQL, rule evidence, optional AI explanations and human review. Uses synthetic data.
 
 Project cards link directly to live applications and source repositories; RiskDesk also links to its technical PDF. The site supports mobile section navigation and keyboard-accessible project details.
+
+
+## Portfolio update - 07 October 2026
+
+Main project stories follow problem, contribution, workflow and evidence. Additional prototypes use compact cards with explicit status labels. RiskDesk and nursing screenshots can be enlarged with keyboard-accessible dialogs. The downloadable CVs include RiskDesk and distinguish model estimates, historical validation and unfinished prototype work. Visa/work-permit eligibility is not asserted.

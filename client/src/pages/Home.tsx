@@ -1,4 +1,5 @@
 import FeaturedProjects from "@/components/FeaturedProjects";
+import SupportingProjects from "@/components/SupportingProjects";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import {
   Mail,
@@ -163,9 +164,9 @@ export default function Home() {
             </div>
 
             <p className="text-secondary-text text-base leading-relaxed max-w-xl">
-              I build data-driven applications from preparation and modeling to
-              APIs, interfaces and deployment. My work brings together Python,
-              Java, SQL and AI to make complex information useful.
+              I turn data into applications people can use: prepare the inputs,
+              build the models and APIs, and connect them to clear interfaces.
+              My projects bring together Python, Java, SQL and AI.
             </p>
 
             {/* CTA Buttons - View Projects + 2 CV Buttons */}
@@ -356,8 +357,8 @@ export default function Home() {
               Selected Work
             </h2>
             <p className="text-secondary-text mt-4 max-w-2xl">
-              Two deployed applications: explore the problem, my contribution
-              and the evidence, then try the live demos.
+              Start with two deployed applications. See the problem, what I
+              built and the results, then explore the live demos or code.
             </p>
           </div>
 
@@ -365,260 +366,9 @@ export default function Home() {
           <h3 className="text-xl font-semibold text-text-white mt-14 mb-6">
             More projects & prototypes
           </h3>
-          {/* Projects Grid */}
-          <div className="space-y-8">
-            {/* PROJECT 1: AI Vision QC Inspector - FEATURED */}
-            <div
-              className="bg-card rounded-xl border border-primary/40 hover:border-primary/80 transition-all duration-300 overflow-hidden group"
-              style={{
-                boxShadow: "0 0 20px rgba(34, 211, 238, 0.1)",
-              }}
-            >
-              <div className="p-8 sm:p-10 space-y-6">
-                <div className="space-y-3">
-                  <div className="inline-block px-3 py-1 bg-primary/10 border border-primary/30 rounded-full">
-                    <span className="text-primary text-xs font-bold uppercase tracking-wide">
-                      Featured Project
-                    </span>
-                  </div>
-                  <h3 className="text-3xl font-bold text-text-white leading-tight">
-                    AI Vision QC Inspector
-                  </h3>
-                </div>
-
-                <p className="text-text-light text-base leading-relaxed">
-                  A computer-vision quality-control tool that classifies
-                  manufacturing parts as defective or OK using transfer learning
-                  (TensorFlow/MobileNetV2), then uses Gemini 2.5 Flash to
-                  auto-generate a plain-language QA report for production
-                  supervisors. Deployed live on Streamlit Cloud. Built and
-                  deployed end-to-end, including debugging real production
-                  deployment issues (Python version conflicts, deprecated SDK
-                  migration, dependency resolution).
-                </p>
-
-                <p className="text-text-muted text-sm leading-relaxed">
-                  <span className="font-semibold text-primary">
-                    Key result:
-                  </span>{" "}
-                  89.4% validation accuracy after 5 epochs of transfer learning,
-                  trained on 6,633 images.
-                </p>
-
-                {/* Tech Stack Badges */}
-                <div className="flex flex-wrap gap-2 pt-2">
-                  {[
-                    "TensorFlow",
-                    "MobileNetV2",
-                    "Gemini 2.5 Flash",
-                    "Streamlit",
-                    "Transfer Learning",
-                    "Google Colab",
-                  ].map(tech => (
-                    <span
-                      key={tech}
-                      className="inline-block px-3 py-1.5 bg-black/30 border border-primary/40 rounded-full text-primary text-xs font-semibold hover:border-primary/70 transition-all"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Buttons */}
-                <div className="flex flex-col sm:flex-row gap-3 pt-6">
-                  <a
-                    href="https://ai-vision-qc-inspector-by-pt.streamlit.app/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg transition-all duration-300 font-semibold text-sm flex-1 group-hover:shadow-lg group-hover:shadow-primary/20"
-                  >
-                    <Sparkles size={18} />
-                    Live Demo
-                  </a>
-                  <a
-                    href="https://github.com/pt22-mfu/ai-vision-qc-inspector"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 px-5 py-3 border border-primary/50 text-primary hover:border-primary hover:bg-primary/5 rounded-lg transition-all duration-300 font-semibold text-sm flex-1"
-                  >
-                    <Github size={18} />
-                    GitHub Repo
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* PROJECT 3: CHIANG MAI - FEATURED */}
-            <div
-              className="bg-card rounded-xl border border-primary/40 hover:border-primary/80 transition-all duration-300 overflow-hidden group"
-              style={{
-                boxShadow: "0 0 20px rgba(34, 211, 238, 0.1)",
-              }}
-            >
-              <div className="p-8 sm:p-10 space-y-6">
-                <div className="space-y-3">
-                  <div className="inline-block px-3 py-1 bg-primary/10 border border-primary/30 rounded-full">
-                    <span className="text-primary text-xs font-bold uppercase tracking-wide">
-                      Featured Project
-                    </span>
-                  </div>
-                  <h3 className="text-3xl font-bold text-text-white leading-tight">
-                    Chiang Mai Tri-Node Zone: Geo-Predictive Platform
-                  </h3>
-                </div>
-
-                <p className="text-text-light text-base leading-relaxed">
-                  End-to-end geospatial AI platform integrating real-time NASA
-                  FIRMS (VIIRS) satellite data and wind vectors to forecast
-                  PM2.5 movement across three critical Chiang Mai urban zones
-                  (Z1: City, Z2: Doi Suthep, Z3: Mae Rim). Features a Spatial
-                  Threat Score and a Generative AI Mitigation Copilot to
-                  translate complex spatial data into proactive action plans for
-                  local authorities.
-                </p>
-
-                {/* Tech Stack Badges */}
-                <div className="flex flex-wrap gap-2 pt-2">
-                  {[
-                    "Python",
-                    "XGBoost",
-                    "Streamlit",
-                    "LangChain",
-                    "Google Gemini",
-                    "NASA FIRMS",
-                    "GISTDA",
-                  ].map(tech => (
-                    <span
-                      key={tech}
-                      className="inline-block px-3 py-1.5 bg-black/30 border border-primary/40 rounded-full text-primary text-xs font-semibold hover:border-primary/70 transition-all"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Buttons */}
-                <div className="flex flex-col sm:flex-row gap-3 pt-6">
-                  <a
-                    href="https://chiangmai-trinode-zone-pm25-prediction.streamlit.app/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg transition-all duration-300 font-semibold text-sm flex-1 group-hover:shadow-lg group-hover:shadow-primary/20"
-                  >
-                    <Sparkles size={18} />
-                    Live Dashboard
-                  </a>
-                  <a
-                    href="https://github.com/pt22-mfu/chiangmai-trinode-pm25"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 px-5 py-3 border border-primary/50 text-primary hover:border-primary hover:bg-primary/5 rounded-lg transition-all duration-300 font-semibold text-sm flex-1"
-                  >
-                    <Github size={18} />
-                    GitHub Repo
-                  </a>
-                  <button
-                    className="inline-flex items-center justify-center gap-2 px-5 py-3 border border-primary/30 text-primary/70 hover:border-primary hover:text-primary hover:bg-primary/5 rounded-lg transition-all duration-300 font-semibold text-sm flex-1"
-                    onClick={() => setSelectedProject("chiang-mai")}
-                  >
-                    <ExternalLink size={18} />
-                    See Details
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            {/* PROJECT 4: Clinical Scenario */}
-            <div
-              className="bg-card rounded-xl border border-primary/40 hover:border-primary/80 transition-all duration-300 overflow-hidden group"
-              style={{
-                boxShadow: "0 0 20px rgba(34, 211, 238, 0.1)",
-              }}
-            >
-              <div className="p-8 sm:p-10 space-y-6">
-                <div className="space-y-3">
-                  <h3 className="text-3xl font-bold text-text-white leading-tight">
-                    Web-Based Clinical Scenario with AI Feedback System
-                  </h3>
-                </div>
-
-                <p className="text-text-light text-base leading-relaxed">
-                  An interactive clinical evaluation platform built for the
-                  School of Nursing (MFU), delivering 12 patient scenarios
-                  across 6 body systems to 4th-year nursing students. Features
-                  AI-powered feedback using Gemini 1.5 Flash for real-time
-                  assessment.
-                </p>
-
-                {/* Tech Stack Badges */}
-                <div className="flex flex-wrap gap-2 pt-2">
-                  {[
-                    "Next.js 14",
-                    "TypeScript",
-                    "Tailwind CSS",
-                    "Prisma",
-                    "PostgreSQL",
-                    "Supabase",
-                    "Upstash Redis",
-                    "Gemini 1.5 Flash",
-                  ].map(tech => (
-                    <span
-                      key={tech}
-                      className="inline-block px-3 py-1.5 bg-black/30 border border-primary/40 rounded-full text-primary text-xs font-semibold hover:border-primary/70 transition-all"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Screenshot Gallery */}
-                <div className="pt-4 space-y-3">
-                  <h4 className="text-sm font-semibold text-primary">
-                    Platform Screenshots
-                  </h4>
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                    <img
-                      src={`${import.meta.env.BASE_URL}screenshot1.png`}
-                      alt="Clinical Scenario Interface"
-                      className="w-full h-auto rounded-lg border border-primary/30 hover:border-primary/70 transition-all duration-300 object-cover"
-                    />
-                    <img
-                      src={`${import.meta.env.BASE_URL}screenshot2.png`}
-                      alt="Patient Assessment Screen"
-                      className="w-full h-auto rounded-lg border border-primary/30 hover:border-primary/70 transition-all duration-300 object-cover"
-                    />
-                    <img
-                      src={`${import.meta.env.BASE_URL}screenshot3.png`}
-                      alt="AI Feedback Results"
-                      className="w-full h-auto rounded-lg border border-primary/30 hover:border-primary/70 transition-all duration-300 object-cover"
-                    />
-                  </div>
-                </div>
-
-                {/* Status Line */}
-                <div className="pt-2 border-t border-primary/20">
-                  <p className="text-text-muted text-sm italic">
-                    Working UI prototype and system architecture completed. Full
-                    backend integration paused pending administrative budget
-                    confirmation.
-                  </p>
-                </div>
-
-                {/* Buttons */}
-                <div className="flex flex-col sm:flex-row gap-3 pt-6">
-                  <a
-                    href="https://github.com/pt22-mfu/nursing-clinical-scenario-ai-feedback"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 px-5 py-3 border border-primary/50 text-primary hover:border-primary hover:bg-primary/5 rounded-lg transition-all duration-300 font-semibold text-sm flex-1"
-                  >
-                    <Github size={18} />
-                    GitHub Repo
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+          <SupportingProjects
+            onShowTriNode={() => setSelectedProject("chiang-mai")}
+          />
         </div>
       </section>
 
@@ -657,26 +407,26 @@ export default function Home() {
               <li className="flex gap-3">
                 <span className="text-primary font-bold">•</span>
                 <span>
-                  Architected a Zero-Budget Hybrid AI Evaluation Engine for a
-                  clinical web platform, combining a fast rule-based matcher
-                  (less than 500ms) with Google Gemini 1.5 Flash LLM for
-                  semantic assessment.
+                  Designed a hybrid feedback approach for a nursing-learning
+                  platform, combining rule-based checks with Gemini
+                  explanations. Full backend integration remains pending.
                 </span>
               </li>
               <li className="flex gap-3">
                 <span className="text-primary font-bold">•</span>
                 <span>
-                  Authored the comprehensive Software Requirements Specification
-                  (SRS) and developed a functional UI prototype using Next.js 14
-                  and Tailwind CSS.
+                  Wrote the Software Requirements Specification and built a
+                  working UI prototype with Next.js, TypeScript and Tailwind
+                  CSS. Reviewed the interface and requirements with nursing
+                  lecturers.
                 </span>
               </li>
               <li className="flex gap-3">
                 <span className="text-primary font-bold">•</span>
                 <span>
-                  Designed PostgreSQL database architecture via Supabase with
-                  attention to access control and privacy requirements, and
-                  planned API caching with Upstash Redis.
+                  Designed the PostgreSQL/Supabase schema, access controls and
+                  API structure; planned caching with Upstash Redis and prepared
+                  documentation for the implementation.
                 </span>
               </li>
             </ul>
@@ -1057,7 +807,7 @@ export default function Home() {
 
                   <div className="space-y-4">
                     <h3 className="text-xl font-bold text-primary">
-                      Automated ETL & Feature Engineering
+                      Data Preparation & Feature Engineering
                     </h3>
                     <p className="text-text-light leading-relaxed">
                       Prepared historical PM2.5, weather and NASA FIRMS hotspot
@@ -1160,10 +910,10 @@ export default function Home() {
                   <div className="space-y-4">
                     <h3 className="text-xl font-bold text-primary">Overview</h3>
                     <p className="text-text-light leading-relaxed">
-                      Developed for the Geospatial Intelligence for Resilience
-                      Hackathon, this system solves the challenge of forecasting
-                      where PM2.5 will accumulate based on wind direction and
-                      topography in the Chiang Mai basin.
+                      A hackathon prototype exploring how fire hotspots, weather
+                      and wind relate to air-quality risk in three Chiang Mai
+                      zones. It combines data views, maps and AI advisory
+                      experiments; it is separate from my MFU project.
                     </p>
                   </div>
 
@@ -1194,10 +944,10 @@ export default function Home() {
                       Wind-Guided AI Predictions
                     </h3>
                     <p className="text-text-light leading-relaxed">
-                      The XGBoost model actively adjusts pollution risk levels
-                      dynamically. For instance, if real-time wind patterns
-                      shift from the north, the system automatically elevates
-                      the risk for southern urban zones.
+                      Combined model outputs with wind and hotspot context to
+                      explore differences between zones. These experimental
+                      outputs are decision-support estimates, not validated
+                      measurements of where pollution will travel.
                     </p>
                   </div>
 
@@ -1206,12 +956,10 @@ export default function Home() {
                       Generative AI Mitigation Copilot
                     </h3>
                     <p className="text-text-light leading-relaxed">
-                      Built a "What-If Simulator" for local government
-                      authorities. The LLM acts as a virtual consultant,
-                      evaluating the AI's predictions to recommend proactive
-                      resource allocations (e.g., dispatching water trucks to
-                      vulnerable areas or ordering targeted school closures)
-                      before pollution reaches critical levels.
+                      Built a what-if advisory workflow that turns supplied
+                      environmental and model context into readable suggestions.
+                      It demonstrates an AI-assisted analysis flow; decisions
+                      require local expertise and supporting evidence.
                     </p>
                   </div>
 
@@ -1462,15 +1210,10 @@ export default function Home() {
                 </div>
 
                 <p className="text-text-light text-base leading-relaxed">
-                  Conducted a UI presentation and project review at the MFU
-                  Learning Innovation Institute (MLii) with two professors from
-                  the School of Nursing. During the one-hour session, we
-                  discussed project details, gathered domain-specific
-                  suggestions, and reviewed the current progress. This modern
-                  web AI integration is my first solo full-stack project. During
-                  the meeting, my senior lead, P'First, provided essential
-                  support in communicating the underlying technical architecture
-                  and system capabilities to the academic stakeholders.
+                  Presented the nursing UI prototype to two School of Nursing
+                  lecturers at MLii. We reviewed the learning workflow and
+                  gathered feedback on the interface and requirements. My senior
+                  lead, P'First, helped communicate the technical design.
                 </p>
 
                 <div className="pt-4 border-t border-border-subtle">
@@ -1478,11 +1221,8 @@ export default function Home() {
                     Key Takeaway:
                   </p>
                   <p className="text-text-muted text-sm">
-                    Successfully delivering a technical project requires
-                    translating complex AI and web integrations into practical
-                    value for domain experts. Navigating these stakeholder
-                    discussions is a critical skill that is greatly enhanced by
-                    effective senior mentorship.
+                    Explain the workflow in the user's terms, listen to domain
+                    feedback, and use it to improve the design.
                   </p>
                 </div>
               </div>
@@ -1516,17 +1256,10 @@ export default function Home() {
                 </div>
 
                 <p className="text-text-light text-base leading-relaxed">
-                  During our Business Data Analytics course (guided by Ajarn
-                  Khwunta Kirimasthong), we had an insightful guest lecture on
-                  Vibe Coding and RAG. The session was delivered by Asst. Prof.
-                  Nongnuch Ketui, Ph.D., who serves as the Vice President of the
-                  Artificial Intelligence Association of Thailand (AIAT) and is
-                  a prominent AI researcher. During the hands-on activity, I
-                  volunteered to solve a data analytics coding problem and
-                  explain the logic to the class. It was a rewarding opportunity
-                  to share my approach. I was honored to receive a special
-                  souvenir from Asst. Prof. Nongnuch in recognition of providing
-                  a correct solution and volunteering as an explainer.
+                  During a Business Data Analytics guest session on Vibe Coding
+                  and RAG, I volunteered to solve a coding problem and explain
+                  the solution to the class. Asst. Prof. Nongnuch Ketui
+                  recognized my contribution with a souvenir.
                 </p>
 
                 <div className="pt-4 border-t border-border-subtle">
@@ -1534,10 +1267,8 @@ export default function Home() {
                     Key Takeaway:
                   </p>
                   <p className="text-text-muted text-sm">
-                    Collaboration and knowledge sharing are essential in data
-                    analytics. This experience reinforced my commitment to
-                    continuous learning and helping others understand complex
-                    concepts.
+                    A clear explanation helps others follow the logic and learn
+                    from the solution.
                   </p>
                 </div>
               </div>
@@ -1581,9 +1312,8 @@ export default function Home() {
                     Key Takeaway:
                   </p>
                   <p className="text-text-muted text-sm">
-                    Developed essential soft skills and a leadership mindset
-                    required for corporate environments and cross-functional
-                    team collaborations.
+                    Practiced communication, teamwork and preparing for a
+                    professional internship.
                   </p>
                 </div>
               </div>
