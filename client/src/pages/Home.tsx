@@ -74,7 +74,9 @@ export default function Home() {
       const current = sections
         .filter(section => section.getBoundingClientRect().top <= 160)
         .at(-1);
-      setActiveSection(current?.id ?? "");
+      setActiveSection(
+        current?.id === "education" ? "about" : (current?.id ?? "")
+      );
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
@@ -370,105 +372,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Projects Section */}
-      <section
-        id="projects"
-        data-section
-        className={`py-24 relative transition-all duration-700 ${
-          visibleSections["projects"]
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 translate-y-8"
-        }`}
-      >
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-16">
-            <div className="accent-bar w-16 mb-4" />
-            <h2 className="text-3xl font-bold text-text-white">
-              Selected Work
-            </h2>
-            <p className="text-secondary-text mt-4 max-w-2xl">
-              Start with two deployed applications. See the problem, what I
-              built and the results, then explore the live demos or code.
-            </p>
-          </div>
-
-          <FeaturedProjects onShowPm25={() => setSelectedProject("mfu-pm25")} />
-          <h3 className="text-xl font-semibold text-text-white mt-14 mb-6">
-            More projects & prototypes
-          </h3>
-          <SupportingProjects
-            onShowTriNode={() => setSelectedProject("chiang-mai")}
-          />
-        </div>
-      </section>
-
-      {/* Experience Section */}
-      <section
-        id="experience"
-        data-section
-        className={`py-24 relative transition-all duration-700 ${
-          visibleSections["experience"]
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 translate-y-8"
-        }`}
-      >
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-16">
-            <div className="accent-bar w-16 mb-4" />
-            <h2 className="text-3xl font-bold text-text-white">Experience</h2>
-          </div>
-
-          <div className="bg-card rounded-lg border-2 border-primary/30 p-8 hover:border-primary/60 transition-all duration-300">
-            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
-              <div>
-                <h3 className="text-xl font-bold text-text-white">
-                  Work Assistant — Web & AI Projects
-                </h3>
-                <p className="text-primary mt-2 font-semibold text-sm">
-                  MFU Learning Innovation Institute (MLii)
-                </p>
-              </div>
-              <p className="text-text-muted text-sm font-semibold flex-shrink-0">
-                May 2026 – Jul 2026
-              </p>
-            </div>
-
-            <ul className="space-y-3 text-text-light text-base">
-              <li className="flex gap-3">
-                <span className="text-primary font-bold">•</span>
-                <span>
-                  Designed a hybrid feedback approach for a nursing-learning
-                  platform, combining rule-based checks with Gemini
-                  explanations. Full backend integration remains pending.
-                </span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-primary font-bold">•</span>
-                <span>
-                  Wrote the Software Requirements Specification and built a
-                  working UI prototype with Next.js, TypeScript and Tailwind
-                  CSS. Reviewed the interface and requirements with nursing
-                  lecturers.
-                </span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-primary font-bold">•</span>
-                <span>
-                  Designed the PostgreSQL/Supabase schema, access controls and
-                  API structure; planned caching with Upstash Redis and prepared
-                  documentation for the implementation.
-                </span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
       {/* Academic Background Section */}
       <section
         id="education"
         data-section
-        className={`py-24 relative transition-all duration-700 ${
+        className={`pb-24 relative transition-all duration-700 ${
           visibleSections["education"]
             ? "opacity-100 translate-y-0"
             : "opacity-0 translate-y-8"
@@ -584,6 +492,100 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section
+        id="projects"
+        data-section
+        className={`py-24 relative transition-all duration-700 ${
+          visibleSections["projects"]
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-8"
+        }`}
+      >
+        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-16">
+            <div className="accent-bar w-16 mb-4" />
+            <h2 className="text-3xl font-bold text-text-white">
+              Selected Work
+            </h2>
+            <p className="text-secondary-text mt-4 max-w-2xl">
+              Start with two deployed applications. See the problem, what I
+              built and the results, then explore the live demos or code.
+            </p>
+          </div>
+
+          <FeaturedProjects onShowPm25={() => setSelectedProject("mfu-pm25")} />
+          <h3 className="text-xl font-semibold text-text-white mt-14 mb-6">
+            More projects & prototypes
+          </h3>
+          <SupportingProjects
+            onShowTriNode={() => setSelectedProject("chiang-mai")}
+          />
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section
+        id="experience"
+        data-section
+        className={`py-24 relative transition-all duration-700 ${
+          visibleSections["experience"]
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-8"
+        }`}
+      >
+        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-16">
+            <div className="accent-bar w-16 mb-4" />
+            <h2 className="text-3xl font-bold text-text-white">Experience</h2>
+          </div>
+
+          <div className="bg-card rounded-lg border-2 border-primary/30 p-8 hover:border-primary/60 transition-all duration-300">
+            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
+              <div>
+                <h3 className="text-xl font-bold text-text-white">
+                  Work Assistant — Web & AI Projects
+                </h3>
+                <p className="text-primary mt-2 font-semibold text-sm">
+                  MFU Learning Innovation Institute (MLii)
+                </p>
+              </div>
+              <p className="text-text-muted text-sm font-semibold flex-shrink-0">
+                May 2026 – Jul 2026
+              </p>
+            </div>
+
+            <ul className="space-y-3 text-text-light text-base">
+              <li className="flex gap-3">
+                <span className="text-primary font-bold">•</span>
+                <span>
+                  Designed a hybrid feedback approach for a nursing-learning
+                  platform, combining rule-based checks with Gemini
+                  explanations. Full backend integration remains pending.
+                </span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-primary font-bold">•</span>
+                <span>
+                  Wrote the Software Requirements Specification and built a
+                  working UI prototype with Next.js, TypeScript and Tailwind
+                  CSS. Reviewed the interface and requirements with nursing
+                  lecturers.
+                </span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-primary font-bold">•</span>
+                <span>
+                  Designed the PostgreSQL/Supabase schema, access controls and
+                  API structure; planned caching with Upstash Redis and prepared
+                  documentation for the implementation.
+                </span>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
