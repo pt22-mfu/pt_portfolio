@@ -197,7 +197,7 @@ export default function FeaturedProjects({
                 className="w-full h-auto"
                 loading="lazy"
                 width={1440}
-                height={1223}
+                height={1000}
               />
             </a>
             <p className="text-sm text-secondary-text">
