@@ -2,6 +2,13 @@ import FeaturedProjects from "@/components/FeaturedProjects";
 import SupportingProjects from "@/components/SupportingProjects";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import {
   Mail,
   Github,
   ExternalLink,
@@ -169,7 +176,7 @@ export default function Home() {
               My projects bring together Python, Java, SQL and AI.
             </p>
 
-            {/* CTA Buttons - View Projects + 2 CV Buttons */}
+            {/* Main actions */}
             <div className="flex flex-col sm:flex-row sm:flex-wrap gap-4 pt-4">
               <button
                 onClick={() =>
@@ -181,24 +188,47 @@ export default function Home() {
               >
                 View Projects
               </button>
-              <a
-                href={`${import.meta.env.BASE_URL}DE_Engr_Pt_Resume.pdf`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-primary text-primary hover:bg-primary/10 rounded-lg transition-all duration-300 font-semibold text-sm"
-              >
-                <Download size={18} />
-                Data Engineer CV
-              </a>
-              <a
-                href={`${import.meta.env.BASE_URL}AI_Eng_Pt_Resume.pdf`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-primary text-primary hover:bg-primary/10 rounded-lg transition-all duration-300 font-semibold text-sm"
-              >
-                <Download size={18} />
-                AI Developer CV
-              </a>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <button
+                    type="button"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-primary text-primary hover:bg-primary/10 rounded-lg transition-colors font-semibold text-sm"
+                  >
+                    <Download size={18} />
+                    Download CV
+                    <ChevronDown size={16} />
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent
+                  align="start"
+                  sideOffset={8}
+                  className="w-64 max-w-[calc(100vw-2rem)] bg-card border-primary/30 p-2 rounded-xl"
+                >
+                  <DropdownMenuLabel className="text-xs text-secondary-text font-medium px-3 pb-2">
+                    Choose a version · PDF
+                  </DropdownMenuLabel>
+                  {[
+                    ["Data Engineering CV", "DE_Engr_Pt_Resume.pdf"],
+                    ["AI Development CV", "AI_Eng_Pt_Resume.pdf"],
+                  ].map(([label, file]) => (
+                    <DropdownMenuItem
+                      key={file}
+                      asChild
+                      className="cursor-pointer px-3 py-3 rounded-lg focus:bg-primary/10 focus:text-primary"
+                    >
+                      <a
+                        href={`${import.meta.env.BASE_URL}${file}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        download={file}
+                      >
+                        <Download size={16} />
+                        {label}
+                      </a>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
             </div>
 
             {/* Social Links */}

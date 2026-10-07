@@ -67,3 +67,5 @@ Project cards link directly to live applications and source repositories; RiskDe
 ## Portfolio update - 07 October 2026
 
 Main project stories follow problem, contribution, workflow and evidence. Additional prototypes use compact cards with explicit status labels. RiskDesk and nursing screenshots can be enlarged with keyboard-accessible dialogs. The downloadable CVs include RiskDesk and distinguish model estimates, historical validation and unfinished prototype work. Visa/work-permit eligibility is not asserted.
+
+The hero offers one Download CV menu with Data Engineering and AI Development versions. The senior-project card leads with a captured first-tab dashboard preview; its model comparison is collapsed under Model results.

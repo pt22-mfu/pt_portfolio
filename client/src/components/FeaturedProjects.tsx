@@ -111,49 +111,75 @@ export default function FeaturedProjects({
             </div>
           </div>
           <div className="case-evidence p-6 sm:p-8 flex flex-col justify-center gap-5">
-            <p className="case-eyebrow">Measured improvement</p>
-            <h4 className="text-xl font-semibold text-foreground">
-              Adding fire features reduced prediction error
-            </h4>
-            <div
-              className="space-y-4"
-              role="img"
-              aria-label="LightGBM burning-season RMSE decreased from 7.3237 without fire features to 6.9878 with fire features; lower is better."
-            >
-              <div>
-                <div className="flex justify-between gap-3 text-sm mb-2">
-                  <span>Without fire features</span>
-                  <strong>7.3237</strong>
-                </div>
-                <div className="h-3 rounded-full bg-white/5">
-                  <div
-                    className="h-full rounded-full bg-slate-400"
-                    style={{ width: "91.55%" }}
-                  />
-                </div>
-              </div>
-              <div>
-                <div className="flex justify-between gap-3 text-sm mb-2">
-                  <span>With fire features</span>
-                  <strong className="text-primary">6.9878</strong>
-                </div>
-                <div className="h-3 rounded-full bg-white/5">
-                  <div
-                    className="h-full rounded-full bg-primary"
-                    style={{ width: "87.35%" }}
-                  />
-                </div>
-              </div>
-            </div>
-            <p className="text-sm text-secondary-text">
-              LightGBM · RMSE in µg/m³ · January–April 2022 · 120 held-out days.
-              Lower is better. Both bars use a zero baseline and the same scale.
+            <p className="case-eyebrow">Campus air quality at a glance</p>
+            <ProjectImage
+              src={`${import.meta.env.BASE_URL}pm25-dashboard-overview.jpg`}
+              alt="Prediction and Map tab showing the campus PM2.5 estimate, air-quality status and regional fire-monitoring cards"
+              title="MFU PM2.5 dashboard — first tab"
+              width={930}
+              height={460}
+            />
+            <p className="text-xs text-secondary-text">
+              Dashboard preview · captured 7 October 2026
             </p>
-            <div className="border-t border-primary/20 pt-4 text-sm text-secondary-text">
-              Historical model evaluation supports this comparison. Future daily
-              outputs are scenario projections; the current value is a model
-              estimate.
-            </div>
+            <p className="text-sm text-secondary-text leading-relaxed">
+              <strong className="text-foreground">Try the dashboard:</strong>{" "}
+              Explore the campus overview and map, then switch to AI Advisory
+              for guidance in your preferred language.
+            </p>
+            <details className="rounded-xl border border-primary/20 p-4">
+              <summary className="cursor-pointer text-sm font-semibold text-primary">
+                Model results
+              </summary>
+              <div className="mt-4 space-y-4">
+                <p className="text-sm font-semibold text-primary">
+                  Measured improvement
+                </p>
+                <h4 className="text-base font-semibold text-foreground">
+                  Adding fire features reduced prediction error
+                </h4>
+                <div
+                  className="space-y-4"
+                  role="img"
+                  aria-label="LightGBM burning-season RMSE decreased from 7.3237 without fire features to 6.9878 with fire features; lower is better."
+                >
+                  <div>
+                    <div className="flex justify-between gap-3 text-sm mb-2">
+                      <span>Without fire features</span>
+                      <strong>7.3237</strong>
+                    </div>
+                    <div className="h-3 rounded-full bg-white/5">
+                      <div
+                        className="h-full rounded-full bg-slate-400"
+                        style={{ width: "91.55%" }}
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <div className="flex justify-between gap-3 text-sm mb-2">
+                      <span>With fire features</span>
+                      <strong className="text-primary">6.9878</strong>
+                    </div>
+                    <div className="h-3 rounded-full bg-white/5">
+                      <div
+                        className="h-full rounded-full bg-primary"
+                        style={{ width: "87.35%" }}
+                      />
+                    </div>
+                  </div>
+                </div>
+                <p className="text-sm text-secondary-text">
+                  LightGBM · RMSE in µg/m³ · January–April 2022 · 120 held-out
+                  days. Lower is better. Both bars use a zero baseline and the
+                  same scale.
+                </p>
+                <div className="border-t border-primary/20 pt-4 text-sm text-secondary-text">
+                  Historical model evaluation supports this comparison. Future
+                  daily outputs are scenario projections; the current value is a
+                  model estimate.
+                </div>
+              </div>
+            </details>
           </div>
         </div>
       </article>
