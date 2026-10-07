@@ -403,7 +403,7 @@ export default function Home() {
                 <div className="bg-card rounded-lg p-6 border border-primary/30 flex-grow">
                   <div className="flex items-start gap-4 mb-4">
                     <img
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsUV1OLFzikxsMB_iue3priwGmciZc_MEnGw&s"
+                      src={`${import.meta.env.BASE_URL}mfu-logo.png`}
                       alt="MFU Logo"
                       className="w-14 h-14 object-contain flex-shrink-0"
                     />
@@ -496,38 +496,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Projects Section */}
-      <section
-        id="projects"
-        data-section
-        className={`py-24 relative transition-all duration-700 ${
-          visibleSections["projects"]
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 translate-y-8"
-        }`}
-      >
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-16">
-            <div className="accent-bar w-16 mb-4" />
-            <h2 className="text-3xl font-bold text-text-white">
-              Selected Work
-            </h2>
-            <p className="text-secondary-text mt-4 max-w-2xl">
-              Start with two deployed applications. See the problem, what I
-              built and the results, then explore the live demos or code.
-            </p>
-          </div>
-
-          <FeaturedProjects onShowPm25={() => setSelectedProject("mfu-pm25")} />
-          <h3 className="text-xl font-semibold text-text-white mt-14 mb-6">
-            More projects & prototypes
-          </h3>
-          <SupportingProjects
-            onShowTriNode={() => setSelectedProject("chiang-mai")}
-          />
-        </div>
-      </section>
-
       {/* Experience Section */}
       <section
         id="experience"
@@ -546,13 +514,23 @@ export default function Home() {
 
           <div className="bg-card rounded-lg border-2 border-primary/30 p-8 hover:border-primary/60 transition-all duration-300">
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
-              <div>
-                <h3 className="text-xl font-bold text-text-white">
-                  Work Assistant — Web & AI Projects
-                </h3>
-                <p className="text-primary mt-2 font-semibold text-sm">
-                  MFU Learning Innovation Institute (MLii)
-                </p>
+              <div className="flex items-start gap-4 min-w-0">
+                <img
+                  src={`${import.meta.env.BASE_URL}mfu-logo.png`}
+                  alt="Mae Fah Luang University logo"
+                  width={56}
+                  height={56}
+                  loading="lazy"
+                  className="w-14 h-14 shrink-0 object-contain rounded-lg bg-white p-1"
+                />
+                <div className="min-w-0">
+                  <h3 className="text-xl font-bold text-text-white">
+                    Work Assistant — Web & AI Projects
+                  </h3>
+                  <p className="text-primary mt-2 font-semibold text-sm">
+                    MFU Learning Innovation Institute (MLii)
+                  </p>
+                </div>
               </div>
               <p className="text-text-muted text-sm font-semibold flex-shrink-0">
                 May 2026 – Jul 2026
@@ -587,6 +565,38 @@ export default function Home() {
               </li>
             </ul>
           </div>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section
+        id="projects"
+        data-section
+        className={`py-24 relative transition-all duration-700 ${
+          visibleSections["projects"]
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-8"
+        }`}
+      >
+        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-16">
+            <div className="accent-bar w-16 mb-4" />
+            <h2 className="text-3xl font-bold text-text-white">
+              Selected Work
+            </h2>
+            <p className="text-secondary-text mt-4 max-w-2xl">
+              Start with two deployed applications. See the problem, what I
+              built and the results, then explore the live demos or code.
+            </p>
+          </div>
+
+          <FeaturedProjects onShowPm25={() => setSelectedProject("mfu-pm25")} />
+          <h3 className="text-xl font-semibold text-text-white mt-14 mb-6">
+            More projects & prototypes
+          </h3>
+          <SupportingProjects
+            onShowTriNode={() => setSelectedProject("chiang-mai")}
+          />
         </div>
       </section>
 

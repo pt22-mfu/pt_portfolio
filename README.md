@@ -70,4 +70,5 @@ Main project stories follow problem, contribution, workflow and evidence. Additi
 
 The hero offers one Download CV menu with Data Engineering and AI Development versions. The senior-project card leads with a captured first-tab dashboard preview; its model comparison is collapsed under Model results.
 
-Page order: introduction, About Me, Academic Background, Selected Work, Experience, Skills and credentials. Academic Background stays within the About navigation flow.
+Page order: introduction, About Me, Academic Background, Experience, Selected Work, Skills and credentials. Academic Background stays within the About navigation flow.
+The MLii experience and MFU academic entry share a locally hosted MFU logo.
