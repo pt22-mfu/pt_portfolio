@@ -1,7 +1,7 @@
 # PT Portfolio
 
 Personal portfolio website for Phyo Thant Kyaw — a Computer Engineering student and
-aspiring Data/AI Engineer. Dark-themed, cyan/teal accent design showcasing projects,
+software, data and AI project builder. Dark-themed, cyan/teal accent design showcasing projects,
 skills, certifications, and experience.
 
 **[Live Site →](https://pt22-mfu.github.io/pt_portfolio/)**
@@ -12,14 +12,14 @@ skills, certifications, and experience.
 
 ## Tech Stack
 
-| Layer | Tools |
-|---|---|
-| Framework | React 19 (TypeScript) |
-| Styling | Tailwind CSS 4 |
-| Routing | Wouter |
-| Build tool | Vite 7 |
-| Icons | Lucide React |
-| Hosting | GitHub Pages (via GitHub Actions CI/CD) |
+| Layer      | Tools                                   |
+| ---------- | --------------------------------------- |
+| Framework  | React 19 (TypeScript)                   |
+| Styling    | Tailwind CSS 4                          |
+| Routing    | Wouter                                  |
+| Build tool | Vite 7                                  |
+| Icons      | Lucide React                            |
+| Hosting    | GitHub Pages (via GitHub Actions CI/CD) |
 
 ## About this project
 
@@ -55,3 +55,10 @@ pnpm run dev
 
 **Phyo Thant Kyaw (PT)** — Computer Engineering, Mae Fah Luang University
 [GitHub](https://github.com/pt22-mfu) · [LinkedIn](https://www.linkedin.com/in/phyo-thant-kyaw-2816332a4/)
+
+## Featured work (October 2026)
+
+- **MFU PM2.5 GeoAI Warning** — historical data preparation, controlled fire-feature evaluation, campus dashboard and multilingual advisory.
+- **RiskDesk** — Java/Spring Boot APIs, React/TypeScript interface, PostgreSQL, rule evidence, optional AI explanations and human review. Uses synthetic data.
+
+Project cards link directly to live applications and source repositories; RiskDesk also links to its technical PDF. The site supports mobile section navigation and keyboard-accessible project details.
